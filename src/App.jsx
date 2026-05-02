@@ -224,7 +224,13 @@ export default function App() {
                   <span className="text-blue-600 font-bold">Câu {idx + 1}: </span> 
                   {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
                   <span dangerouslySetInnerHTML={renderMath(q.text)} />
-                  {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
+                  {q.image && (
+  <img 
+    src={q.image} 
+    className="mt-6 mb-2 mx-auto block max-w-[80%] md:max-w-md rounded-xl border border-slate-200 shadow-sm" 
+    alt="Minh họa" 
+  />
+)}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-4">
                   {q.options.map((opt, oIdx) => {
@@ -253,7 +259,13 @@ export default function App() {
                 <span className="text-blue-600 font-bold">Câu {exam.part1A.length + idx + 1}: </span> 
                 {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
                 <span dangerouslySetInnerHTML={renderMath(q.text)} />
-                {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
+                {q.image && (
+  <img 
+    src={q.image} 
+    className="mt-6 mb-2 mx-auto block max-w-[80%] md:max-w-md rounded-xl border border-slate-200 shadow-sm" 
+    alt="Minh họa" 
+  />
+)}
               </div>
               <div className="space-y-3 pl-4">
                 {q.options.map((opt, oIdx) => {
@@ -287,7 +299,13 @@ export default function App() {
                     <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + idx + 1}: </span> 
                     {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
                     <span dangerouslySetInnerHTML={renderMath(q.text)} />
-                    {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
+                    {q.image && (
+  <img 
+    src={q.image} 
+    className="mt-6 mb-2 mx-auto block max-w-[80%] md:max-w-md rounded-xl border border-slate-200 shadow-sm" 
+    alt="Minh họa" 
+  />
+)}
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {q.options.map((opt, oIdx) => {
@@ -323,7 +341,13 @@ export default function App() {
                     <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + (exam.part2?.questions?.length || 0) + idx + 1}: </span> 
                     {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
                     <span dangerouslySetInnerHTML={renderMath(q.text)} />
-                    {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
+                    {q.image && (
+  <img 
+    src={q.image} 
+    className="mt-6 mb-2 mx-auto block max-w-[80%] md:max-w-md rounded-xl border border-slate-200 shadow-sm" 
+    alt="Minh họa" 
+  />
+)}
                   </div>
                   <div className="relative">
                     <input type="text" placeholder="Đáp số..." disabled={isReviewMode} value={userVal} onChange={(e) => handleAnswerChange(q.id, e.target.value)} className={`w-full md:w-40 p-4 rounded-2xl border-2 font-mono text-lg focus:outline-none focus:border-blue-600 ${isReviewMode ? (isCorrect ? 'border-green-500 bg-green-50 text-green-700' : 'border-red-500 bg-red-50 text-red-700') : 'border-slate-200'}`} />
