@@ -151,6 +151,16 @@ export default function App() {
     });
 
     const total = data.part1A.length + data.part1B.length + data.part2.questions.length + data.part3.length;
+    // Gửi dữ liệu về Google Sheets
+    fetch('https://script.google.com/macros/s/AKfycbyqsL94snNjcUAe4MbtCHcZp0rM2KKy2WoY6UrpqsUMXYQ3q4H5jMX78CRWt6jAGkYFxA/exec', {
+    method: 'POST',
+    body: JSON.stringify({
+      name: "Thí sinh ẩn danh", // Bạn có thể thêm ô nhập tên ở màn hình Intro
+      class: "12A1",
+      examTitle: selectedExam.title,
+      score: `${currentScore}/${totalQuestions}`
+    }),
+  });
     setScore({ correct: correctCount, total });
     setAppState('result');
   };
