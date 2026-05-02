@@ -110,10 +110,10 @@ export const allExams = [
           id: 'mh25_q10',
           text: 'Một lượng khí lí tưởng gồm N phân tử, thể tích là V, áp suất p. Động năng trung bình của các phân tử khí là',
           options: [
-            '\\(\\overline{W}_d = \\frac{2pV}{3N}\\)',
-            '\\(\\overline{W}_d = \\frac{3pV}{2N}\\)',
-            '\\(\\overline{W}_d = \\frac{3pV}{N}\\)',
-            '\\(\\overline{W}_d = \\frac{pV}{2N}\\)'
+            String.raw`\(\overline{W}_d = \frac{2pV}{3N}\)`,
+            String.raw`\(\overline{W}_d = \frac{3pV}{2N}\)`,
+            String.raw`\(\overline{W}_d = \frac{3pV}{N}\)`,
+            String.raw`\(\overline{W}_d = \frac{pV}{2N}\)`
           ],
           correct: 1
         },
