@@ -288,10 +288,22 @@ export default function App() {
         {exam.part2 && (
           <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
             <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 2: Đọc hiểu ngữ liệu</h2>
+            
+            {/* 1. HIỂN THỊ ẢNH NGỮ LIỆU Ở ĐÂY (NẾU CÓ) */}
+            {exam.part2.image && (
+              <img 
+                src={exam.part2.image} 
+                className="mb-6 mx-auto block w-[90%] md:w-[60%] rounded-xl border border-slate-200 shadow-sm" 
+                alt="Minh họa ngữ liệu" 
+              />
+            )}
+
+            {/* 2. ĐOẠN VĂN BẢN NGỮ LIỆU */}
             <div 
               className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-8 italic"
               dangerouslySetInnerHTML={renderMath(exam.part2.passage)}
             />
+            
             <div className="space-y-10">
               {exam.part2.questions.map((q, idx) => (
                 <div key={q.id}>
