@@ -31,6 +31,7 @@
         {
           "id": "mh25_q3",
           "text": "Đường sức điện của hệ hai điện tích điểm $q_1$ và $q_2$ được mô tả như hình vẽ. Phát biểu nào sau đây là đúng khi nói về dấu của hai điện tích điểm?",
+          "image": "/images/q3.png",
           "options": [
             "$q_1 > 0, q_2 > 0$",
             "$q_1 > 0, q_2 < 0$",
