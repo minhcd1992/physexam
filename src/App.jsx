@@ -138,32 +138,43 @@ export default function App() {
   };
 
   const handleSubmit = () => {
-    let correctCount = 0;
-    const data = selectedExam.questions;
+  if (appState !== 'playing') return;
 
-    data.part1A.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
-    data.part1B.forEach(q => {
-      if (JSON.stringify(answers[q.id] || []) === JSON.stringify(q.correct)) correctCount++;
-    });
-    data.part2.questions.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
-    data.part3.forEach(q => {
-      if (answers[q.id]?.toString().trim() === q.correct) correctCount++;
-    });
+  let correctCount = 0;
+  const data = selectedExam.questions;
 
-    const total = data.part1A.length + data.part1B.length + data.part2.questions.length + data.part3.length;
-    // Gửi dữ liệu về Google Sheets
-    fetch('https://script.google.com/macros/s/AKfycbyqsL94snNjcUAe4MbtCHcZp0rM2KKy2WoY6UrpqsUMXYQ3q4H5jMX78CRWt6jAGkYFxA/exec', {
+  // Tính điểm
+  data.part1A.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
+  data.part1B.forEach(q => {
+    if (JSON.stringify(answers[q.id] || []) === JSON.stringify(q.correct)) correctCount++;
+  });
+  data.part2.questions.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
+  data.part3.forEach(q => {
+    if (answers[q.id]?.toString().trim() === q.correct) correctCount++;
+  });
+
+  const total = data.part1A.length + data.part1B.length + data.part2.questions.length + data.part3.length;
+  const finalScoreString = `${correctCount}/${total}`;
+
+  // GỬI DỮ LIỆU VỀ GOOGLE SHEETS
+  // Lưu ý: Thay 'Thí sinh ẩn danh' bằng biến name nếu bạn có state lưu tên
+  fetch('https://script.google.com/macros/s/AKfycbyqsL94snNjcUAe4MbtCHcZp0rM2KKy2WoY6UrpqsUMXYQ3q4H5jMX78CRWt6jAGkYFxA/exec', {
     method: 'POST',
+    mode: 'no-cors', // Rất quan trọng để tránh lỗi CORS
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({
-      name: "Thí sinh ẩn danh", // Bạn có thể thêm ô nhập tên ở màn hình Intro
+      name: answers['student_name'] || "Thí sinh ẩn danh", 
       class: "12A1",
       examTitle: selectedExam.title,
-      score: `${currentScore}/${totalQuestions}`
+      score: finalScoreString
     }),
-  });
-    setScore({ correct: correctCount, total });
-    setAppState('result');
-  };
+  }).catch(err => console.log("Lỗi gửi Sheet:", err));
+
+  setScore({ correct: correctCount, total });
+  setAppState('result');
+};
 
   // --- MÀN HÌNH 1: DANH SÁCH ĐỀ THI ---
   if (appState === 'menu') {
