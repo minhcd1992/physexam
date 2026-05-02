@@ -227,7 +227,7 @@ export default function App() {
                   {q.image && (
   <img 
     src={q.image} 
-    className="mt-6 mb-2 mx-auto block max-w-[80%] md:max-w-md rounded-xl border border-slate-200 shadow-sm" 
+    className="mt-6 mb-2 mx-auto block w-[70%] md:w-[40%] rounded-xl border border-slate-200 shadow-sm" 
     alt="Minh họa" 
   />
 )}
@@ -262,7 +262,7 @@ export default function App() {
                 {q.image && (
   <img 
     src={q.image} 
-    className="mt-6 mb-2 mx-auto block max-w-[80%] md:max-w-md rounded-xl border border-slate-200 shadow-sm" 
+    className="mt-6 mb-2 mx-auto block w-[70%] md:w-[40%] rounded-xl border border-slate-200 shadow-sm" 
     alt="Minh họa" 
   />
 )}
@@ -302,7 +302,7 @@ export default function App() {
                     {q.image && (
   <img 
     src={q.image} 
-    className="mt-6 mb-2 mx-auto block max-w-[80%] md:max-w-md rounded-xl border border-slate-200 shadow-sm" 
+    className="mt-6 mb-2 mx-auto block w-[70%] md:w-[40%] rounded-xl border border-slate-200 shadow-sm" 
     alt="Minh họa" 
   />
 )}
@@ -344,7 +344,7 @@ export default function App() {
                     {q.image && (
   <img 
     src={q.image} 
-    className="mt-6 mb-2 mx-auto block max-w-[80%] md:max-w-md rounded-xl border border-slate-200 shadow-sm" 
+    className="mt-6 mb-2 mx-auto block w-[70%] md:w-[40%] rounded-xl border border-slate-200 shadow-sm" 
     alt="Minh họa" 
   />
 )}
