@@ -4,20 +4,22 @@ import {
   Send, ChevronRight, Home 
 } from 'lucide-react';
 
-// Dòng này sẽ kéo toàn bộ đề thi từ file database của bạn vào web
-import { allExams } from './data/exam_db';
+// --- THƯ VIỆN HIỂN THỊ CÔNG THỨC TOÁN HỌC ---
 import 'katex/dist/katex.min.css';
 import Latex from 'react-latex-next';
 
+// --- DATABASE ĐỀ THI ---
+import { allExams } from './data/exam_db'; 
+
 export default function App() {
-  const [appState, setAppState] = useState('menu'); 
+  const [appState, setAppState] = useState('menu'); // menu, intro, playing, result, review
   const [selectedExam, setSelectedExam] = useState(null);
   const [timeLeft, setTimeLeft] = useState(0);
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState({ correct: 0, total: 0, scale10: 0 });
-  const [studentName, setStudentName] = useState(''); // Tách riêng state cho Tên học sinh
+  const [studentName, setStudentName] = useState('');
 
-  // Hẹn giờ
+  // Quản lý đếm ngược thời gian
   useEffect(() => {
     let timer;
     if (appState === 'playing' && timeLeft > 0) {
@@ -52,7 +54,7 @@ export default function App() {
   const handleStart = () => {
     setAppState('playing');
     setTimeLeft(selectedExam.duration);
-    setAnswers({}); // Chỉ xóa đáp án, giữ nguyên studentName
+    setAnswers({}); 
   };
 
   const handleAnswerChange = (questionId, value, type = 'single') => {
@@ -78,30 +80,28 @@ export default function App() {
     data.part1B.forEach(q => {
       if (JSON.stringify(answers[q.id] || []) === JSON.stringify(q.correct)) correctCount++;
     });
-    data.part2.questions.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
-    
-    // So sánh Part 3: Chuyển đổi dấu phẩy thành dấu chấm để tránh học sinh bị mất điểm oan
+    if (data.part2 && data.part2.questions) {
+      data.part2.questions.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
+    }
     data.part3.forEach(q => {
       const userAns = answers[q.id]?.toString().replace(',', '.').trim() || '';
       const correctAns = q.correct.toString().replace(',', '.').trim();
       if (userAns === correctAns) correctCount++;
     });
 
-    const total = data.part1A.length + data.part1B.length + data.part2.questions.length + data.part3.length;
+    const total = data.part1A.length + data.part1B.length + (data.part2?.questions?.length || 0) + data.part3.length;
     const finalScale10 = ((correctCount / total) * 10).toFixed(1);
 
     // Gửi dữ liệu về Google Sheets
     fetch('https://script.google.com/macros/s/AKfycbyqsL94snNjcUAe4MbtCHcZp0rM2KKy2WoY6UrpqsUMXYQ3q4H5jMX78CRWt6jAGkYFxA/exec', {
       method: 'POST',
       mode: 'no-cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name: studentName, 
         class: "Chưa xác định",
         examTitle: selectedExam.title,
-        score: finalScale10 // Gửi điểm hệ số 10 về sheet
+        score: finalScale10
       }),
     }).catch(err => console.log("Lỗi gửi Sheet:", err));
 
@@ -109,30 +109,21 @@ export default function App() {
     setAppState('result');
   };
 
-  // --- MÀN HÌNH 1: DANH SÁCH ĐỀ THI ---
+  // --- MÀN HÌNH 1: MENU CHỌN ĐỀ ---
   if (appState === 'menu') {
     return (
       <div className="min-h-screen bg-slate-50 p-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
-            <div className="bg-blue-600 p-2 rounded-lg text-white">
-              <FileText size={32} />
-            </div>
+            <div className="bg-blue-600 p-2 rounded-lg text-white"><FileText size={32} /></div>
             <h1 className="text-3xl font-black text-slate-800 uppercase tracking-tight">Hệ thống Thi thử Vật lí</h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {allExams.map(exam => (
-              <button 
-                key={exam.id}
-                onClick={() => handleSelectExam(exam)}
-                className="bg-white p-6 rounded-2xl shadow-sm border-2 border-transparent hover:border-blue-500 hover:shadow-md transition-all text-left group"
-              >
+              <button key={exam.id} onClick={() => handleSelectExam(exam)} className="bg-white p-6 rounded-2xl shadow-sm border-2 border-transparent hover:border-blue-500 hover:shadow-md transition-all text-left group">
                 <div className="text-blue-600 font-bold text-sm mb-2 uppercase">{exam.subject}</div>
                 <h3 className="text-lg font-bold text-slate-800 mb-4 group-hover:text-blue-700">{exam.title}</h3>
-                <div className="flex items-center text-slate-500 text-sm">
-                  <Clock size={16} className="mr-1" /> {exam.duration / 60} phút
-                  <ChevronRight size={16} className="ml-auto" />
-                </div>
+                <div className="flex items-center text-slate-500 text-sm"><Clock size={16} className="mr-1" /> {exam.duration / 60} phút <ChevronRight size={16} className="ml-auto" /></div>
               </button>
             ))}
           </div>
@@ -141,7 +132,7 @@ export default function App() {
     );
   }
 
-  // --- MÀN HÌNH 2: HƯỚNG DẪN THI ---
+  // --- MÀN HÌNH 2: NHẬP TÊN & HƯỚNG DẪN ---
   if (appState === 'intro') {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
@@ -152,29 +143,18 @@ export default function App() {
           </div>
           <div className="p-8">
             <div className="mb-6">
-              <label className="block text-sm font-bold text-slate-700 mb-2">Họ và Tên thí sinh (Bắt buộc):</label>
-              <input 
-                type="text" 
-                placeholder="Nhập tên của bạn..."
-                className="w-full p-4 border-2 border-slate-200 rounded-xl focus:border-blue-600 focus:outline-none"
-                value={studentName}
-                onChange={(e) => setStudentName(e.target.value)}
-              />
+              <label className="block text-sm font-bold text-slate-700 mb-2">Họ và Tên thí sinh:</label>
+              <input type="text" placeholder="Nhập tên của bạn..." className="w-full p-4 border-2 border-slate-200 rounded-xl focus:border-blue-600 focus:outline-none" value={studentName} onChange={(e) => setStudentName(e.target.value)} />
             </div>
-            
-            <h2 className="font-bold text-slate-800 mb-4 flex items-center"><AlertCircle className="mr-2 text-blue-600" /> Lưu ý trước khi thi:</h2>
+            <h2 className="font-bold text-slate-800 mb-4 flex items-center"><AlertCircle className="mr-2 text-blue-600" /> Lưu ý:</h2>
             <ul className="space-y-3 text-slate-600 mb-8 text-sm">
-              <li className="flex gap-2"> <CheckCircle className="text-green-500 shrink-0" size={18} /> Hệ thống tự động nộp bài khi hết giờ.</li>
-              <li className="flex gap-2"> <CheckCircle className="text-green-500 shrink-0" size={18} /> Phần điền đáp số: Có thể dùng dấu phẩy (,) hoặc dấu chấm (.) cho số thập phân.</li>
+              <li className="flex gap-2"><CheckCircle className="text-green-500 shrink-0" size={18} /> Hệ thống tự nộp bài khi hết giờ.</li>
+              <li className="flex gap-2"><CheckCircle className="text-green-500 shrink-0" size={18} /> Chấp nhận dấu phẩy (,) và dấu chấm (.) cho số thập phân.</li>
             </ul>
             <div className="flex gap-3">
-              <button onClick={() => setAppState('menu')} className="flex-1 bg-slate-100 text-slate-600 font-bold py-4 rounded-2xl hover:bg-slate-200 transition-all">Quay lại</button>
-              <button 
-                onClick={handleStart} 
-                disabled={!studentName || studentName.trim() === ''}
-                className="flex-2 bg-blue-600 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-2xl hover:bg-blue-700 transition-all flex items-center justify-center gap-2"
-              >
-                <Play fill="currentColor" size={20} /> BẮT ĐẦU NGAY
+              <button onClick={() => setAppState('menu')} className="flex-1 bg-slate-100 text-slate-600 font-bold py-4 rounded-2xl hover:bg-slate-200">Quay lại</button>
+              <button onClick={handleStart} disabled={!studentName.trim()} className="flex-2 bg-blue-600 disabled:bg-slate-300 text-white font-bold py-4 px-8 rounded-2xl hover:bg-blue-700 flex items-center justify-center gap-2">
+                <Play fill="currentColor" size={20} /> BẮT ĐẦU
               </button>
             </div>
           </div>
@@ -183,7 +163,7 @@ export default function App() {
     );
   }
 
-  // --- MÀN HÌNH 3 & 4: LÀM BÀI / XEM LẠI BÀI ---
+  // --- MÀN HÌNH CHÍNH: LÀM BÀI / XEM LẠI ---
   const exam = selectedExam.questions;
   const isReviewMode = appState === 'result' || appState === 'review';
 
@@ -191,26 +171,15 @@ export default function App() {
     <div className="min-h-screen bg-slate-100 flex flex-col">
       <header className="bg-white/80 backdrop-blur-md border-b sticky top-0 z-40 shadow-sm">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-          <button onClick={() => isReviewMode && setAppState('menu')} className="text-slate-500 hover:text-blue-600 transition-colors">
-            <Home size={24} />
-          </button>
-          
+          <button onClick={() => isReviewMode && setAppState('menu')} className="text-slate-500 hover:text-blue-600"><Home size={24} /></button>
           {appState === 'playing' && (
-            <div className={`font-mono text-xl font-black px-4 py-1.5 rounded-full ${timeLeft < 300 ? 'bg-red-50 text-red-600 animate-pulse' : 'bg-blue-50 text-blue-600'}`}>
-              {formatTime(timeLeft)}
-            </div>
+            <div className={`font-mono text-xl font-black px-4 py-1.5 rounded-full ${timeLeft < 300 ? 'bg-red-50 text-red-600 animate-pulse' : 'bg-blue-50 text-blue-600'}`}>{formatTime(timeLeft)}</div>
           )}
-
           {appState === 'playing' && (
-            <button onClick={() => window.confirm('Nộp bài ngay?') && handleSubmit()} className="bg-green-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-green-700 flex items-center gap-2">
-              <Send size={18} /> NỘP BÀI
-            </button>
+            <button onClick={() => window.confirm('Nộp bài?') && handleSubmit()} className="bg-green-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-green-700 flex items-center gap-2"><Send size={18} /> NỘP BÀI</button>
           )}
-
           {appState === 'review' && (
-             <button onClick={() => setAppState('result')} className="bg-blue-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-blue-700">
-               BẢNG ĐIỂM
-             </button>
+             <button onClick={() => setAppState('result')} className="bg-blue-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-blue-700">BẢNG ĐIỂM</button>
           )}
         </div>
       </header>
@@ -218,26 +187,21 @@ export default function App() {
       <main className="max-w-4xl mx-auto w-full p-4 md:p-8 space-y-10 pb-20">
         {/* PHẦN 1A */}
         <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
-          <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 1: Trắc nghiệm 1 đáp án</h2>
+          <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 1: Trắc nghiệm khách quan</h2>
           <div className="space-y-10">
             {exam.part1A.map((q, idx) => (
               <div key={q.id}>
-                <p className="text-slate-800 font-medium mb-4"><span className="text-blue-600 font-bold">Câu {idx + 1}:</span> {<Latex>{q.text}</Latex>}</p>
+                <div className="text-slate-800 font-medium mb-4">
+                  <span className="text-blue-600 font-bold">Câu {idx + 1}: </span> 
+                  <Latex>{q.text}</Latex>
+                  {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-4">
                   {q.options.map((opt, oIdx) => {
                     const isSelected = answers[q.id] === oIdx;
                     const isCorrect = q.correct === oIdx;
                     return (
-                      <button 
-                        key={oIdx}
-                        disabled={isReviewMode}
-                        onClick={() => handleAnswerChange(q.id, oIdx)}
-                        className={`text-left p-4 rounded-xl border-2 transition-all ${
-                          isReviewMode 
-                            ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60'))
-                            : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')
-                        }`}
-                      >
+                      <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx)} className={`text-left p-4 rounded-xl border-2 transition-all ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')}`}>
                         <span className="font-bold mr-2">{String.fromCharCode(65 + oIdx)}.</span> <Latex>{opt}</Latex>
                       </button>
                     );
@@ -250,29 +214,22 @@ export default function App() {
 
         {/* PHẦN 1B */}
         <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
-          <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 1B: Trắc nghiệm nhiều đáp án</h2>
+          <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 1B: Trắc nghiệm nhiều lựa chọn</h2>
           {exam.part1B.map((q, idx) => (
             <div key={q.id}>
-              <p className="text-slate-800 font-medium mb-4"><span className="text-blue-600 font-bold">Câu {exam.part1A.length + idx + 1}:</span> {q.text}</p>
+              <div className="text-slate-800 font-medium mb-4">
+                <span className="text-blue-600 font-bold">Câu {exam.part1A.length + idx + 1}: </span> 
+                <Latex>{q.text}</Latex>
+                {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
+              </div>
               <div className="space-y-3 pl-4">
                 {q.options.map((opt, oIdx) => {
                   const isSelected = (answers[q.id] || []).includes(oIdx);
                   const isCorrect = q.correct.includes(oIdx);
                   return (
-                    <button 
-                      key={oIdx}
-                      disabled={isReviewMode}
-                      onClick={() => handleAnswerChange(q.id, oIdx, 'multiple')}
-                      className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center gap-3 ${
-                        isReviewMode 
-                          ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60'))
-                          : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')
-                      }`}
-                    >
-                      <div className={`w-5 h-5 rounded border-2 flex items-center justify-center ${isSelected ? 'bg-blue-600 border-blue-600 text-white' : 'border-slate-300'}`}>
-                        {isSelected && <CheckCircle size={14} />}
-                      </div>
-                      {opt}
+                    <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx, 'multiple')} className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center gap-3 ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')}`}>
+                      <div className={`w-5 h-5 rounded border-2 flex items-center justify-center ${isSelected ? 'bg-blue-600 border-blue-600 text-white' : 'border-slate-300'}`}>{isSelected && <CheckCircle size={14} />}</div>
+                      <Latex>{opt}</Latex>
                     </button>
                   );
                 })}
@@ -282,68 +239,52 @@ export default function App() {
         </div>
 
         {/* PHẦN 2 */}
-        <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
-          <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 2: Đọc hiểu ngữ liệu</h2>
-          <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-8 italic">
-            {exam.part2.passage}
-          </div>
-          <div className="space-y-10">
-            {exam.part2.questions.map((q, idx) => (
-              <div key={q.id}>
-                <p className="text-slate-800 font-medium mb-4"><span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + idx + 1}:</span> {q.text}</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {q.options.map((opt, oIdx) => {
-                    const isSelected = answers[q.id] === oIdx;
-                    const isCorrect = q.correct === oIdx;
-                    return (
-                      <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx)}
-                        className={`text-left p-4 rounded-xl border-2 transition-all ${
-                          isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 font-bold' : (isSelected ? 'bg-red-50 border-red-500' : 'bg-slate-50 border-slate-100 opacity-60'))
-                          : (isSelected ? 'bg-blue-50 border-blue-600' : 'bg-white border-slate-100 hover:border-slate-300')
-                        }`}
-                      >
-                        {String.fromCharCode(65 + oIdx)}. {opt}
-                      </button>
-                    );
-                  })}
+        {exam.part2 && (
+          <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
+            <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 2: Đọc hiểu ngữ liệu</h2>
+            <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-8 italic"><Latex>{exam.part2.passage}</Latex></div>
+            <div className="space-y-10">
+              {exam.part2.questions.map((q, idx) => (
+                <div key={q.id}>
+                  <div className="text-slate-800 font-medium mb-4">
+                    <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + idx + 1}: </span> 
+                    <Latex>{q.text}</Latex>
+                    {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {q.options.map((opt, oIdx) => {
+                      const isSelected = answers[q.id] === oIdx;
+                      const isCorrect = q.correct === oIdx;
+                      return (
+                        <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx)} className={`text-left p-4 rounded-xl border-2 transition-all ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 font-bold' : (isSelected ? 'bg-red-50 border-red-500' : 'opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600' : 'bg-white border-slate-100')}`}><Latex>{opt}</Latex></button>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* PHẦN 3 */}
         <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
-          <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 3: Điền đáp số</h2>
+          <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 3: Câu hỏi điền đáp số</h2>
           <div className="space-y-8">
             {exam.part3.map((q, idx) => {
               const userVal = answers[q.id] || '';
-              // So sánh chấp nhận cả dấu phẩy và chấm khi xem lại
               const userValFormatted = userVal.toString().replace(',', '.').trim();
               const correctAnsFormatted = q.correct.toString().replace(',', '.').trim();
               const isCorrect = userValFormatted === correctAnsFormatted;
-              
               return (
                 <div key={q.id} className="flex flex-col md:flex-row md:items-start gap-4">
                   <div className="flex-1 text-slate-800 mt-2">
-                    <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + exam.part2.questions.length + idx + 1}:</span> {q.text}
+                    <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + (exam.part2?.questions?.length || 0) + idx + 1}: </span> 
+                    <Latex>{q.text}</Latex>
+                    {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
                   </div>
                   <div className="relative">
-                    <input 
-                      type="text" 
-                      placeholder="Đáp số..."
-                      disabled={isReviewMode}
-                      value={userVal}
-                      onChange={(e) => handleAnswerChange(q.id, e.target.value)}
-                      className={`w-full md:w-40 p-4 rounded-2xl border-2 font-mono text-lg focus:outline-none focus:border-blue-600 ${
-                        isReviewMode ? (isCorrect ? 'border-green-500 bg-green-50 text-green-700' : 'border-red-500 bg-red-50 text-red-700') : 'border-slate-200'
-                      }`}
-                    />
-                    {isReviewMode && !isCorrect && (
-                      <div className="text-sm bg-green-100 text-green-700 p-2 rounded-lg mt-2 font-bold text-center border border-green-200">
-                        Đáp án: {q.correct}
-                      </div>
-                    )}
+                    <input type="text" placeholder="Đáp số..." disabled={isReviewMode} value={userVal} onChange={(e) => handleAnswerChange(q.id, e.target.value)} className={`w-full md:w-40 p-4 rounded-2xl border-2 font-mono text-lg focus:outline-none focus:border-blue-600 ${isReviewMode ? (isCorrect ? 'border-green-500 bg-green-50 text-green-700' : 'border-red-500 bg-red-50 text-red-700') : 'border-slate-200'}`} />
+                    {isReviewMode && !isCorrect && <div className="text-sm bg-green-100 text-green-700 p-2 rounded-lg mt-2 font-bold text-center border border-green-200">Đáp án: {q.correct}</div>}
                   </div>
                 </div>
               );
@@ -352,29 +293,20 @@ export default function App() {
         </div>
       </main>
 
-      {/* MÀN HÌNH BẢNG ĐIỂM (OVERLAY) */}
+      {/* MÀN HÌNH BẢNG ĐIỂM */}
       {appState === 'result' && (
         <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md flex items-center justify-center p-4">
           <div className="bg-white rounded-[40px] p-10 max-w-sm w-full text-center shadow-2xl">
-            <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600">
-              <CheckCircle size={48} />
-            </div>
-            <h2 className="text-3xl font-black text-slate-800 mb-2 font-serif">HOÀN THÀNH!</h2>
-            
-            {/* Vùng hiển thị điểm được nâng cấp */}
+            <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600"><CheckCircle size={48} /></div>
+            <h2 className="text-3xl font-black text-slate-800 mb-2">HOÀN THÀNH!</h2>
             <div className="bg-slate-50 rounded-3xl p-8 mb-8 border border-slate-100">
-              <div className="text-6xl font-black text-blue-600 mb-2">
-                {score.scale10}<span className="text-2xl text-slate-400">/10</span>
-              </div>
-              <div className="text-slate-500 font-medium uppercase tracking-widest text-sm mb-3">Điểm số chính thức</div>
-              <div className="text-slate-400 text-sm font-medium border-t border-slate-200 pt-3">
-                Số câu đúng: {score.correct}/{score.total}
-              </div>
+              <div className="text-6xl font-black text-blue-600 mb-2">{score.scale10}<span className="text-2xl text-slate-400">/10</span></div>
+              <div className="text-slate-500 font-medium uppercase tracking-widest text-sm mb-3">Điểm số của bạn</div>
+              <div className="text-slate-400 text-sm font-medium border-t border-slate-200 pt-3">Đúng: {score.correct}/{score.total} câu</div>
             </div>
-
             <div className="flex flex-col gap-3">
-              <button onClick={() => setAppState('review')} className="w-full py-4 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all">XEM LẠI BÀI ĐÃ LÀM</button>
-              <button onClick={() => setAppState('menu')} className="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all">VỀ DANH SÁCH ĐỀ</button>
+              <button onClick={() => setAppState('review')} className="w-full py-4 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all">XEM LẠI BÀI</button>
+              <button onClick={() => setAppState('menu')} className="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all">VỀ MENU</button>
             </div>
           </div>
         </div>
