@@ -76,17 +76,16 @@ const allExams = [
       ]
     }
   }
-  // Bạn có thể thêm các đề thi mới vào đây theo cấu trúc tương tự
 ];
 
 export default function App() {
-  const [appState, setAppState] = useState('menu'); // menu, intro, playing, result
+  // Thêm trạng thái 'review'
+  const [appState, setAppState] = useState('menu'); 
   const [selectedExam, setSelectedExam] = useState(null);
   const [timeLeft, setTimeLeft] = useState(0);
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState({ correct: 0, total: 0 });
 
-  // Quản lý đếm ngược
   useEffect(() => {
     let timer;
     if (appState === 'playing' && timeLeft > 0) {
@@ -138,43 +137,41 @@ export default function App() {
   };
 
   const handleSubmit = () => {
-  if (appState !== 'playing') return;
+    if (appState !== 'playing') return;
 
-  let correctCount = 0;
-  const data = selectedExam.questions;
+    let correctCount = 0;
+    const data = selectedExam.questions;
 
-  // Tính điểm
-  data.part1A.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
-  data.part1B.forEach(q => {
-    if (JSON.stringify(answers[q.id] || []) === JSON.stringify(q.correct)) correctCount++;
-  });
-  data.part2.questions.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
-  data.part3.forEach(q => {
-    if (answers[q.id]?.toString().trim() === q.correct) correctCount++;
-  });
+    data.part1A.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
+    data.part1B.forEach(q => {
+      if (JSON.stringify(answers[q.id] || []) === JSON.stringify(q.correct)) correctCount++;
+    });
+    data.part2.questions.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
+    data.part3.forEach(q => {
+      if (answers[q.id]?.toString().trim() === q.correct) correctCount++;
+    });
 
-  const total = data.part1A.length + data.part1B.length + data.part2.questions.length + data.part3.length;
-  const finalScoreString = `${correctCount}/${total}`;
+    const total = data.part1A.length + data.part1B.length + data.part2.questions.length + data.part3.length;
+    const finalScoreString = `${correctCount}/${total}`;
 
-  // GỬI DỮ LIỆU VỀ GOOGLE SHEETS
-  // Lưu ý: Thay 'Thí sinh ẩn danh' bằng biến name nếu bạn có state lưu tên
-  fetch('https://script.google.com/macros/s/AKfycbyqsL94snNjcUAe4MbtCHcZp0rM2KKy2WoY6UrpqsUMXYQ3q4H5jMX78CRWt6jAGkYFxA/exec', {
-    method: 'POST',
-    mode: 'no-cors', // Rất quan trọng để tránh lỗi CORS
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      name: answers['student_name'] || "Thí sinh ẩn danh", 
-      class: "12A1",
-      examTitle: selectedExam.title,
-      score: finalScoreString
-    }),
-  }).catch(err => console.log("Lỗi gửi Sheet:", err));
+    // Gửi dữ liệu về Google Sheets
+    fetch('https://script.google.com/macros/s/AKfycbyqsL94snNjcUAe4MbtCHcZp0rM2KKy2WoY6UrpqsUMXYQ3q4H5jMX78CRWt6jAGkYFxA/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: answers['student_name'] || "Thí sinh ẩn danh", 
+        class: "12A1",
+        examTitle: selectedExam.title,
+        score: finalScoreString
+      }),
+    }).catch(err => console.log("Lỗi gửi Sheet:", err));
 
-  setScore({ correct: correctCount, total });
-  setAppState('result');
-};
+    setScore({ correct: correctCount, total });
+    setAppState('result');
+  };
 
   // --- MÀN HÌNH 1: DANH SÁCH ĐỀ THI ---
   if (appState === 'menu') {
@@ -208,7 +205,7 @@ export default function App() {
     );
   }
 
-  // --- MÀN HÌNH 2: HƯỚNG DẪN ---
+  // --- MÀN HÌNH 2: HƯỚNG DẪN THI ---
   if (appState === 'intro') {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
@@ -218,6 +215,17 @@ export default function App() {
             <p className="opacity-90">Thời gian làm bài: {selectedExam.duration / 60} phút</p>
           </div>
           <div className="p-8">
+            <div className="mb-6">
+              <label className="block text-sm font-bold text-slate-700 mb-2">Họ và Tên thí sinh (Bắt buộc):</label>
+              <input 
+                type="text" 
+                placeholder="Nhập tên của bạn..."
+                className="w-full p-4 border-2 border-slate-200 rounded-xl focus:border-blue-600 focus:outline-none"
+                value={answers['student_name'] || ''}
+                onChange={(e) => setAnswers(prev => ({...prev, student_name: e.target.value}))}
+              />
+            </div>
+            
             <h2 className="font-bold text-slate-800 mb-4 flex items-center"><AlertCircle className="mr-2 text-blue-600" /> Lưu ý trước khi thi:</h2>
             <ul className="space-y-3 text-slate-600 mb-8 text-sm">
               <li className="flex gap-2"> <CheckCircle className="text-green-500 shrink-0" size={18} /> Hệ thống tự động nộp bài khi hết giờ.</li>
@@ -225,7 +233,11 @@ export default function App() {
             </ul>
             <div className="flex gap-3">
               <button onClick={() => setAppState('menu')} className="flex-1 bg-slate-100 text-slate-600 font-bold py-4 rounded-2xl hover:bg-slate-200 transition-all">Quay lại</button>
-              <button onClick={handleStart} className="flex-2 bg-blue-600 text-white font-bold py-4 px-8 rounded-2xl hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
+              <button 
+                onClick={handleStart} 
+                disabled={!answers['student_name'] || answers['student_name'].trim() === ''}
+                className="flex-2 bg-blue-600 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-2xl hover:bg-blue-700 transition-all flex items-center justify-center gap-2"
+              >
                 <Play fill="currentColor" size={20} /> BẮT ĐẦU NGAY
               </button>
             </div>
@@ -235,25 +247,36 @@ export default function App() {
     );
   }
 
-  // --- MÀN HÌNH 3: LÀM BÀI & KẾT QUẢ ---
+  // --- MÀN HÌNH 3 & 4: LÀM BÀI / XEM LẠI BÀI ---
   const exam = selectedExam.questions;
+  // Gộp chung trạng thái Result và Review để khóa ô chọn
+  const isReviewMode = appState === 'result' || appState === 'review';
+
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col">
       {/* Sticky Header */}
       <header className="bg-white/80 backdrop-blur-md border-b sticky top-0 z-40 shadow-sm">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-          <button onClick={() => appState === 'result' && setAppState('menu')} className="text-slate-500 hover:text-blue-600 transition-colors">
+          <button onClick={() => isReviewMode && setAppState('menu')} className="text-slate-500 hover:text-blue-600 transition-colors">
             <Home size={24} />
           </button>
-          <div className={`font-mono text-xl font-black px-4 py-1.5 rounded-full ${timeLeft < 300 ? 'bg-red-50 text-red-600 animate-pulse' : 'bg-blue-50 text-blue-600'}`}>
-            {formatTime(timeLeft)}
-          </div>
-          {appState === 'playing' ? (
+          
+          {appState === 'playing' && (
+            <div className={`font-mono text-xl font-black px-4 py-1.5 rounded-full ${timeLeft < 300 ? 'bg-red-50 text-red-600 animate-pulse' : 'bg-blue-50 text-blue-600'}`}>
+              {formatTime(timeLeft)}
+            </div>
+          )}
+
+          {appState === 'playing' && (
             <button onClick={() => window.confirm('Nộp bài ngay?') && handleSubmit()} className="bg-green-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-green-700 flex items-center gap-2">
               <Send size={18} /> NỘP BÀI
             </button>
-          ) : (
-            <div className="font-bold text-blue-600">KẾT QUẢ: {score.correct}/{score.total}</div>
+          )}
+
+          {appState === 'review' && (
+             <button onClick={() => setAppState('result')} className="bg-blue-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-blue-700">
+               BẢNG ĐIỂM
+             </button>
           )}
         </div>
       </header>
@@ -269,16 +292,15 @@ export default function App() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-4">
                   {q.options.map((opt, oIdx) => {
                     const isSelected = answers[q.id] === oIdx;
-                    const isResult = appState === 'result';
                     const isCorrect = q.correct === oIdx;
                     return (
                       <button 
                         key={oIdx}
-                        disabled={isResult}
+                        disabled={isReviewMode}
                         onClick={() => handleAnswerChange(q.id, oIdx)}
                         className={`text-left p-4 rounded-xl border-2 transition-all ${
-                          isResult 
-                            ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60'))
+                          isReviewMode 
+                            ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60'))
                             : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')
                         }`}
                       >
@@ -301,16 +323,15 @@ export default function App() {
               <div className="space-y-3 pl-4">
                 {q.options.map((opt, oIdx) => {
                   const isSelected = (answers[q.id] || []).includes(oIdx);
-                  const isResult = appState === 'result';
                   const isCorrect = q.correct.includes(oIdx);
                   return (
                     <button 
                       key={oIdx}
-                      disabled={isResult}
+                      disabled={isReviewMode}
                       onClick={() => handleAnswerChange(q.id, oIdx, 'multiple')}
                       className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center gap-3 ${
-                        isResult 
-                          ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60'))
+                        isReviewMode 
+                          ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60'))
                           : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')
                       }`}
                     >
@@ -339,13 +360,12 @@ export default function App() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {q.options.map((opt, oIdx) => {
                     const isSelected = answers[q.id] === oIdx;
-                    const isResult = appState === 'result';
                     const isCorrect = q.correct === oIdx;
                     return (
-                      <button key={oIdx} disabled={isResult} onClick={() => handleAnswerChange(q.id, oIdx)}
+                      <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx)}
                         className={`text-left p-4 rounded-xl border-2 transition-all ${
-                          isResult ? (isCorrect ? 'bg-green-50 border-green-500' : (isSelected ? 'bg-red-50 border-red-500' : 'opacity-60'))
-                          : (isSelected ? 'bg-blue-50 border-blue-600' : 'bg-white border-slate-100')
+                          isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 font-bold' : (isSelected ? 'bg-red-50 border-red-500' : 'bg-slate-50 border-slate-100 opacity-60'))
+                          : (isSelected ? 'bg-blue-50 border-blue-600' : 'bg-white border-slate-100 hover:border-slate-300')
                         }`}
                       >
                         {String.fromCharCode(65 + oIdx)}. {opt}
@@ -363,26 +383,29 @@ export default function App() {
           <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 3: Điền đáp số</h2>
           <div className="space-y-8">
             {exam.part3.map((q, idx) => {
-              const isResult = appState === 'result';
               const userVal = answers[q.id] || '';
               const isCorrect = userVal.trim() === q.correct;
               return (
-                <div key={q.id} className="flex flex-col md:flex-row md:items-center gap-4">
-                  <div className="flex-1 text-slate-800">
+                <div key={q.id} className="flex flex-col md:flex-row md:items-start gap-4">
+                  <div className="flex-1 text-slate-800 mt-2">
                     <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + exam.part2.questions.length + idx + 1}:</span> {q.text}
                   </div>
                   <div className="relative">
                     <input 
                       type="text" 
                       placeholder="Đáp số..."
-                      disabled={isResult}
+                      disabled={isReviewMode}
                       value={userVal}
                       onChange={(e) => handleAnswerChange(q.id, e.target.value)}
                       className={`w-full md:w-40 p-4 rounded-2xl border-2 font-mono text-lg focus:outline-none focus:border-blue-600 ${
-                        isResult ? (isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-slate-100'
+                        isReviewMode ? (isCorrect ? 'border-green-500 bg-green-50 text-green-700' : 'border-red-500 bg-red-50 text-red-700') : 'border-slate-200'
                       }`}
                     />
-                    {isResult && !isCorrect && <div className="text-xs text-green-600 mt-1 font-bold">Đáp án: {q.correct}</div>}
+                    {isReviewMode && !isCorrect && (
+                      <div className="text-sm bg-green-100 text-green-700 p-2 rounded-lg mt-2 font-bold text-center border border-green-200">
+                        Đáp án: {q.correct}
+                      </div>
+                    )}
                   </div>
                 </div>
               );
@@ -391,10 +414,10 @@ export default function App() {
         </div>
       </main>
 
-      {/* MÀN HÌNH KẾT QUẢ (OVERLAY) */}
+      {/* MÀN HÌNH BẢNG ĐIỂM (OVERLAY) */}
       {appState === 'result' && (
         <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="bg-white rounded-[40px] p-10 max-w-sm w-full text-center shadow-2xl scale-in-center">
+          <div className="bg-white rounded-[40px] p-10 max-w-sm w-full text-center shadow-2xl">
             <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600">
               <CheckCircle size={48} />
             </div>
@@ -404,7 +427,8 @@ export default function App() {
               <div className="text-slate-500 font-medium uppercase tracking-widest text-sm">Điểm số của bạn</div>
             </div>
             <div className="flex flex-col gap-3">
-              <button onClick={() => setAppState('playing')} className="w-full py-4 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all">XEM LẠI BÀI</button>
+              {/* Sửa nút này để đổi sang chế độ Review */}
+              <button onClick={() => setAppState('review')} className="w-full py-4 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all">XEM LẠI BÀI ĐÃ LÀM</button>
               <button onClick={() => setAppState('menu')} className="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all">VỀ DANH SÁCH ĐỀ</button>
             </div>
           </div>
