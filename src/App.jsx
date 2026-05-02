@@ -14,13 +14,6 @@ const latexDelimiters = [
   { left: '\\[', right: '\\]', display: true },
 ];
 
-// --- HÀM XỬ LÝ LATEX CỦA BẠN (CỨU TINH CỦA DỰ ÁN) ---
-const fixLatex = (str) => {
-  if (!str) return '';
-  // Tìm tất cả các dấu \ đơn và nhân đôi chúng lên thành \\
-  return str.replace(/\\/g, '\\\\');
-};
-
 export default function App() {
   const [allExams, setAllExams] = useState([]); 
   const [isLoading, setIsLoading] = useState(true); 
@@ -220,7 +213,7 @@ export default function App() {
                 <div className="text-slate-800 font-medium mb-4">
                   <span className="text-blue-600 font-bold">Câu {idx + 1}: </span> 
                   {/* BỌC fixLatex Ở ĐÂY */}
-                  <Latex delimiters={latexDelimiters}>{fixLatex(q.text)}</Latex>
+                  <Latex delimiters={latexDelimiters}>{q.text}</Latex>
                   {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-4">
@@ -231,7 +224,7 @@ export default function App() {
                       <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx)} className={`text-left p-4 rounded-xl border-2 transition-all ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')}`}>
                         <span className="font-bold mr-2">{String.fromCharCode(65 + oIdx)}.</span> 
                         {/* BỌC fixLatex Ở ĐÂY */}
-                        <Latex delimiters={latexDelimiters}>{fixLatex(opt)}</Latex>
+                        <Latex delimiters={latexDelimiters}>{opt}</Latex>
                       </button>
                     );
                   })}
@@ -249,7 +242,7 @@ export default function App() {
               <div className="text-slate-800 font-medium mb-4">
                 <span className="text-blue-600 font-bold">Câu {exam.part1A.length + idx + 1}: </span> 
                 {/* BỌC fixLatex Ở ĐÂY */}
-                <Latex delimiters={latexDelimiters}>{fixLatex(q.text)}</Latex>
+                <Latex delimiters={latexDelimiters}>{q.text}</Latex>
                 {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
               </div>
               <div className="space-y-3 pl-4">
@@ -260,7 +253,7 @@ export default function App() {
                     <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx, 'multiple')} className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center gap-3 ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')}`}>
                       <div className={`w-5 h-5 rounded border-2 flex items-center justify-center ${isSelected ? 'bg-blue-600 border-blue-600 text-white' : 'border-slate-300'}`}>{isSelected && <CheckCircle size={14} />}</div>
                       {/* BỌC fixLatex Ở ĐÂY */}
-                      <Latex delimiters={latexDelimiters}>{fixLatex(opt)}</Latex>
+                      <Latex delimiters={latexDelimiters}>{opt}</Latex>
                     </button>
                   );
                 })}
@@ -275,7 +268,7 @@ export default function App() {
             <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 2: Đọc hiểu ngữ liệu</h2>
             <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-8 italic">
               {/* BỌC fixLatex Ở ĐÂY */}
-              <Latex delimiters={latexDelimiters}>{fixLatex(exam.part2.passage)}</Latex>
+              <Latex delimiters={latexDelimiters}>{exam.part2.passage}</Latex>
             </div>
             <div className="space-y-10">
               {exam.part2.questions.map((q, idx) => (
@@ -283,7 +276,7 @@ export default function App() {
                   <div className="text-slate-800 font-medium mb-4">
                     <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + idx + 1}: </span> 
                     {/* BỌC fixLatex Ở ĐÂY */}
-                    <Latex delimiters={latexDelimiters}>{fixLatex(q.text)}</Latex>
+                    <Latex delimiters={latexDelimiters}>{q.text}</Latex>
                     {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -294,7 +287,7 @@ export default function App() {
                         <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx)} className={`text-left p-4 rounded-xl border-2 transition-all ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 font-bold' : (isSelected ? 'bg-red-50 border-red-500' : 'opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600' : 'bg-white border-slate-100')}`}>
                           <span className="font-bold mr-2">{String.fromCharCode(65 + oIdx)}.</span>
                           {/* BỌC fixLatex Ở ĐÂY */}
-                          <Latex delimiters={latexDelimiters}>{fixLatex(opt)}</Latex>
+                          <Latex delimiters={latexDelimiters}>{opt}</Latex>
                         </button>
                       );
                     })}
@@ -319,7 +312,7 @@ export default function App() {
                   <div className="flex-1 text-slate-800 mt-2">
                     <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + (exam.part2?.questions?.length || 0) + idx + 1}: </span> 
                     {/* BỌC fixLatex Ở ĐÂY */}
-                    <Latex delimiters={latexDelimiters}>{fixLatex(q.text)}</Latex>
+                    <Latex delimiters={latexDelimiters}>{q.text}</Latex>
                     {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
                   </div>
                   <div className="relative">
