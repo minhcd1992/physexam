@@ -17,8 +17,7 @@ const latexDelimiters = [
 ];
 
 // --- DATABASE ĐỀ THI ---
-import { allExams } from './data/exam_db'; 
-
+import allExams from './data/exam_db.json';
 export default function App() {
   const [appState, setAppState] = useState('menu');
   const [selectedExam, setSelectedExam] = useState(null);
