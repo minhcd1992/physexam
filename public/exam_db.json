@@ -175,6 +175,7 @@
         {
           "id": "mh25_q16",
           "text": "Bản đồ điện thế của một vùng không gian được mô tả theo đường đồng mức (đường đẳng thế) như hình vẽ. Một điện tích điểm $q = 8 \\mu\\text{C}$ dịch chuyển từ điểm A lần lượt qua các điểm B, C rồi đến D. Công của lực điện thực hiện lên điện tích có giá trị bao nhiêu?",
+          "image": "/images/q16.png",
           "options": [
             "-800 μJ.",
             "800 μJ.",
@@ -186,6 +187,7 @@
         {
           "id": "mh25_q17",
           "text": "Đường đặc trưng vôn - ampe của hai điện trở $R_1$ và $R_2$ ở 20°C được thể hiện như hình vẽ. Khi mắc nối tiếp 2 điện trở này để tạo thành bộ điện trở thì điện trở tương đương của bộ bằng bao nhiêu?",
+          "image": "/images/q17.png",
           "options": [
             "1,8 Ω.",
             "2,4 Ω.",
@@ -277,6 +279,7 @@
         {
           "id": "mh25_q25",
           "text": "Nhãn dán trên bao bì của một số thực phẩm được bán trong siêu thị tại một số nước có biểu tượng Radura (Cây xanh trong vòng tròn đứt nét). Những phương án nào sau đây đúng với ý nghĩa của biểu tượng trên?",
+          "image": "/images/q25.png",
           "options": [
             "1. Thực phẩm này đã bị chiếu xạ y nên hạn chế sử dụng.",
             "2. Thực phẩm này đã được chiếu xạ y và an toàn để sử dụng.",
@@ -289,15 +292,17 @@
       ],
       "part2": {
         "passage": "NGỮ LIỆU 1: Một sinh viên kĩ thuật thử nghiệm hệ thống cung cấp điện cho đèn dây tóc 12V - 6W bằng cách đạp xe. Máy phát điện xoay chiều được sử dụng có cấu tạo gồm một khung dây hình chữ nhật có kích thước 1 cm x 3 cm quay trong từ trường có độ lớn cảm ứng từ 0,6 T. Khung dây được dẫn động bằng một vòng tròn nhỏ trên máy phát điện có đường kính 1,6 cm và được nối với bánh xe bằng dây đai truyền động. Khi cho bánh xe quay đều để một điểm trên bánh xe có tốc độ 15 m/s thì máy phát tạo ra suất điện động xoay chiều có giá trị cực đại là 17 V.\n\nNGỮ LIỆU 2: Vào năm 2019, một trận động đất có độ lớn 5,4 độ richter xảy ra tại Trùng Khánh tỉnh Cao Bằng. Khi sóng địa chấn P được phát ra từ một vị trí khởi nguồn của động đất (nguồn sóng ở tâm chấn) với tốc độ khoảng 5000 m/s thì nhà cửa, công trình và các đồ đạc, vật dụng của nhà dân ở những vị trí cách xa tâm chấn vẫn bị ảnh hưởng do có sóng truyền qua. Độ richter được tính như sau: $M_L = \\log A - \\log A_0$, với A là biên độ tối đa đo được và $A_0$ là biên độ chuẩn. Một trận động đất được xem có cấp độ nhẹ khi $M_L < 4$, trung bình khi $4 \\le M_L < 5$, mạnh khi $5 \\le M_L \\le 6$ và rất mạnh khi $M_L > 6$.",
+        "image": "/images/q26-28.png",
         "questions": [
           {
             "id": "mh25_q26",
             "text": "Dựa vào Ngữ liệu 1: Hình vẽ nào sau đây thể hiện đúng vị trí và sự quay của khung dây trong từ trường bên trong máy phát điện?",
+            "image": "/images/q26.png",
             "options": [
-              "Hình A (Trục quay tịnh tiến).",
-              "Hình B (Trục quay song song từ trường).",
-              "Hình C (Trục quay vuông góc khung).",
-              "Hình D (Trục quay nằm trong mặt phẳng khung và vuông góc từ trường)."
+              "Hình A ",
+              "Hình B ",
+              "Hình C ",
+              "Hình D "
             ],
             "correct": 3
           },
