@@ -6,6 +6,8 @@ import {
 
 // Dòng này sẽ kéo toàn bộ đề thi từ file database của bạn vào web
 import { allExams } from './data/exam_db';
+import 'katex/dist/katex.min.css';
+import Latex from 'react-latex-next';
 
 export default function App() {
   const [appState, setAppState] = useState('menu'); 
@@ -220,7 +222,7 @@ export default function App() {
           <div className="space-y-10">
             {exam.part1A.map((q, idx) => (
               <div key={q.id}>
-                <p className="text-slate-800 font-medium mb-4"><span className="text-blue-600 font-bold">Câu {idx + 1}:</span> {q.text}</p>
+                <p className="text-slate-800 font-medium mb-4"><span className="text-blue-600 font-bold">Câu {idx + 1}:</span> {<Latex>{q.text}</Latex>}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-4">
                   {q.options.map((opt, oIdx) => {
                     const isSelected = answers[q.id] === oIdx;
@@ -236,7 +238,7 @@ export default function App() {
                             : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')
                         }`}
                       >
-                        <span className="font-bold mr-2">{String.fromCharCode(65 + oIdx)}.</span> {opt}
+                        <span className="font-bold mr-2">{String.fromCharCode(65 + oIdx)}.</span> <Latex>{opt}</Latex>
                       </button>
                     );
                   })}
