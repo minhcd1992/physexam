@@ -8,6 +8,14 @@ import {
 import 'katex/dist/katex.min.css';
 import Latex from 'react-latex-next';
 
+// THÊM ĐOẠN NÀY ĐỂ ÉP THƯ VIỆN NHẬN DIỆN DẤU $
+const latexDelimiters = [
+  { left: '$$', right: '$$', display: true },
+  { left: '$', right: '$', display: false },
+  { left: '\\(', right: '\\)', display: false },
+  { left: '\\[', right: '\\]', display: true },
+];
+
 // --- DATABASE ĐỀ THI ---
 import { allExams } from './data/exam_db'; 
 
@@ -193,7 +201,7 @@ export default function App() {
               <div key={q.id}>
                 <div className="text-slate-800 font-medium mb-4">
                   <span className="text-blue-600 font-bold">Câu {idx + 1}: </span> 
-                  <Latex>{q.text}</Latex>
+                  <Latex delimiters={latexDelimiters}>{q.text}</Latex>
                   {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-4">
@@ -202,7 +210,7 @@ export default function App() {
                     const isCorrect = q.correct === oIdx;
                     return (
                       <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx)} className={`text-left p-4 rounded-xl border-2 transition-all ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')}`}>
-                        <span className="font-bold mr-2">{String.fromCharCode(65 + oIdx)}.</span> <Latex>{opt}</Latex>
+                        <span className="font-bold mr-2">{String.fromCharCode(65 + oIdx)}.</span> <Latex delimiters={latexDelimiters}>{opt}</Latex>
                       </button>
                     );
                   })}
