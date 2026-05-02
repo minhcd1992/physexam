@@ -1,71 +1,402 @@
 // --- CƠ SỞ DỮ LIỆU ĐỀ THI ---
 export const allExams = [
   {
-    id: 'hcmue_phys_2025_01',
-    title: 'Đề số 1',
+    id: 'hcmue_phys_2025_minhhoa',
+    title: 'Đề thi minh họa ĐGNL Chuyên biệt 2025',
     subject: 'VẬT LÍ',
     duration: 90 * 60,
     questions: {
       part1A: [
         {
-          id: 'q1',
-          text: 'Trong dao động tắt dần của một con lắc lò xo, đại lượng nào sau đây luôn giảm liên tục theo thời gian?',
-          options: ['Li độ.', 'Gia tốc.', 'Động năng.', 'Cơ năng.'],
+          id: 'mh25_q1',
+          text: 'Dao động nào dưới đây là dao động cưỡng bức?',
+          options: [
+            'Sự dao động của màng trống sau khi ngừng gõ.',
+            'Sự dao động của dây đàn guitar sau khi ngừng gảy đàn.',
+            'Sự dao động của bộ phận giảm xóc sau khi qua gờ giảm tốc.',
+            'Sự dao động của chiếc nôi điện khi đang hoạt động.'
+          ],
           correct: 3
         },
         {
-          id: 'q2',
-          text: 'Tia nào sau đây có bản chất là dòng các hạt mang điện?',
-          options: ['Tia X.', 'Tia gamma (γ).', 'Tia alpha (α).', 'Tia tử ngoại.'],
+          id: 'mh25_q2',
+          text: 'Cho phát biểu sau: "Các bức xạ điện từ được sắp xếp theo chiều tăng dần bước sóng trong thang sóng điện từ là: tia γ, tia X, ...(1)..., ánh sáng vàng, vi sóng". Trong phát biểu này, (1) là bức xạ điện từ nào sau đây?',
+          options: [
+            'tia tử ngoại.',
+            'tia hồng ngoại.',
+            'ánh sáng đỏ.',
+            'sóng FM.'
+          ],
+          correct: 0
+        },
+        {
+          id: 'mh25_q3',
+          text: 'Đường sức điện của hệ hai điện tích điểm $q_1$ và $q_2$ được mô tả như hình vẽ. Phát biểu nào sau đây là đúng khi nói về dấu của hai điện tích điểm?',
+          options: [
+            '$q_1 > 0, q_2 > 0$',
+            '$q_1 > 0, q_2 < 0$',
+            '$q_1 < 0, q_2 > 0$',
+            '$q_1 < 0, q_2 < 0$'
+          ],
           correct: 2
         },
         {
-          id: 'q3',
-          text: 'Theo thang sóng điện từ, bức xạ nào sau đây có bước sóng dài nhất?',
-          options: ['Tia X', 'Ánh sáng vàng', 'Vi sóng', 'Tia hồng ngoại'],
+          id: 'mh25_q4',
+          text: 'Năm 2019, các nhà khoa học Brazil đã công bố nghiên cứu cho thấy một loài lươn tại vùng nước ngọt rừng Amazon của Nam Mỹ có khả năng phóng luồng điện lên đến 860 V, mức mạnh nhất từ trước đến nay trong thế giới động vật. Nước bao quanh con lươn sẽ tạo thành một mạch điện giữa đầu và đuôi của nó. Nếu xem nước xung quanh lươn có tổng điện trở là 430 Ω, giả sử bỏ qua điện trở của lươn thì lươn có thể phóng ra dòng điện có cường độ bằng bao nhiêu?',
+          options: [
+            '0,15 A.',
+            '0,30 A.',
+            '2,00 A.',
+            '1,5 A.'
+          ],
           correct: 2
+        },
+        {
+          id: 'mh25_q5',
+          text: 'Khi sắp xếp độ lớn lực tương tác giữa các phân tử chất rắn, chất lỏng và chất khí theo thứ tự từ nhỏ đến lớn, cách sắp xếp nào sau đây là đúng?',
+          options: [
+            'Khí, rắn, lỏng.',
+            'Rắn, khí, lỏng.',
+            'Khí, lỏng, rắn.',
+            'Rắn, lỏng, khí.'
+          ],
+          correct: 2
+        },
+        {
+          id: 'mh25_q6',
+          text: 'Nhiệt độ nào sau đây KHÔNG tồn tại trong thực tế?',
+          options: [
+            '-142°C.',
+            '-324°C.',
+            '758°C.',
+            '365°C.'
+          ],
+          correct: 1
+        },
+        {
+          id: 'mh25_q7',
+          text: 'Hiện tượng nào sau đây KHÔNG liên quan đến sự nóng chảy?',
+          options: [
+            'Cầu chì bị đứt khi dòng điện qua nó có cường độ lớn hơn giá trị cho phép.',
+            'Thép được nấu trong lò luyện kim.',
+            'Giọt nước đọng bên ngoài cốc nước đá.',
+            'Đá trong cốc nước chanh đá ngày càng nhỏ đi.'
+          ],
+          correct: 2
+        },
+        {
+          id: 'mh25_q8',
+          text: 'Chuyển động Brown có thể quan sát được trong các môi trường nào sau đây?',
+          options: [
+            'Chất rắn, chất lỏng.',
+            'Chất rắn, chất khí.',
+            'Chất lỏng, chất khí.',
+            'Chân không, chất rắn.'
+          ],
+          correct: 2
+        },
+        {
+          id: 'mh25_q9',
+          text: 'Nếu thể tích của một khối khí xác định tăng gấp đôi khi nhiệt độ được giữ không đổi thì áp suất của khối khí đó sẽ thay đổi như thế nào?',
+          options: [
+            'Giảm hai lần.',
+            'Tăng hai lần.',
+            'Tăng bốn lần.',
+            'Giảm bốn lần.'
+          ],
+          correct: 0
+        },
+        {
+          id: 'mh25_q10',
+          text: 'Một lượng khí lí tưởng gồm N phân tử, thể tích là V, áp suất p. Động năng trung bình của các phân tử khí là',
+          options: [
+            '$\\overline{W}_d = \\frac{2pV}{3N}$',
+            '$\\overline{W}_d = \\frac{3pV}{2N}$',
+            '$\\overline{W}_d = \\frac{3pV}{N}$',
+            '$\\overline{W}_d = \\frac{pV}{2N}$'
+          ],
+          correct: 1
+        },
+        {
+          id: 'mh25_q11',
+          text: 'Đơn vị nào sau đây là đơn vị đo cảm ứng từ?',
+          options: [
+            'tesla (T).',
+            'weber (Wb).',
+            'ampere (A).',
+            'volt (V).'
+          ],
+          correct: 0
+        },
+        {
+          id: 'mh25_q12',
+          text: 'Thiết bị nào sau đây hoạt động dựa trên nguyên tắc của hiện tượng cảm ứng điện từ?',
+          options: [
+            'Bếp hồng ngoại.',
+            'Lò sưởi điện.',
+            'Ấm đun siêu tốc.',
+            'Máy phát điện.'
+          ],
+          correct: 3
+        },
+        {
+          id: 'mh25_q13',
+          text: 'Biết nguyên tử carbon nằm ở vị trí thứ 6 trong bảng tuần hoàn các nguyên tố hoá học. Kí hiệu nào sau đây là kí hiệu của đồng vị carbon có 8 neutron?',
+          options: [
+            '${}_{6}^{14}C$',
+            '${}_{8}^{14}C$',
+            '${}_{6}^{6}C$',
+            '${}_{14}^{6}C$'
+          ],
+          correct: 0
+        },
+        {
+          id: 'mh25_q14',
+          text: 'Năng lượng liên kết riêng của các hạt nhân ${}_{6}^{14}C$, ${}_{4}^{9}Be$, ${}_{26}^{56}Fe$, ${}_{47}^{108}Ag$ lần lượt là 7,7 MeV, 6,3 MeV, 8,8 MeV, 8,6 MeV. Hạt nhân nào trong số những hạt nhân trên có mức độ bền vững kém nhất?',
+          options: [
+            '${}_{6}^{14}C$',
+            '${}_{4}^{9}Be$',
+            '${}_{26}^{56}Fe$',
+            '${}_{47}^{108}Ag$'
+          ],
+          correct: 1
+        },
+        {
+          id: 'mh25_q15',
+          text: 'Phát biểu nào sau đây KHÔNG đúng về quy tắc an toàn khi làm việc với nguồn phóng xạ?',
+          options: [
+            'Nên ưu tiên sử dụng các phương tiện điều khiển từ xa hoặc cánh tay robot khi thao tác với các nguồn phóng xạ.',
+            'Chỉ cần mặc trang phục bảo hộ là có thể làm việc liên tục trong thời gian dài với các nguồn phóng xạ.',
+            'Các hộp đựng chất phóng xạ cần có lớp lót bằng chì với độ dày phù hợp để tăng cường khả năng ngăn chặn các tia phóng xạ thoát ra.',
+            'Sử dụng trang phục bảo hộ phù hợp, tăng khoảng cách đến nguồn phóng xạ và giảm thời gian phơi nhiễm khi làm việc.'
+          ],
+          correct: 1
+        },
+        {
+          id: 'mh25_q16',
+          text: 'Bản đồ điện thế của một vùng không gian được mô tả theo đường đồng mức (đường đẳng thế) như hình vẽ. Một điện tích điểm $q = 8 \\mu\\text{C}$ dịch chuyển từ điểm A lần lượt qua các điểm B, C rồi đến D. Công của lực điện thực hiện lên điện tích có giá trị bao nhiêu?',
+          options: [
+            '-800 μJ.',
+            '800 μJ.',
+            '-2400 μJ.',
+            '2400 μJ.'
+          ],
+          correct: 2
+        },
+        {
+          id: 'mh25_q17',
+          text: 'Đường đặc trưng vôn - ampe của hai điện trở $R_1$ và $R_2$ ở 20°C được thể hiện như hình vẽ. Khi mắc nối tiếp 2 điện trở này để tạo thành bộ điện trở thì điện trở tương đương của bộ bằng bao nhiêu?',
+          options: [
+            '1,8 Ω.',
+            '2,4 Ω.',
+            '1,26 Ω.',
+            '4,2 Ω.'
+          ],
+          correct: 3
+        },
+        {
+          id: 'mh25_q18',
+          text: 'Một đoạn dây dẫn thẳng mang dòng điện đặt trong không khí và trong vùng có từ trường đều với độ lớn cảm ứng từ là 50 mT. Biết trong mỗi giây có $2 \\times 10^{19}$ electron chạy qua tiết diện thẳng của dây, điện tích của một electron là $-1,6 \\times 10^{-19}$ C. Dây dẫn hợp với vectơ cảm ứng từ một góc 30°. Độ lớn lực từ tác dụng lên 1 m chiều dài dây dẫn bằng bao nhiêu?',
+          options: [
+            '80 N.',
+            '8 N.',
+            '0,8 N.',
+            '0,08 N.'
+          ],
+          correct: 3
+        },
+        {
+          id: 'mh25_q19',
+          text: 'Xét một máy biến áp lí tưởng có số vòng dây quấn ở cuộn sơ cấp và thứ cấp lần lượt là $N_1$ và $N_2$. Khi đặt vào hai đầu cuộn dây sơ cấp một điện áp xoay chiều có tần số $f_1$ và giá trị hiệu dụng 220 V, thì điện áp xoay chiều giữa hai đầu của cuộn thứ cấp có tần số $f_2$ và giá trị hiệu dụng 110 V. Cường độ dòng điện hiệu dụng trong cuộn sơ cấp và thứ cấp lần lượt là $I_1$ và $I_2$. Phương án nào sau đây là đúng?',
+          options: [
+            '$f_1 = 2f_2$.',
+            '$I_1 = 2I_2$.',
+            '$N_1 = 2N_2$.',
+            '$f_2 = 2f_1$.'
+          ],
+          correct: 2
+        },
+        {
+          id: 'mh25_q20',
+          text: 'Sức căng của dây đàn guitar có thể được điều chỉnh bằng cách vặn khóa dây đàn. Việc chỉnh sức căng của dây đàn làm thay đổi tốc độ truyền sóng trên dây. Xét một dây đàn dài 64 cm khi được gảy phát ra âm cơ bản có tần số 275 Hz, quan sát thấy trên dây đàn thấy chỉ có hai điểm cố định. Nhạc công vặn khóa dây đàn để tốc độ truyền sóng trên dây tăng thêm 70,4 m/s, khi đó dây đàn phát ra âm cơ bản có tần số $f_0$. Giá trị của $f_0$ bằng bao nhiêu?',
+          options: [
+            '330 Hz.',
+            '220 Hz.',
+            '385 Hz.',
+            '165 Hz.'
+          ],
+          correct: 0
         }
       ],
       part1B: [
         {
-          id: 'q4',
-          text: 'Trong các dao động sau đây, những dao động nào là dao động cưỡng bức? (Chọn nhiều đáp án)',
+          id: 'mh25_q21',
+          text: 'Có ba thùng cách nhiệt A, B, C đựng nước ở nhiệt độ lần lượt là 90°C, 40°C, t°C. Khi múc $n_1$ ca nước từ thùng A, $n_2$ ca nước từ thùng B, rồi đổ vào thùng C thì nhiệt độ cân bằng trong thùng C là 50°C. Biết tỉ lệ khối lượng nước được múc giữa hai thùng A và B để đổ vào thùng C là 3/2. Xem khối lượng nước được múc trong mỗi lần là như nhau và ban đầu thùng C chứa lượng nước bằng với lượng nước được đổ vào từ thùng A và B. Giả sử sự trao đổi nhiệt của nước với môi trường bên ngoài và dụng cụ múc nước là không đáng kể. Những phát biểu nào sau đây đúng?',
           options: [
-            'Sự dao động của màng trống sau khi ngừng gõ.',
-            'Sự dao động của bộ phận giảm xóc sau khi qua gờ giảm tốc.',
-            'Sự dao động của chiếc nôi điện khi đang hoạt động.',
-            'Sự dao động của con lắc đồng hồ khi máy đồng hồ đang chạy.'
+            '1. Nếu $n_1 = 3, n_2 = 2$ thì nhiệt độ ban đầu của nước trong thùng cách nhiệt C là 30°C.',
+            '2. Nếu $n_1 = 2, n_2 = 3$ thì nhiệt độ ban đầu của nước trong thùng cách nhiệt C là 20°C.',
+            '3. Nhiệt lượng hấp thụ của nước ở thùng C bằng nhiệt lượng tỏa ra của nước được múc từ thùng A và thùng B.',
+            '4. Nhiệt lượng tỏa ra của nước được múc từ thùng A bằng nhiệt lượng hấp thụ của nước ở thùng C và nước được múc từ thùng B.'
           ],
-          correct: [2, 3]
+          correct: [0, 3]
+        },
+        {
+          id: 'mh25_q22',
+          text: 'Những phát biểu nào sau đây đúng khi nói về vai trò của lớp vật liệu hấp thụ dao động trong đầu dò của máy siêu âm?',
+          options: [
+            '1. Tạo ra dao động cưỡng bức đối với tinh thể áp điện nhằm tạo ra sóng siêu âm.',
+            '2. Điều hướng sóng âm truyền theo một chiều từ bề mặt trước của tinh thể áp điện đến vị trí cần chẩn đoán.',
+            '3. Hấp thụ sóng siêu âm truyền ngược từ bề mặt sau vào đầu dò.',
+            '4. Góp phần tăng cường độ của tín hiệu.'
+          ],
+          correct: [2]
+        },
+        {
+          id: 'mh25_q23',
+          text: 'Một vòng dây dẫn kín hình tròn, diện tích S, đặt trong từ trường đều có cảm ứng từ B. Cho vòng dây quay đều với tốc độ góc ω quanh trục trùng với đường kính của vòng dây và vuông góc với các đường sức từ. Những phát biểu nào sau đây đúng?',
+          options: [
+            '1. Trong vòng dây xuất hiện dòng điện không đổi.',
+            '2. Suất điện động cảm ứng cực đại trong vòng dây là $E_0 = BS\\omega$.',
+            '3. Từ thông qua diện tích vòng dây biến thiên điều hòa với tần số góc ω.',
+            '4. Từ thông cực đại qua diện tích vòng dây là $\\phi_0 = B\\omega$.'
+          ],
+          correct: [1, 2]
+        },
+        {
+          id: 'mh25_q24',
+          text: 'Trong lĩnh vực chẩn đoán hình ảnh y học, những phát biểu nào sau đây đúng khi nói về ưu điểm của kĩ thuật chụp cộng hưởng từ (MRI) so với các kĩ thuật chụp X-quang và kĩ thuật chụp cắt lớp (CT)?',
+          options: [
+            '1. Chụp MRI không sử dụng tia bức xạ ion hoá nên an toàn hơn cho bệnh nhân và nhân viên.',
+            '2. Chụp MRI được sử dụng cho các mô cứng như mô xương tốt hơn chụp X-quang và chụp CT.',
+            '3. Chụp MRI nhanh hơn so với chụp X-quang và chụp CT.',
+            '4. Trong chụp MRI, các thiết bị trong máy MRI không cần phải di chuyển mà chỉ cần thay đổi cường độ dòng điện và từ trường.',
+            '5. Chụp MRI có thể được thực hiện khi bên trong người bệnh nhân có các vật bằng kim loại.'
+          ],
+          correct: [0, 3]
+        },
+        {
+          id: 'mh25_q25',
+          text: 'Nhãn dán trên bao bì của một số thực phẩm được bán trong siêu thị tại một số nước có biểu tượng Radura (Cây xanh trong vòng tròn đứt nét). Những phương án nào sau đây đúng với ý nghĩa của biểu tượng trên?',
+          options: [
+            '1. Thực phẩm này đã bị chiếu xạ y nên hạn chế sử dụng.',
+            '2. Thực phẩm này đã được chiếu xạ y và an toàn để sử dụng.',
+            '3. Thực phẩm đã bị chiếu xạ y nên đã nhiễm phóng xạ.',
+            '4. Thực phẩm được chiếu xạ y để tiêu diệt vi khuẩn trong thực phẩm.',
+            '5. Thực phẩm được chiếu xạ y để tiêu diệt tế bào gây ung thư trong thực phẩm.'
+          ],
+          correct: [1, 3]
         }
       ],
       part2: {
-        passage: `Quá trình biến đổi tín hiệu tương tự (Analog) sang tín hiệu số (Digital) thông qua bộ biến đổi ADC bắt buộc phải đi qua 3 bước cốt lõi: Lấy mẫu (Sampling), Lượng tử hoá và Mã hoá nhị phân. Cần đo tín hiệu tương tự trong các khoảng thời gian đều đặn gọi là lấy mẫu. Định lý Nyquist chỉ ra rằng: Tần số lấy mẫu tối thiểu phải gấp đôi tần số tín hiệu tối đa cần thu để có thể khôi phục lại tín hiệu ban đầu một cách chính xác.`,
+        passage: `NGỮ LIỆU 1: Một sinh viên kĩ thuật thử nghiệm hệ thống cung cấp điện cho đèn dây tóc 12V - 6W bằng cách đạp xe. Máy phát điện xoay chiều được sử dụng có cấu tạo gồm một khung dây hình chữ nhật có kích thước 1 cm x 3 cm quay trong từ trường có độ lớn cảm ứng từ 0,6 T. Khung dây được dẫn động bằng một vòng tròn nhỏ trên máy phát điện có đường kính 1,6 cm và được nối với bánh xe bằng dây đai truyền động. Khi cho bánh xe quay đều để một điểm trên bánh xe có tốc độ 15 m/s thì máy phát tạo ra suất điện động xoay chiều có giá trị cực đại là 17 V.\n\nNGỮ LIỆU 2: Vào năm 2019, một trận động đất có độ lớn 5,4 độ richter xảy ra tại Trùng Khánh tỉnh Cao Bằng. Khi sóng địa chấn P được phát ra từ một vị trí khởi nguồn của động đất (nguồn sóng ở tâm chấn) với tốc độ khoảng 5000 m/s thì nhà cửa, công trình và các đồ đạc, vật dụng của nhà dân ở những vị trí cách xa tâm chấn vẫn bị ảnh hưởng do có sóng truyền qua. Độ richter được tính như sau: $M_L = \\log A - \\log A_0$, với A là biên độ tối đa đo được và $A_0$ là biên độ chuẩn. Một trận động đất được xem có cấp độ nhẹ khi $M_L < 4$, trung bình khi $4 \\le M_L < 5$, mạnh khi $5 \\le M_L \\le 6$ và rất mạnh khi $M_L > 6$.`,
         questions: [
           {
-            id: 'q5',
-            text: 'Bước nào sau đây KHÔNG thuộc quá trình biến đổi tín hiệu qua bộ ADC được nhắc đến trong đoạn văn?',
-            options: ['Lấy mẫu', 'Mã hóa nhị phân', 'Khuếch đại tín hiệu', 'Lượng tử hóa'],
+            id: 'mh25_q26',
+            text: 'Dựa vào Ngữ liệu 1: Hình vẽ nào sau đây thể hiện đúng vị trí và sự quay của khung dây trong từ trường bên trong máy phát điện?',
+            options: [
+              'Hình A (Trục quay tịnh tiến).',
+              'Hình B (Trục quay song song từ trường).',
+              'Hình C (Trục quay vuông góc khung).',
+              'Hình D (Trục quay nằm trong mặt phẳng khung và vuông góc từ trường).'
+            ],
+            correct: 3
+          },
+          {
+            id: 'mh25_q27',
+            text: 'Dựa vào Ngữ liệu 1: Khung dây trong máy phát điện này có bao nhiêu vòng dây quấn?',
+            options: [
+              '50 vòng.',
+              '100 vòng.',
+              '5000 vòng.',
+              '10000 vòng.'
+            ],
+            correct: 0
+          },
+          {
+            id: 'mh25_q28',
+            text: 'Dựa vào Ngữ liệu 1: Năng lượng điện bóng đèn điện đã tiêu thụ là bao nhiêu sau khi khung dây quay được 18750 vòng? Giả sử điện trở của cuộn dây bên trong máy phát là không đáng kể.',
+            options: [
+              '188 J.',
+              '212 J.',
+              '377 J.',
+              '424 J.'
+            ],
             correct: 2
           },
           {
-            id: 'q6',
-            text: 'Theo định lý Nyquist, nếu tần số tín hiệu âm thanh tối đa cần thu là 20 kHz, thì tần số lấy mẫu tối thiểu phải là bao nhiêu?',
-            options: ['10 kHz', '20 kHz', '40 kHz', '80 kHz'],
+            id: 'mh25_q29',
+            text: 'Dựa vào Ngữ liệu 2: Sau khoảng thời gian bao lâu thì sóng địa chấn P này truyền đến một trạm địa chấn tại Bắc Giang, cách tâm chấn khoảng 250 km?',
+            options: [
+              '0,0138 s.',
+              '0,05 s.',
+              '13,88 s.',
+              '50 s.'
+            ],
+            correct: 3
+          },
+          {
+            id: 'mh25_q30',
+            text: 'Dựa vào Ngữ liệu 2: Cũng trong khoảng thời gian này, trận động đất khác tại Mộc Châu có biên độ nhỏ hơn hai lần trận động đất tại Trùng Khánh. Trận động đất tại Mộc Châu có thể được xem ở cấp độ nào?',
+            options: [
+              'Động đất nhẹ.',
+              'Động đất trung bình.',
+              'Động đất mạnh.',
+              'Động đất rất mạnh.'
+            ],
             correct: 2
           }
         ]
       },
       part3: [
         {
-          id: 'q7',
-          text: 'Một vật chuyển động từ trạng thái nghỉ. Trong 2 giây đầu, vật có gia tốc không đổi là 5 m/s². Trong 2 giây tiếp theo, vật có gia tốc không đổi là 2 m/s². Tính vận tốc của vật ở thời điểm t = 4 giây (Đơn vị: m/s).',
+          id: 'mh25_q31',
+          text: 'Xét khối khí trong một xilanh đặt nằm ngang. Khi truyền nhiệt lượng X joule (J) cho khối khí, khối khí nở ra đẩy pit-tông dịch chuyển đều, làm thể tích khối khí tăng thêm $9\\text{ cm}^3$ và nội năng của khối khí tăng thêm 0,4 J. Biết trong quá trình đó áp suất khối khí không đổi và bằng $10^5$ Pa. Xác định giá trị X.',
+          correct: '1,3'
+        },
+        {
+          id: 'mh25_q32',
+          text: 'Trong giờ học thực hành, học sinh tiến hành thí nghiệm khảo sát định luật Boyle cho một khối khí trong ống pipette có thể tích ban đầu là 0,85 ml, ở áp suất khí quyển 760 mmHg. Học sinh vặn pit-tông vào trong để thể tích khí đạt giá trị $V_2$ ml thì trên áp kế điện tử hiện giá trị 90 mmHg so với áp suất khí quyển. Biết khối khí trong ống pipette có nhiệt độ không đổi. Hãy xác định giá trị $V_2$ (ml).',
+          correct: '0,76'
+        },
+        {
+          id: 'mh25_q33',
+          text: 'Một cuộn dây dẫn được đặt trong từ trường đều có vector cảm ứng từ vuông góc với mặt phẳng của cuộn dây. Cuộn dây có 25 vòng dây được quấn trên một khung hình vuông cạnh 2 cm thành mạch kín. Mỗi vòng dây có diện tích giống nhau và bằng diện tích của khung, điện trở của cuộn dây là 0,25 Ω. Người ta làm cho từ trường biến đổi sao cho độ lớn cảm ứng từ tăng đều từ 0 T đến 0,5 T trong 0,8 s. Độ lớn của dòng điện cảm ứng trong cuộn dây khi từ trường biến đổi bằng bao nhiêu miliampere (mA)?',
+          correct: '25'
+        },
+        {
+          id: 'mh25_q34',
+          text: 'Để xác định niên đại xây dựng vòng tròn đá Stonehenge ở Anh, các nhà khoa học đã sử dụng phương pháp carbon phóng xạ. Kết quả cho thấy tỉ lệ số hạt ${}_{6}^{14}C$ và ${}_{6}^{12}C$ trong mẫu chất bằng 56% tỉ lệ được tìm thấy trong các sinh vật sống. Biết rằng đồng vị phóng xạ ${}_{6}^{14}C$ có chu kì bán rã khoảng 5730 năm. Từ kết quả đo đạc đó, em hãy xác định vòng tròn đá Stonehenge đã được xây dựng cách đây bao nhiêu thế kỉ? Lấy kết quả xấp xỉ đến hai chữ số thập phân.',
+          correct: '47,93'
+        },
+        {
+          id: 'mh25_q35',
+          text: 'Nguyên lý Binary-Deflection là một trong các nguyên lý của máy in phun mực. Xét một giọt mực có khối lượng $m = 3,2 \\times 10^{-10}$ kg được tích điện âm có độ lớn $q = 1,6 \\times 10^{-13}$ C đi vào vùng không gian giữa hai bản lái tia. Ban đầu giọt mực chuyển động song song với các bản với tốc độ 20 m/s. Chiều dài L của các bản bằng 2 cm. Điện trường giữa các bản được xem là đều và vuông góc với phương ban đầu, có độ lớn $3 \\times 10^6$ V/m. Độ dịch chuyển theo phương vuông góc của giọt mực tính từ lúc đi vào đến khi vừa ra khỏi vùng giữa hai bản bằng bao nhiêu mi-li-mét (mm)?',
+          correct: '0,75'
+        },
+        {
+          id: 'mh25_q36',
+          text: 'Một bếp điện hoạt động bình thường ở hiệu điện thế 220 V và cường độ dòng điện qua bếp là 9 A. Một ấm đun nước bằng nhôm có khối lượng 300 g, chứa 3 lít nước được đun trên bếp. Biết nhiệt độ ban đầu của cả ấm và nước là 20°C, nhiệt dung riêng và khối lượng riêng của nước lần lượt là 4180 J/kg.K và 995 kg/m³, thời gian đun sôi nước (100°C) là 11 phút. Giả sử bếp hoạt động bình thường và 78% nhiệt lượng tỏa ra từ bếp được sử dụng để đun sôi nước. Nhiệt dung riêng của ấm nhôm là X J/kg.K. Xác định giá trị X.',
+          correct: '880'
+        },
+        {
+          id: 'mh25_q37',
+          text: 'Nhiệt độ ngăn mát của tủ lạnh nhà Hùng là 2,5°C. Hùng đặt một quả bóng chườm lạnh có chứa 1365 mg không khí ở 0°C và áp suất 1 atm vào trong tủ lạnh. Biết 1 mol không khí có khối lượng 29 g và thể tích 22,4 lít ở nhiệt độ 0°C và áp suất 1 atm. Nếu áp suất khí trong quả bóng không đổi thì khi cân bằng nhiệt, thể tích của quả bóng tăng thêm bao nhiêu mi-li-lít (ml)? Lấy kết quả xấp xỉ đến hai chữ số thập phân.',
+          correct: '9,65'
+        },
+        {
+          id: 'mh25_q38',
+          text: 'Trong một tiết thí nghiệm về lắp ghép tụ điện, giáo viên cung cấp cho mỗi nhóm học sinh ba tụ điện có điện dung lần lượt là $C_1, C_2$ và $C_3$ khác nhau và yêu cầu tạo ra các bộ tụ (sử dụng từ 2 tụ trở lên). Theo em, từ ba tụ điện trên có thể tạo ra nhiều nhất bao nhiêu bộ tụ có điện dung tương đương khác nhau?',
           correct: '14'
         },
         {
-          id: 'q8',
-          text: 'Một nhiệt điện trở PTC có điện trở R0 = 100 Ω ở 25°C. Hệ số nhiệt điện trở α = 0,05 K⁻¹. Tính điện trở của nó ở 45°C (Đơn vị: Ω).',
-          correct: '200'
+          id: 'mh25_q39',
+          text: 'Giả sử trong lõi một ngôi sao chỉ có helium với khối lượng $4,5 \\times 10^{32}$ kg. He tiếp tục thực hiện phản ứng tổng hợp hạt nhân thành carbon theo phương trình: ${}_{2}^{4}He + {}_{2}^{4}He + {}_{2}^{4}He \\rightarrow {}_{6}^{12}C + 7,27 \\text{ MeV}$. Giả thiết toàn bộ năng lượng nhiệt từ quá trình tổng hợp He đều được phát ra với công suất trung bình là $5,1 \\times 10^{30}$ W. Cho 1 năm bằng 365,25 ngày, khối lượng mol của helium là 4 g/mol, số Avogadro $N_A = 6,02 \\times 10^{23}\\text{ mol}^{-1}$, và $1\\text{ eV} = 1,6 \\times 10^{-19}$ J. Sau bao nhiêu triệu năm thì He ở ngôi sao này sẽ chuyển hoá hết thành C? Lấy kết quả xấp xỉ đến hai chữ số thập phân.',
+          correct: '1631,58'
+        },
+        {
+          id: 'mh25_q40',
+          text: 'Trong thí nghiệm nhiễu xạ electron, lấy hằng số Planck $h = 6,626 \\times 10^{-34}$ J.s và khối lượng electron $m_e = 9,1 \\times 10^{-31}$ kg. Xét một electron chuyển động với tốc độ $7 \\times 10^6$ m/s thì tỉ số giữa bước sóng de Broglie của electron này và khoảng cách trung bình giữa các phân tử trong tinh thể than chì khoảng $10^{-10}$ m bằng bao nhiêu? Lấy kết quả xấp xỉ đến hai chữ số thập phân.',
+          correct: '1,04'
         }
       ]
     }
