@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Clock, FileText, CheckCircle, AlertCircle, Play, 
-  RotateCcw, Send, ChevronRight, XCircle, Home 
+  Send, ChevronRight, Home 
 } from 'lucide-react';
 
 // --- CƠ SỞ DỮ LIỆU ĐỀ THI ---
@@ -79,13 +79,14 @@ const allExams = [
 ];
 
 export default function App() {
-  // Thêm trạng thái 'review'
   const [appState, setAppState] = useState('menu'); 
   const [selectedExam, setSelectedExam] = useState(null);
   const [timeLeft, setTimeLeft] = useState(0);
   const [answers, setAnswers] = useState({});
-  const [score, setScore] = useState({ correct: 0, total: 0 });
+  const [score, setScore] = useState({ correct: 0, total: 0, scale10: 0 });
+  const [studentName, setStudentName] = useState(''); // Tách riêng state cho Tên học sinh
 
+  // Hẹn giờ
   useEffect(() => {
     let timer;
     if (appState === 'playing' && timeLeft > 0) {
@@ -120,7 +121,7 @@ export default function App() {
   const handleStart = () => {
     setAppState('playing');
     setTimeLeft(selectedExam.duration);
-    setAnswers({});
+    setAnswers({}); // Chỉ xóa đáp án, giữ nguyên studentName
   };
 
   const handleAnswerChange = (questionId, value, type = 'single') => {
@@ -147,12 +148,16 @@ export default function App() {
       if (JSON.stringify(answers[q.id] || []) === JSON.stringify(q.correct)) correctCount++;
     });
     data.part2.questions.forEach(q => { if (answers[q.id] === q.correct) correctCount++; });
+    
+    // So sánh Part 3: Chuyển đổi dấu phẩy thành dấu chấm để tránh học sinh bị mất điểm oan
     data.part3.forEach(q => {
-      if (answers[q.id]?.toString().trim() === q.correct) correctCount++;
+      const userAns = answers[q.id]?.toString().replace(',', '.').trim() || '';
+      const correctAns = q.correct.toString().replace(',', '.').trim();
+      if (userAns === correctAns) correctCount++;
     });
 
     const total = data.part1A.length + data.part1B.length + data.part2.questions.length + data.part3.length;
-    const finalScoreString = `${correctCount}/${total}`;
+    const finalScale10 = ((correctCount / total) * 10).toFixed(1);
 
     // Gửi dữ liệu về Google Sheets
     fetch('https://script.google.com/macros/s/AKfycbyqsL94snNjcUAe4MbtCHcZp0rM2KKy2WoY6UrpqsUMXYQ3q4H5jMX78CRWt6jAGkYFxA/exec', {
@@ -162,14 +167,14 @@ export default function App() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: answers['student_name'] || "Thí sinh ẩn danh", 
-        class: "12A1",
+        name: studentName, 
+        class: "Chưa xác định",
         examTitle: selectedExam.title,
-        score: finalScoreString
+        score: finalScale10 // Gửi điểm hệ số 10 về sheet
       }),
     }).catch(err => console.log("Lỗi gửi Sheet:", err));
 
-    setScore({ correct: correctCount, total });
+    setScore({ correct: correctCount, total, scale10: finalScale10 });
     setAppState('result');
   };
 
@@ -221,21 +226,21 @@ export default function App() {
                 type="text" 
                 placeholder="Nhập tên của bạn..."
                 className="w-full p-4 border-2 border-slate-200 rounded-xl focus:border-blue-600 focus:outline-none"
-                value={answers['student_name'] || ''}
-                onChange={(e) => setAnswers(prev => ({...prev, student_name: e.target.value}))}
+                value={studentName}
+                onChange={(e) => setStudentName(e.target.value)}
               />
             </div>
             
             <h2 className="font-bold text-slate-800 mb-4 flex items-center"><AlertCircle className="mr-2 text-blue-600" /> Lưu ý trước khi thi:</h2>
             <ul className="space-y-3 text-slate-600 mb-8 text-sm">
               <li className="flex gap-2"> <CheckCircle className="text-green-500 shrink-0" size={18} /> Hệ thống tự động nộp bài khi hết giờ.</li>
-              <li className="flex gap-2"> <CheckCircle className="text-green-500 shrink-0" size={18} /> Phần điền đáp số: Chỉ nhập số, không nhập đơn vị.</li>
+              <li className="flex gap-2"> <CheckCircle className="text-green-500 shrink-0" size={18} /> Phần điền đáp số: Có thể dùng dấu phẩy (,) hoặc dấu chấm (.) cho số thập phân.</li>
             </ul>
             <div className="flex gap-3">
               <button onClick={() => setAppState('menu')} className="flex-1 bg-slate-100 text-slate-600 font-bold py-4 rounded-2xl hover:bg-slate-200 transition-all">Quay lại</button>
               <button 
                 onClick={handleStart} 
-                disabled={!answers['student_name'] || answers['student_name'].trim() === ''}
+                disabled={!studentName || studentName.trim() === ''}
                 className="flex-2 bg-blue-600 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-2xl hover:bg-blue-700 transition-all flex items-center justify-center gap-2"
               >
                 <Play fill="currentColor" size={20} /> BẮT ĐẦU NGAY
@@ -249,12 +254,10 @@ export default function App() {
 
   // --- MÀN HÌNH 3 & 4: LÀM BÀI / XEM LẠI BÀI ---
   const exam = selectedExam.questions;
-  // Gộp chung trạng thái Result và Review để khóa ô chọn
   const isReviewMode = appState === 'result' || appState === 'review';
 
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col">
-      {/* Sticky Header */}
       <header className="bg-white/80 backdrop-blur-md border-b sticky top-0 z-40 shadow-sm">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
           <button onClick={() => isReviewMode && setAppState('menu')} className="text-slate-500 hover:text-blue-600 transition-colors">
@@ -384,7 +387,11 @@ export default function App() {
           <div className="space-y-8">
             {exam.part3.map((q, idx) => {
               const userVal = answers[q.id] || '';
-              const isCorrect = userVal.trim() === q.correct;
+              // So sánh chấp nhận cả dấu phẩy và chấm khi xem lại
+              const userValFormatted = userVal.toString().replace(',', '.').trim();
+              const correctAnsFormatted = q.correct.toString().replace(',', '.').trim();
+              const isCorrect = userValFormatted === correctAnsFormatted;
+              
               return (
                 <div key={q.id} className="flex flex-col md:flex-row md:items-start gap-4">
                   <div className="flex-1 text-slate-800 mt-2">
@@ -422,12 +429,19 @@ export default function App() {
               <CheckCircle size={48} />
             </div>
             <h2 className="text-3xl font-black text-slate-800 mb-2 font-serif">HOÀN THÀNH!</h2>
-            <div className="bg-slate-50 rounded-3xl p-8 mb-8">
-              <div className="text-6xl font-black text-blue-600 mb-2">{score.correct}<span className="text-2xl text-slate-400">/{score.total}</span></div>
-              <div className="text-slate-500 font-medium uppercase tracking-widest text-sm">Điểm số của bạn</div>
+            
+            {/* Vùng hiển thị điểm được nâng cấp */}
+            <div className="bg-slate-50 rounded-3xl p-8 mb-8 border border-slate-100">
+              <div className="text-6xl font-black text-blue-600 mb-2">
+                {score.scale10}<span className="text-2xl text-slate-400">/10</span>
+              </div>
+              <div className="text-slate-500 font-medium uppercase tracking-widest text-sm mb-3">Điểm số chính thức</div>
+              <div className="text-slate-400 text-sm font-medium border-t border-slate-200 pt-3">
+                Số câu đúng: {score.correct}/{score.total}
+              </div>
             </div>
+
             <div className="flex flex-col gap-3">
-              {/* Sửa nút này để đổi sang chế độ Review */}
               <button onClick={() => setAppState('review')} className="w-full py-4 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all">XEM LẠI BÀI ĐÃ LÀM</button>
               <button onClick={() => setAppState('menu')} className="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all">VỀ DANH SÁCH ĐỀ</button>
             </div>
