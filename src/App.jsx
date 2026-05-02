@@ -4,15 +4,24 @@ import {
   Send, ChevronRight, Home 
 } from 'lucide-react';
 
+// CHỈ DÙNG KATEX GỐC, KHÔNG DÙNG REACT-LATEX-NEXT NỮA
+import katex from 'katex';
 import 'katex/dist/katex.min.css';
-import Latex from 'react-latex-next';
 
-const latexDelimiters = [
-  { left: '$$', right: '$$', display: true },
-  { left: '$', right: '$', display: false },
-  { left: '\\(', right: '\\)', display: false },
-  { left: '\\[', right: '\\]', display: true },
-];
+// TỰ ĐỘNG QUÉT VÀ RENDER CÔNG THỨC TOÁN
+const renderMath = (text) => {
+  if (!text) return { __html: '' };
+  // Tìm tất cả các đoạn nằm trong dấu $...$ và chuyển thành HTML Toán học
+  const html = text.replace(/\$([^$]+)\$/g, (match, math) => {
+    try {
+      // throwOnError: false giúp web không bao giờ bị sập dù gõ sai 1 kí tự LaTeX
+      return katex.renderToString(math, { throwOnError: false });
+    } catch (e) {
+      return match;
+    }
+  });
+  return { __html: html };
+};
 
 export default function App() {
   const [allExams, setAllExams] = useState([]); 
@@ -26,7 +35,8 @@ export default function App() {
   const [studentName, setStudentName] = useState('');
 
   useEffect(() => {
-    fetch('/exam_db.json')
+    // THÊM Date.now() ĐỂ ÉP VERCEL LUÔN TẢI BẢN MỚI NHẤT, KHÔNG BỊ DÍNH CACHE CŨ
+    fetch('/exam_db.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
         setAllExams(data);
@@ -212,8 +222,8 @@ export default function App() {
               <div key={q.id}>
                 <div className="text-slate-800 font-medium mb-4">
                   <span className="text-blue-600 font-bold">Câu {idx + 1}: </span> 
-                  {/* BỌC fixLatex Ở ĐÂY */}
-                  <Latex delimiters={latexDelimiters}>{q.text}</Latex>
+                  {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
+                  <span dangerouslySetInnerHTML={renderMath(q.text)} />
                   {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-4">
@@ -223,8 +233,8 @@ export default function App() {
                     return (
                       <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx)} className={`text-left p-4 rounded-xl border-2 transition-all ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')}`}>
                         <span className="font-bold mr-2">{String.fromCharCode(65 + oIdx)}.</span> 
-                        {/* BỌC fixLatex Ở ĐÂY */}
-                        <Latex delimiters={latexDelimiters}>{opt}</Latex>
+                        {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
+                        <span dangerouslySetInnerHTML={renderMath(opt)} />
                       </button>
                     );
                   })}
@@ -241,8 +251,8 @@ export default function App() {
             <div key={q.id}>
               <div className="text-slate-800 font-medium mb-4">
                 <span className="text-blue-600 font-bold">Câu {exam.part1A.length + idx + 1}: </span> 
-                {/* BỌC fixLatex Ở ĐÂY */}
-                <Latex delimiters={latexDelimiters}>{q.text}</Latex>
+                {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
+                <span dangerouslySetInnerHTML={renderMath(q.text)} />
                 {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
               </div>
               <div className="space-y-3 pl-4">
@@ -252,8 +262,8 @@ export default function App() {
                   return (
                     <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx, 'multiple')} className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center gap-3 ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 text-green-700 font-bold' : (isSelected ? 'bg-red-50 border-red-500 text-red-700' : 'bg-slate-50 border-slate-100 opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600 text-blue-700' : 'bg-white border-slate-100 hover:border-slate-300')}`}>
                       <div className={`w-5 h-5 rounded border-2 flex items-center justify-center ${isSelected ? 'bg-blue-600 border-blue-600 text-white' : 'border-slate-300'}`}>{isSelected && <CheckCircle size={14} />}</div>
-                      {/* BỌC fixLatex Ở ĐÂY */}
-                      <Latex delimiters={latexDelimiters}>{opt}</Latex>
+                      {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
+                      <span dangerouslySetInnerHTML={renderMath(opt)} />
                     </button>
                   );
                 })}
@@ -266,17 +276,17 @@ export default function App() {
         {exam.part2 && (
           <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
             <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 2: Đọc hiểu ngữ liệu</h2>
-            <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-8 italic">
-              {/* BỌC fixLatex Ở ĐÂY */}
-              <Latex delimiters={latexDelimiters}>{exam.part2.passage}</Latex>
-            </div>
+            <div 
+              className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-8 italic"
+              dangerouslySetInnerHTML={renderMath(exam.part2.passage)}
+            />
             <div className="space-y-10">
               {exam.part2.questions.map((q, idx) => (
                 <div key={q.id}>
                   <div className="text-slate-800 font-medium mb-4">
                     <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + idx + 1}: </span> 
-                    {/* BỌC fixLatex Ở ĐÂY */}
-                    <Latex delimiters={latexDelimiters}>{q.text}</Latex>
+                    {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
+                    <span dangerouslySetInnerHTML={renderMath(q.text)} />
                     {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -286,8 +296,8 @@ export default function App() {
                       return (
                         <button key={oIdx} disabled={isReviewMode} onClick={() => handleAnswerChange(q.id, oIdx)} className={`text-left p-4 rounded-xl border-2 transition-all ${isReviewMode ? (isCorrect ? 'bg-green-50 border-green-500 font-bold' : (isSelected ? 'bg-red-50 border-red-500' : 'opacity-60')) : (isSelected ? 'bg-blue-50 border-blue-600' : 'bg-white border-slate-100')}`}>
                           <span className="font-bold mr-2">{String.fromCharCode(65 + oIdx)}.</span>
-                          {/* BỌC fixLatex Ở ĐÂY */}
-                          <Latex delimiters={latexDelimiters}>{opt}</Latex>
+                          {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
+                          <span dangerouslySetInnerHTML={renderMath(opt)} />
                         </button>
                       );
                     })}
@@ -311,8 +321,8 @@ export default function App() {
                 <div key={q.id} className="flex flex-col md:flex-row md:items-start gap-4">
                   <div className="flex-1 text-slate-800 mt-2">
                     <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + (exam.part2?.questions?.length || 0) + idx + 1}: </span> 
-                    {/* BỌC fixLatex Ở ĐÂY */}
-                    <Latex delimiters={latexDelimiters}>{q.text}</Latex>
+                    {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
+                    <span dangerouslySetInnerHTML={renderMath(q.text)} />
                     {q.image && <img src={q.image} className="mt-4 rounded-xl border border-slate-200" alt="Minh họa" />}
                   </div>
                   <div className="relative">
