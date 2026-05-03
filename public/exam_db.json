@@ -299,6 +299,7 @@
             "id": "mh25_q26",
             "text": "Dựa vào Ngữ liệu 1: Hình vẽ nào sau đây thể hiện đúng vị trí và sự quay của khung dây trong từ trường bên trong máy phát điện?",
             "image": "/images/q26.png",
+            "imageWidth": "100%",
             "options": [
               "Hình A ",
               "Hình B ",
