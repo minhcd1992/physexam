@@ -333,6 +333,20 @@ export default function App() {
                 alt="Minh họa ngữ liệu" 
               />
             )}
+            {/* 3. XỬ LÝ NHIỀU ẢNH (Dùng trường "images" mới cho Ngữ liệu) */}
+    {exam.part2.images && (
+      <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
+        {exam.part2.images.map((imgObj, index) => (
+          <img 
+            key={index}
+            src={imgObj.url} 
+            style={{ width: imgObj.width || '45%' }} 
+            className="rounded-xl border border-slate-200 shadow-sm" 
+            alt={`Minh họa ngữ liệu ${index + 1}`} 
+          />
+        ))}
+      </div>
+    )}
             
             <div className="space-y-10">
               {exam.part2.questions.map((q, idx) => (
