@@ -232,6 +232,20 @@ export default function App() {
     alt="Minh họa" 
   />
 )}
+                  {/* CODE MỚI: XỬ LÝ NHIỀU ẢNH LÚC CÙNG LÚC */}
+{q.images && (
+  <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-2">
+    {q.images.map((imgObj, index) => (
+      <img 
+        key={index}
+        src={imgObj.url} 
+        style={{ width: imgObj.width || '45%' }} 
+        className="rounded-xl border border-slate-200 shadow-sm" 
+        alt={`Minh họa ${index + 1}`} 
+      />
+    ))}
+  </div>
+)}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-4">
                   {q.options.map((opt, oIdx) => {
@@ -267,6 +281,20 @@ export default function App() {
     className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
     alt="Minh họa" 
   />
+)}
+                {/* CODE MỚI: XỬ LÝ NHIỀU ẢNH LÚC CÙNG LÚC */}
+{q.images && (
+  <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-2">
+    {q.images.map((imgObj, index) => (
+      <img 
+        key={index}
+        src={imgObj.url} 
+        style={{ width: imgObj.width || '45%' }} 
+        className="rounded-xl border border-slate-200 shadow-sm" 
+        alt={`Minh họa ${index + 1}`} 
+      />
+    ))}
+  </div>
 )}
               </div>
               <div className="space-y-3 pl-4">
@@ -363,6 +391,20 @@ export default function App() {
     className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
     alt="Minh họa" 
   />
+)}
+                    {/* CODE MỚI: XỬ LÝ NHIỀU ẢNH LÚC CÙNG LÚC */}
+{q.images && (
+  <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-2">
+    {q.images.map((imgObj, index) => (
+      <img 
+        key={index}
+        src={imgObj.url} 
+        style={{ width: imgObj.width || '45%' }} 
+        className="rounded-xl border border-slate-200 shadow-sm" 
+        alt={`Minh họa ${index + 1}`} 
+      />
+    ))}
+  </div>
 )}
                   </div>
                   <div className="relative">
