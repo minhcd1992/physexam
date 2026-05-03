@@ -315,25 +315,29 @@ export default function App() {
         </div>
 
         {/* PHẦN 2 */}
-        {exam.part2 && (
-          <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
-            <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">Phần 2: Đọc hiểu ngữ liệu</h2>
-            
-            {/* 1. ĐOẠN VĂN BẢN NGỮ LIỆU LÊN TRÊN */}
-            <div 
-              className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-6 italic"
-              dangerouslySetInnerHTML={renderMath(exam.part2.passage)}
-            />
+{exam.part2 && (
+  <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
+    <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">
+      Phần 2: Đọc hiểu ngữ liệu
+    </h2>
+    
+    {/* 1. NỘI DUNG VĂN BẢN NGỮ LIỆU */}
+    <div 
+      className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-6 italic"
+      dangerouslySetInnerHTML={renderMath(exam.part2.passage)}
+    />
 
-            {/* 2. HIỂN THỊ ẢNH NGỮ LIỆU XUỐNG DƯỚI */}
-            {exam.part2.image && (
-              <img 
-                src={exam.part2.image} 
-                className="mb-8 mx-auto block w-[90%] md:w-[60%] rounded-xl border border-slate-200 shadow-sm" 
-                alt="Minh họa ngữ liệu" 
-              />
-            )}
-            {/* 3. XỬ LÝ NHIỀU ẢNH (Dùng trường "images" mới cho Ngữ liệu) */}
+    {/* 2. XỬ LÝ 1 ẢNH DUY NHẤT (Nếu chỉ dùng trường "image" cũ) */}
+    {exam.part2.image && (
+      <img 
+        src={exam.part2.image} 
+        style={{ width: exam.part2.imageWidth || '60%' }}
+        className="mb-8 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
+        alt="Minh họa ngữ liệu" 
+      />
+    )}
+
+    {/* 3. XỬ LÝ NHIỀU ẢNH (Dùng trường "images" mới cho Ngữ liệu) */}
     {exam.part2.images && (
       <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
         {exam.part2.images.map((imgObj, index) => (
