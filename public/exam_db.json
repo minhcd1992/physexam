@@ -429,7 +429,7 @@
             "Con lắc đơn dao động trong không khí, biên độ giảm dần theo thời gian.",
             "Màng loa rung khi có tín hiệu âm thanh được cấp liên tục."
           ],
-          "correct": 0
+          "correct": 2
         },
         {
           "id": "mh25_ct_q2",
@@ -440,11 +440,12 @@
             "Tia tử ngoại.",
             "Tia gamma ($\\gamma$)."
           ],
-          "correct": 0
+          "correct": 3
         },
         {
           "id": "mh25_ct_q3",
           "text": "Hình vẽ bên mô tả đường sức điện trong vùng không gian giữa hai tấm kim loại phẳng song song. Phát biểu nào sau đây là ĐÚNG?",
+          "image":"/img/q3_1.png",
           "options": [
             "Điện trường giữa hai bản là điện trường đều, các đường sức điện song song và cách đều nhau.",
             "Cường độ điện trường tại mép của hai bản lớn hơn ở giữa.",
@@ -462,7 +463,7 @@
             "132 atm.",
             "140 atm."
           ],
-          "correct": 0
+          "correct": 2
         },
         {
           "id": "mh25_ct_q5",
@@ -473,7 +474,7 @@
             "Chất rắn đa tinh thể có tính dị hướng rõ rệt.",
             "Kim loại là loại chất rắn vô định hình điển hình."
           ],
-          "correct": 0
+          "correct": 1
         },
         {
           "id": "mh25_ct_q6",
@@ -484,7 +485,7 @@
             "0 K.",
             "Cả B và C đều đúng."
           ],
-          "correct": 0
+          "correct": 3
         },
         {
           "id": "mh25_ct_q7",
@@ -495,7 +496,7 @@
             "Nước hồ bốc hơi vào ban ngày.",
             "Mực trong bình mực bị giảm dần dù không dùng."
           ],
-          "correct": 0
+          "correct": 1
         },
         {
           "id": "mh25_ct_q8",
@@ -506,7 +507,7 @@
             "Kim loại dẫn điện tốt.",
             "Sóng âm truyền được qua chân không."
           ],
-          "correct": 0
+          "correct": 1
         },
         {
           "id": "mh25_ct_q9",
@@ -517,7 +518,7 @@
             "1,125 atm.",
             "12 atm."
           ],
-          "correct": 0
+          "correct": 1
         },
         {
           "id": "mh25_ct_q10",
@@ -539,7 +540,7 @@
             "henry (H).",
             "farad (F)."
           ],
-          "correct": 0
+          "correct": 1
         },
         {
           "id": "mh25_ct_q12",
@@ -550,7 +551,7 @@
             "Máy biến áp.",
             "Tụ điện."
           ],
-          "correct": 0
+          "correct": 2
         },
         {
           "id": "mh25_ct_q13",
@@ -561,7 +562,7 @@
             "235 neutron.",
             "327 neutron."
           ],
-          "correct": 0
+          "correct": 1
         },
         {
           "id": "mh25_ct_q14",
@@ -572,7 +573,7 @@
             "Phản ứng phân hạch toả năng lượng vì độ hụt khối của sản phẩm lớn hơn độ hụt khối của uranium.",
             "Phản ứng phân hạch chỉ xảy ra trong điều kiện nhiệt độ rất cao."
           ],
-          "correct": 0
+          "correct": 2
         },
         {
           "id": "mh25_ct_q15",
@@ -583,11 +584,12 @@
             "Tia $\\alpha$ là dòng các hạt nhân ${}_{2}^{4}\\text{He}$, di chuyển chậm hơn tia $\\beta$ nhưng ion hoá mạnh hơn.",
             "Tia $\\alpha$ có khả năng đâm xuyên qua tấm chì dày vài cm."
           ],
-          "correct": 0
+          "correct": 2
         },
         {
           "id": "mh25_ct_q16",
-          "text": "Một điện tích điểm $q = -4\\ \\mu\\text{C}$ dịch chuyển từ điểm M (điện thế 50 V) đến điểm N (điện thế 150 V). Công của lực điện thực hiện là bao nhiêu?",
+          "text": "Một điện tích điểm $q = -4\\ \\mu\\text{C}$ dịch chuyển từ điểm M đến điểm N. Công của lực điện thực hiện là bao nhiêu?",
+          "image": "/img/q16_1.png",
           "options": [
             "$400\\ \\mu\\text{J}$.",
             "$-400\\ \\mu\\text{J}$.",
@@ -599,13 +601,14 @@
         {
           "id": "mh25_ct_q17",
           "text": "Hai điện trở $R_1$ và $R_2$ có đặc tuyến vôn-ampe như hình vẽ. Biết tại $U = 6\\text{V}$, dòng qua $R_1$ là 2A và dòng qua $R_2$ là 1A. Khi mắc song song hai điện trở này, điện trở tương đương của bộ bằng bao nhiêu?",
+          "image": "/img/q17_1.png",
           "options": [
             "$9\\ \\Omega$.",
             "$2\\ \\Omega$.",
             "$1\\ \\Omega$.",
             "$3\\ \\Omega$."
           ],
-          "correct": 0
+          "correct": 1
         },
         {
           "id": "mh25_ct_q18",
@@ -627,7 +630,7 @@
             "Điện áp hiệu dụng ở cuộn thứ cấp là 55 V.",
             "Tần số điện áp ở cuộn thứ cấp gấp 4 lần tần số ở cuộn sơ cấp."
           ],
-          "correct": 0
+          "correct": 2
         },
         {
           "id": "mh25_ct_q20",
@@ -638,7 +641,7 @@
             "200 Hz.",
             "1600 Hz."
           ],
-          "correct": 0
+          "correct": 1
         }
       ],
       "part1B": [
@@ -652,7 +655,7 @@
             "4. Vận tốc cực đại của vật là $20\\pi\\text{ cm/s} \\approx 62,8\\text{ cm/s}$.",
             "5. Gia tốc của vật khi đi qua vị trí cân bằng bằng 0."
           ],
-          "correct": []
+          "correct": [0, 1, 2, 3, 4]
         },
         {
           "id": "mh25_ct_q22",
@@ -663,7 +666,7 @@
             "3. Tốc độ ánh sáng trong mọi môi trường đều bằng $c = 3 \\times 10^8\\text{ m/s}$.",
             "4. Hiện tượng giao thoa ánh sáng chứng tỏ ánh sáng có tính chất sóng."
           ],
-          "correct": []
+          "correct": [0, 3]
         },
         {
           "id": "mh25_ct_q23",
@@ -674,7 +677,7 @@
             "3. Mạch xảy ra hiện tượng cộng hưởng điện.",
             "4. Cường độ dòng điện hiệu dụng trong mạch là 2 A."
           ],
-          "correct": []
+          "correct": [0, 1, 2, 3]
         },
         {
           "id": "mh25_ct_q24",
@@ -685,22 +688,23 @@
             "3. Người ta thường dùng nhiều chùm tia chiếu từ nhiều hướng khác nhau hội tụ vào khối u để giảm tổn thương mô lành.",
             "4. Nguồn phóng xạ ${}^{60}\\text{Co}$ thường được sử dụng trong xạ trị vì phát ra tia gamma có năng lượng cao."
           ],
-          "correct": []
+          "correct": [0, 2, 3]
         },
         {
           "id": "mh25_ct_q25",
           "text": "Biển báo hiệu nguy hiểm phóng xạ có hình ảnh như sau. Những phát biểu nào sau đây ĐÚNG khi nói về ý nghĩa của biển báo này?",
+          "image": "/img/q25_1.png",
           "options": [
             "1. Khu vực hoặc vật liệu này phát ra bức xạ ion hoá có thể gây hại cho sức khoẻ.",
             "2. Cần mặc trang phục bảo hộ, hạn chế thời gian tiếp xúc và giữ khoảng cách an toàn.",
             "3. Khu vực này chỉ nguy hiểm khi chạm tay trực tiếp vào nguồn phóng xạ.",
             "4. Trẻ em và phụ nữ mang thai cần đặc biệt tránh xa khu vực này."
           ],
-          "correct": []
+          "correct": [0, 1, 3]
         }
       ],
       "part2": {
-        "passage": "NGỮ LIỆU 1: Trong một thí nghiệm vật lí, một sinh viên sử dụng tấm pin mặt trời công suất tối đa 50 W để nạp điện cho ắc quy 12 V. Mạch điện gồm pin mặt trời (suất điện động $E$, điện trở trong $r = 2\\ \\Omega$) mắc nối tiếp với điện trở ngoài $R = 10\\ \\Omega$ và ắc quy 12 V. Khi chiếu sáng đủ mạnh, ampe kế đo được cường độ dòng điện trong mạch là 2 A.\n\nNGỮ LIỆU 2: Thang độ Richter (Magnitude Richter) là thang logarithm dùng để đo độ mạnh của động đất. Mỗi bậc tăng một đơn vị tương ứng với biên độ dao động tăng 10 lần và năng lượng tăng khoảng 31,6 lần. Một nhà địa chấn học phát hiện rằng ngôi nhà ở gần tâm chấn có tường bê tông dày 20 cm có thể hấp thụ và giảm chấn rung. Tốc độ truyền sóng địa chấn S trong lớp đất mềm khoảng 1500 m/s, trong đá cứng khoảng 4500 m/s. Vào tháng 11 năm 2020, một trận động đất 4,9 độ Richter xảy ra tại Mộc Châu, Sơn La.",
+        "passage": "NGỮ LIỆU 1: Trong một thí nghiệm vật lí, một sinh viên sử dụng tấm pin mặt trời công suất tối đa 50 W để nạp điện cho ắc quy 12 V. Mạch điện gồm pin mặt trời (suất điện động $E$, điện trở trong $r = 2\\ \\Omega$) mắc nối tiếp với điện trở ngoài $R = 10\\ \\Omega$ và ắc quy 12 V. Khi chiếu sáng đủ mạnh, ampe kế đo được cường độ dòng điện trong mạch là 2 A.<br /><br />NGỮ LIỆU 2: Thang độ Richter (Magnitude Richter) là thang logarithm dùng để đo độ mạnh của động đất. Mỗi bậc tăng một đơn vị tương ứng với biên độ dao động tăng 10 lần và năng lượng tăng khoảng 31,6 lần. Một nhà địa chấn học phát hiện rằng ngôi nhà ở gần tâm chấn có tường bê tông dày 20 cm có thể hấp thụ và giảm chấn rung. Tốc độ truyền sóng địa chấn S trong lớp đất mềm khoảng 1500 m/s, trong đá cứng khoảng 4500 m/s. Vào tháng 11 năm 2020, một trận động đất 4,9 độ Richter xảy ra tại Mộc Châu, Sơn La.",
         "questions": [
           {
             "id": "mh25_ct_q26",
@@ -711,7 +715,7 @@
               "36 V.",
               "48 V."
             ],
-            "correct": 0
+            "correct": 2
           },
           {
             "id": "mh25_ct_q27",
@@ -722,7 +726,7 @@
               "40 W.",
               "8 W."
             ],
-            "correct": 0
+            "correct": 2
           },
           {
             "id": "mh25_ct_q28",
@@ -733,7 +737,7 @@
               "60%.",
               "75%."
             ],
-            "correct": 0
+            "correct": 1
           },
           {
             "id": "mh25_ct_q29",
@@ -744,7 +748,7 @@
               "0,01 s.",
               "1000 s."
             ],
-            "correct": 0
+            "correct": 1
           },
           {
             "id": "mh25_ct_q30",
@@ -763,52 +767,53 @@
         {
           "id": "mh25_ct_q31",
           "text": "Một khối khí trong xilanh thẳng đứng được nung nóng đẳng áp ở áp suất $p = 2 \\times 10^5\\text{ Pa}$. Thể tích khí tăng từ 2 lít lên 5 lít. Nội năng khí tăng thêm 500 J. Nhiệt lượng cần cung cấp cho khối khí trong quá trình này là bao nhiêu joule (J)?",
-          "correct": ""
+          "correct": "1100"
         },
         {
           "id": "mh25_ct_q32",
           "text": "Một bình cầu thuỷ tinh chứa khí nitrogen ở áp suất 1 atm và nhiệt độ $17^\\circ\\text{C}$. Đun nóng bình đến $117^\\circ\\text{C}$ (thể tích bình không đổi). Áp suất khí trong bình lúc này bằng bao nhiêu atm? Làm tròn đến hai chữ số thập phân.",
-          "correct": ""
+          "correct": "1,34"
         },
         {
           "id": "mh25_ct_q33",
           "text": "Cuộn dây có 50 vòng quấn trên khung hình chữ nhật kích thước 4 cm $\\times$ 6 cm, điện trở tổng của cuộn là $0,5\\ \\Omega$. Từ trường đều vuông góc mặt phẳng cuộn dây tăng đều từ 0 T đến 1 T trong 2 s. Cường độ dòng điện cảm ứng trong cuộn dây bằng bao nhiêu miliampere (mA)?",
-          "correct": ""
+          "image": "/img/q33_1.png",
+          "correct": "120"
         },
         {
           "id": "mh25_ct_q34",
           "text": "Một mẫu vật phóng xạ ban đầu có $10^6$ hạt nhân ${}_{15}^{32}\\text{P}$ (chu kì bán rã $T_{1/2} = 14,3\\text{ ngày}$). Sau 42,9 ngày, số hạt nhân ${}_{15}^{32}\\text{P}$ còn lại trong mẫu bằng bao nhiêu?",
-          "correct": ""
+          "correct": "125000"
         },
         {
           "id": "mh25_ct_q35",
-          "text": "Một điện tích $q = 3 \\times 10^{-6}\\text{ C}$ được bắn vào vùng điện trường đều giữa hai bản tụ theo phương song song với hai bản với tốc độ ban đầu $v_0 = 3 \\times 10^6\\text{ m/s}$. Khối lượng hạt $m = 9 \\times 10^{-31}\\text{ kg}$. Hai bản dài $L = 5\\text{ cm}$. Điện trường giữa hai bản $E = 1000\\text{ V/m}$ hướng vuông góc phương ban đầu. Bỏ qua trọng lực. Độ lệch theo phương điện trường của hạt khi vừa ra khỏi hai bản là bao nhiêu mm? Làm tròn đến hai chữ số thập phân.",
-          "correct": ""
+          "text": "Một điện tích $q = 1,6 \\times 10^{-19}\\text{ C}$ được bắn vào vùng điện trường đều giữa hai bản tụ theo phương song song với hai bản với tốc độ ban đầu $v_0 = 3 \\times 10^6\\text{ m/s}$. Khối lượng hạt $m = 9,1 \\times 10^{-31}\\text{ kg}$. Hai bản dài $L = 5\\text{ cm}$. Điện trường giữa hai bản $E = 1000\\text{ V/m}$ hướng vuông góc phương ban đầu. Bỏ qua trọng lực. Độ lệch theo phương điện trường của hạt khi vừa ra khỏi hai bản là bao nhiêu mm? Làm tròn đến hai chữ số thập phân.",
+          "correct": "24,69"
         },
         {
           "id": "mh25_ct_q36",
           "text": "Một bếp điện có công suất định mức 1000 W, dùng để đun sôi 2 lít nước từ $25^\\circ\\text{C}$. Nhiệt dung riêng của nước là $4200\\text{ J/(kg}\\cdot\\text{K)}$, khối lượng riêng nước $1000\\text{ kg/m}^3$. Biết hiệu suất của bếp là 80%. Thời gian cần thiết để đun sôi nước là bao nhiêu phút? Làm tròn đến hai chữ số thập phân.",
-          "correct": ""
+          "correct": "13,13"
         },
         {
           "id": "mh25_ct_q37",
           "text": "Ở $0^\\circ\\text{C}$ và 1 atm, khí hydrogen có khối lượng riêng là $0,09\\text{ kg/m}^3$. Một bình chứa 0,18 kg khí hydrogen ở $0^\\circ\\text{C}$ và 1 atm. Nếu nén đẳng nhiệt để áp suất tăng lên 3 atm thì thể tích khí lúc sau bằng bao nhiêu lít?",
-          "correct": ""
+          "correct": "666,67"
         },
         {
           "id": "mh25_ct_q38",
           "text": "Ba tụ điện $C_1 = 2\\ \\mu\\text{F}$, $C_2 = 3\\ \\mu\\text{F}$, $C_3 = 6\\ \\mu\\text{F}$. Hỏi từ ba tụ điện này có thể tạo ra tối đa bao nhiêu bộ tụ ghép (sử dụng ít nhất 2 tụ) cho điện dung tương đương khác nhau?",
-          "correct": ""
+          "correct": "14"
         },
         {
           "id": "mh25_ct_q39",
           "text": "Phản ứng tổng hợp nhiệt hạch: ${}_{1}^{2}\\text{H} + {}_{1}^{3}\\text{H} \\rightarrow {}_{2}^{4}\\text{He} + {}_{0}^{1}\\text{n} + 17,6\\text{ MeV}$. Biết $1\\text{ MeV} = 1,6 \\times 10^{-13}\\text{ J}$, số Avogadro $N_A = 6,02 \\times 10^{23}\\text{ mol}^{-1}$. Nếu tổng hợp được 1 mol He từ phản ứng trên thì năng lượng toả ra là bao nhiêu GJ (gigajoule)? Làm tròn đến hai chữ số thập phân.",
-          "correct": ""
+          "correct": "1695,23"
         },
         {
           "id": "mh25_ct_q40",
           "text": "Trong thí nghiệm tán sắc ánh sáng, ánh sáng đơn sắc màu lục có bước sóng 520 nm chiếu qua khe hẹp trong thí nghiệm Young, khoảng cách hai khe $d = 0,5\\text{ mm}$, khoảng cách từ hai khe đến màn $D = 1\\text{ m}$. Khoảng vân giao thoa $i$ bằng bao nhiêu mm? Làm tròn đến hai chữ số thập phân.",
-          "correct": ""
+          "correct": "1,04"
         }
       ]
     }
