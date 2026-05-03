@@ -225,27 +225,27 @@ export default function App() {
                   {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
                   <span dangerouslySetInnerHTML={renderMath(q.text)} />
                   {q.image && (
-  <img 
-    src={q.image} 
-    style={{ width: q.imageWidth || '60%' }} // Ưu tiên imageWidth từ JSON, nếu không có thì mặc định 60%
-    className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
-    alt="Minh họa" 
-  />
-)}
+                    <img 
+                      src={q.image} 
+                      style={{ width: q.imageWidth || '60%' }} // Ưu tiên imageWidth từ JSON, nếu không có thì mặc định 60%
+                      className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
+                      alt="Minh họa" 
+                    />
+                  )}
                   {/* CODE MỚI: XỬ LÝ NHIỀU ẢNH LÚC CÙNG LÚC */}
-{q.images && (
-  <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-2">
-    {q.images.map((imgObj, index) => (
-      <img 
-        key={index}
-        src={imgObj.url} 
-        style={{ width: imgObj.width || '45%' }} 
-        className="rounded-xl border border-slate-200 shadow-sm" 
-        alt={`Minh họa ${index + 1}`} 
-      />
-    ))}
-  </div>
-)}
+                  {q.images && (
+                    <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-2">
+                      {q.images.map((imgObj, index) => (
+                        <img 
+                          key={index}
+                          src={imgObj.url} 
+                          style={{ width: imgObj.width || '45%' }} 
+                          className="rounded-xl border border-slate-200 shadow-sm" 
+                          alt={`Minh họa ${index + 1}`} 
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-4">
                   {q.options.map((opt, oIdx) => {
@@ -275,27 +275,27 @@ export default function App() {
                 {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
                 <span dangerouslySetInnerHTML={renderMath(q.text)} />
                 {q.image && (
-  <img 
-    src={q.image} 
-    style={{ width: q.imageWidth || '60%' }} // Ưu tiên imageWidth từ JSON, nếu không có thì mặc định 60%
-    className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
-    alt="Minh họa" 
-  />
-)}
+                  <img 
+                    src={q.image} 
+                    style={{ width: q.imageWidth || '60%' }} // Ưu tiên imageWidth từ JSON, nếu không có thì mặc định 60%
+                    className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
+                    alt="Minh họa" 
+                  />
+                )}
                 {/* CODE MỚI: XỬ LÝ NHIỀU ẢNH LÚC CÙNG LÚC */}
-{q.images && (
-  <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-2">
-    {q.images.map((imgObj, index) => (
-      <img 
-        key={index}
-        src={imgObj.url} 
-        style={{ width: imgObj.width || '45%' }} 
-        className="rounded-xl border border-slate-200 shadow-sm" 
-        alt={`Minh họa ${index + 1}`} 
-      />
-    ))}
-  </div>
-)}
+                {q.images && (
+                  <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-2">
+                    {q.images.map((imgObj, index) => (
+                      <img 
+                        key={index}
+                        src={imgObj.url} 
+                        style={{ width: imgObj.width || '45%' }} 
+                        className="rounded-xl border border-slate-200 shadow-sm" 
+                        alt={`Minh họa ${index + 1}`} 
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
               <div className="space-y-3 pl-4">
                 {q.options.map((opt, oIdx) => {
@@ -315,42 +315,42 @@ export default function App() {
         </div>
 
         {/* PHẦN 2 */}
-{exam.part2 && (
-  <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
-    <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">
-      Phần 2: Đọc hiểu ngữ liệu
-    </h2>
-    
-    {/* 1. NỘI DUNG VĂN BẢN NGỮ LIỆU */}
-    <div 
-      className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-6 italic"
-      dangerouslySetInnerHTML={renderMath(exam.part2.passage)}
-    />
+        {exam.part2 && (
+          <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
+            <h2 className="text-xl font-black text-blue-800 mb-6 border-l-4 border-blue-600 pl-4 uppercase">
+              Phần 2: Đọc hiểu ngữ liệu
+            </h2>
+            
+            {/* 1. NỘI DUNG VĂN BẢN NGỮ LIỆU */}
+            <div 
+              className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed mb-6 italic"
+              dangerouslySetInnerHTML={renderMath(exam.part2.passage)}
+            />
 
-    {/* 2. XỬ LÝ 1 ẢNH DUY NHẤT (Nếu chỉ dùng trường "image" cũ) */}
-    {exam.part2.image && (
-      <img 
-        src={exam.part2.image} 
-        style={{ width: exam.part2.imageWidth || '60%' }}
-        className="mb-8 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
-        alt="Minh họa ngữ liệu" 
-      />
-    )}
+            {/* 2. XỬ LÝ 1 ẢNH DUY NHẤT CHO NGỮ LIỆU */}
+            {exam.part2.image && (
+              <img 
+                src={exam.part2.image} 
+                style={{ width: exam.part2.imageWidth || '60%' }}
+                className="mb-8 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
+                alt="Minh họa ngữ liệu" 
+              />
+            )}
 
-    {/* 3. XỬ LÝ NHIỀU ẢNH (Dùng trường "images" mới cho Ngữ liệu) */}
-    {exam.part2.images && (
-      <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
-        {exam.part2.images.map((imgObj, index) => (
-          <img 
-            key={index}
-            src={imgObj.url} 
-            style={{ width: imgObj.width || '45%' }} 
-            className="rounded-xl border border-slate-200 shadow-sm" 
-            alt={`Minh họa ngữ liệu ${index + 1}`} 
-          />
-        ))}
-      </div>
-    )}
+            {/* 3. XỬ LÝ NHIỀU ẢNH CHO NGỮ LIỆU */}
+            {exam.part2.images && (
+              <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
+                {exam.part2.images.map((imgObj, index) => (
+                  <img 
+                    key={index}
+                    src={imgObj.url} 
+                    style={{ width: imgObj.width || '45%' }} 
+                    className="rounded-xl border border-slate-200 shadow-sm" 
+                    alt={`Minh họa ngữ liệu ${index + 1}`} 
+                  />
+                ))}
+              </div>
+            )}
             
             <div className="space-y-10">
               {exam.part2.questions.map((q, idx) => (
@@ -359,14 +359,29 @@ export default function App() {
                     <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + idx + 1}: </span> 
                     {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
                     <span dangerouslySetInnerHTML={renderMath(q.text)} />
-                    {exam.part2.image && (
-  <img 
-    src={exam.part2.image} 
-    style={{ width: exam.part2.imageWidth || '70%' }}
-    className="mb-8 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
-    alt="Minh họa ngữ liệu" 
-  />
-)}
+                    
+                    {/* ĐÃ FIX: Sử dụng q.image và q.images thay vì exam.part2.image */}
+                    {q.image && (
+                      <img 
+                        src={q.image} 
+                        style={{ width: q.imageWidth || '70%' }}
+                        className="mt-6 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
+                        alt="Minh họa" 
+                      />
+                    )}
+                    {q.images && (
+                      <div className="flex flex-wrap justify-center items-center gap-4 mt-6">
+                        {q.images.map((imgObj, index) => (
+                          <img 
+                            key={index}
+                            src={imgObj.url} 
+                            style={{ width: imgObj.width || '45%' }} 
+                            className="rounded-xl border border-slate-200 shadow-sm" 
+                            alt={`Minh họa ${index + 1}`} 
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {q.options.map((opt, oIdx) => {
@@ -403,27 +418,27 @@ export default function App() {
                     {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
                     <span dangerouslySetInnerHTML={renderMath(q.text)} />
                     {q.image && (
-  <img 
-    src={q.image} 
-    style={{ width: q.imageWidth || '60%' }} // Ưu tiên imageWidth từ JSON, nếu không có thì mặc định 60%
-    className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
-    alt="Minh họa" 
-  />
-)}
+                      <img 
+                        src={q.image} 
+                        style={{ width: q.imageWidth || '60%' }} // Ưu tiên imageWidth từ JSON, nếu không có thì mặc định 60%
+                        className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
+                        alt="Minh họa" 
+                      />
+                    )}
                     {/* CODE MỚI: XỬ LÝ NHIỀU ẢNH LÚC CÙNG LÚC */}
-{q.images && (
-  <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-2">
-    {q.images.map((imgObj, index) => (
-      <img 
-        key={index}
-        src={imgObj.url} 
-        style={{ width: imgObj.width || '45%' }} 
-        className="rounded-xl border border-slate-200 shadow-sm" 
-        alt={`Minh họa ${index + 1}`} 
-      />
-    ))}
-  </div>
-)}
+                    {q.images && (
+                      <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-2">
+                        {q.images.map((imgObj, index) => (
+                          <img 
+                            key={index}
+                            src={imgObj.url} 
+                            style={{ width: imgObj.width || '45%' }} 
+                            className="rounded-xl border border-slate-200 shadow-sm" 
+                            alt={`Minh họa ${index + 1}`} 
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <div className="relative">
                     <input type="text" placeholder="Đáp số..." disabled={isReviewMode} value={userVal} onChange={(e) => handleAnswerChange(q.id, e.target.value)} className={`w-full md:w-40 p-4 rounded-2xl border-2 font-mono text-lg focus:outline-none focus:border-blue-600 ${isReviewMode ? (isCorrect ? 'border-green-500 bg-green-50 text-green-700' : 'border-red-500 bg-red-50 text-red-700') : 'border-slate-200'}`} />
