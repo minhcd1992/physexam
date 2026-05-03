@@ -414,7 +414,7 @@
     }
   },
   {
-    "id": "hcmue_phys_2025_minhhoa_01",
+    "id": "hcmue_phys_2026_minhhoa_01",
     "title": "Đề thi ĐGNL Chuyên biệt 2026 - Đề số 1",
     "subject": "VẬT LÍ",
     "duration": 5400,
@@ -808,6 +808,804 @@
         {
           "id": "mh25_ct_q40",
           "text": "Trong thí nghiệm tán sắc ánh sáng, ánh sáng đơn sắc màu lục có bước sóng 520 nm chiếu qua khe hẹp trong thí nghiệm Young, khoảng cách hai khe $d = 0,5\\text{ mm}$, khoảng cách từ hai khe đến màn $D = 1\\text{ m}$. Khoảng vân giao thoa $i$ bằng bao nhiêu mm? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "hcmue_phys_2026_minhhoa_02",
+    "title": "Đề thi minh họa ĐGNL Chuyên biệt 2025 - Số 2",
+    "subject": "VẬT LÍ",
+    "duration": 5400,
+    "questions": {
+      "part1A": [
+        {
+          "id": "mh25_d2_q1",
+          "text": "Tại các cửa khẩu sân bay, hành lý của hành khách được đưa qua máy soi X-quang. Màn hình hiển thị sẽ tô màu khác nhau cho từng loại vật liệu: vật liệu hữu cơ (nhựa, vải, thực phẩm) thường hiện màu cam/nâu, kim loại hiện màu xanh dương/xanh lá, và vật liệu vô cơ dày đặc (gốm sứ, thủy tinh dày) hiện màu xanh lá sẫm. Nguyên nhân phân biệt màu này là do",
+          "options": [
+            "Tia X bị phản xạ khác nhau bởi bề mặt từng loại vật liệu.",
+            "Các vật liệu khác nhau hấp thụ tia X với mức độ khác nhau, phần mềm xử lý gán màu theo mức độ suy giảm cường độ.",
+            "Tia X bị khúc xạ khác nhau khi xuyên qua từng loại vật liệu.",
+            "Tia X kích thích các nguyên tử phát ra ánh sáng nhìn thấy có màu đặc trưng."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q2",
+          "text": "Lò vi sóng trong nhà bếp hoạt động ở tần số $2,45\\text{ GHz}$. Bước sóng của vi sóng này xấp xỉ bằng bao nhiêu?",
+          "options": [
+            "0,122 m.",
+            "12,2 cm.",
+            "1,22 mm.",
+            "Cả A và B đều đúng."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q3",
+          "text": "Hình vẽ mô tả đường sức từ của hệ hai thanh nam châm thẳng đặt song song. Phát biểu nào sau đây là ĐÚNG?",
+          "options": [
+            "Vùng giữa hai nam châm có từ trường yếu vì các đường sức triệt tiêu nhau.",
+            "Vùng giữa hai nam châm có từ trường mạnh và gần đều vì các đường sức dày và song song.",
+            "Đường sức từ bắt đầu và kết thúc tại các cực từ, không tạo thành vòng kín.",
+            "Hai nam châm đặt cùng chiều sẽ luôn hút nhau."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q4",
+          "text": "Cá torpedo (cá đuối điện) là một loài cá biển có khả năng phóng điện để tự vệ. Người ta đo được điện áp phóng ra là 220 V và cường độ dòng điện là 30 A trong thời gian khoảng 2 ms. Năng lượng điện mà cá torpedo giải phóng trong mỗi lần phóng điện là bao nhiêu?",
+          "options": [
+            "6,6 J.",
+            "13,2 J.",
+            "660 mJ.",
+            "0,013 J."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q5",
+          "text": "Màn hình LCD (Liquid Crystal Display) sử dụng vật liệu tinh thể lỏng. Tinh thể lỏng có đặc điểm nào sau đây?",
+          "options": [
+            "Là chất rắn vô định hình hoàn toàn, không có trật tự cấu trúc.",
+            "Là trạng thái trung gian giữa chất lỏng và chất rắn tinh thể: có tính chảy của chất lỏng nhưng vẫn giữ sự sắp xếp trật tự của phân tử theo một số hướng nhất định.",
+            "Là chất lỏng thông thường với nhiệt độ đông đặc rất thấp.",
+            "Có cấu trúc tinh thể hoàn toàn giống chất rắn nhưng ở thể lỏng."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q6",
+          "text": "Nhiệt độ bề mặt của Mặt Trời khoảng $5778\\text{ K}$. Nhiệt độ này tương đương bao nhiêu độ Celsius?",
+          "options": [
+            "$5505^\\circ\\text{C}$.",
+            "$6051^\\circ\\text{C}$.",
+            "$5778^\\circ\\text{C}$.",
+            "$5232^\\circ\\text{C}$."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q7",
+          "text": "Trong công nghệ đông lạnh thực phẩm bằng nitơ lỏng ($-196^\\circ\\text{C}$), thực phẩm được làm đông rất nhanh. Ưu điểm vật lí chính của phương pháp này so với đông lạnh thông thường (tủ đông $-20^\\circ\\text{C}$) là",
+          "options": [
+            "Nitơ lỏng bay hơi nhanh, hút nhiệt lớn và nhanh khiến tinh thể đá hình thành rất nhỏ, ít phá vỡ tế bào thực phẩm.",
+            "Nitơ lỏng phản ứng hóa học với thực phẩm, bảo quản tốt hơn.",
+            "Nhiệt độ thấp hơn làm cho nước không thể đông đặc.",
+            "Nitơ lỏng tạo ra áp suất cao bảo vệ cấu trúc tế bào thực phẩm."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q8",
+          "text": "Nhà vật lí Robert Brown năm 1827 quan sát hạt phấn hoa lơ lửng trong nước qua kính hiển vi và thấy chúng chuyển động hỗn loạn không ngừng. Nguyên nhân đúng nhất của hiện tượng này là",
+          "options": [
+            "Hạt phấn hoa có sự sống nên tự di chuyển.",
+            "Dòng đối lưu trong nước làm hạt phấn hoa di chuyển.",
+            "Các phân tử nước chuyển động nhiệt không ngừng, va chạm không đều vào hạt phấn hoa từ mọi phía, tạo lực tổng hợp biến đổi liên tục.",
+            "Ánh sáng từ kính hiển vi tác dụng lực lên hạt phấn hoa."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q9",
+          "text": "Một người bơm bánh xe đạp. Ban đầu lốp xe có thể tích $V = 1,2\\text{ lít}$, áp suất $p_0 = 1\\text{ atm}$ (áp suất khí quyển). Sau khi bơm thêm không khí ở áp suất khí quyển vào, áp suất trong lốp tăng lên 3 atm ở cùng nhiệt độ. Thể tích khí (quy về áp suất khí quyển) đã được bơm thêm vào bằng bao nhiêu lít?",
+          "options": [
+            "1,2 lít.",
+            "2,4 lít.",
+            "3,6 lít.",
+            "4,8 lít."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q10",
+          "text": "Ở nhiệt độ $T_1 = 300\\text{ K}$, động năng tịnh tiến trung bình của một phân tử khí lí tưởng là $\\overline{W}_1$. Khi tăng nhiệt độ lên $T_2 = 900\\text{ K}$, động năng tịnh tiến trung bình $\\overline{W}_2$ bằng bao nhiêu?",
+          "options": [
+            "$\\overline{W}_2 = 3\\overline{W}_1$.",
+            "$\\overline{W}_2 = 9\\overline{W}_1$.",
+            "$\\overline{W}_2 = \\sqrt{3}\\cdot\\overline{W}_1$.",
+            "$\\overline{W}_2 = \\overline{W}_1/3$."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q11",
+          "text": "Bếp từ (induction cooker) đun nóng nồi kim loại nhưng KHÔNG làm nóng đĩa sứ. Nguyên lí vật lí nào giải thích điều này?",
+          "options": [
+            "Sứ không dẫn nhiệt nên không bị nung nóng.",
+            "Bếp từ phát ra sóng hồng ngoại chỉ hấp thụ được bởi kim loại.",
+            "Cuộn dây trong bếp tạo từ trường biến thiên, cảm ứng dòng điện Foucault trong nồi kim loại làm nóng nồi; sứ không dẫn điện nên không có dòng Foucault.",
+            "Kim loại có nhiệt dung riêng nhỏ hơn sứ nên nóng lên nhanh hơn."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q12",
+          "text": "Trong máy gia tốc cyclotron, hạt tích điện chuyển động theo quỹ đạo tròn trong từ trường đều. Khi động năng hạt tăng lên (do được gia tốc bởi điện trường), bán kính quỹ đạo của hạt sẽ",
+          "options": [
+            "Giảm vì hạt chuyển động nhanh hơn, lực từ lớn hơn.",
+            "Tăng vì bán kính tỉ lệ với vận tốc hạt: $r = \\frac{mv}{qB}$.",
+            "Không đổi vì lực từ luôn vuông góc với vận tốc.",
+            "Tăng hay giảm phụ thuộc vào chiều của từ trường."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q13",
+          "text": "Trong lò phản ứng hạt nhân, uranium-235 bắt một neutron nhiệt và phân hạch. Một trong các phản ứng có thể xảy ra là: ${}_{92}^{235}\\text{U} + {}_{0}^{1}\\text{n} \\rightarrow {}_{56}^{144}\\text{Ba} + X + 3{}_{0}^{1}\\text{n}$. Hạt nhân $X$ là hạt nhân nào?",
+          "options": [
+            "${}_{36}^{89}\\text{Kr}$.",
+            "${}_{36}^{90}\\text{Kr}$.",
+            "${}_{35}^{89}\\text{Br}$.",
+            "${}_{36}^{92}\\text{Kr}$."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q14",
+          "text": "Dựa vào đồ thị năng lượng liên kết riêng theo số khối, phát biểu nào sau đây ĐÚNG?",
+          "options": [
+            "Các hạt nhân nhẹ ($A < 10$) bền vững hơn hạt nhân trung bình.",
+            "Phản ứng tổng hợp hạt nhân (fusion) và phân hạch (fission) đều có thể toả năng lượng vì đều làm tăng năng lượng liên kết riêng của sản phẩm so với hạt nhân ban đầu.",
+            "Sắt (${}^{56}\\text{Fe}$) không tham gia được vào bất kì phản ứng hạt nhân nào.",
+            "Hạt nhân càng nặng thì càng bền vững."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q15",
+          "text": "Trong phòng chụp X-quang y tế, kỹ thuật viên thường đứng sau tấm chắn chì hoặc ra ngoài phòng trong lúc máy hoạt động. Phát biểu nào sau đây là ĐÚNG về lí do này?",
+          "options": [
+            "Tia X phản xạ lại từ cơ thể bệnh nhân có cường độ lớn hơn tia X chiếu vào.",
+            "Kỹ thuật viên cần tránh tiếp xúc tích lũy tia X vì liều hấp thụ tổng cộng trong thời gian dài có thể vượt ngưỡng an toàn và gây hại tế bào.",
+            "Tia X chỉ nguy hiểm khi chạm trực tiếp vào da người.",
+            "Phòng chụp X-quang có từ trường mạnh, nguy hiểm cho người ở gần."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q16",
+          "text": "Một proton ($q = +1,6 \\times 10^{-19}\\text{ C}$) dịch chuyển từ điểm P (điện thế 200 V) đến điểm Q (điện thế 600 V) theo đường bất kì. Công của lực điện trường thực hiện lên proton bằng bao nhiêu?",
+          "options": [
+            "$+6,4 \\times 10^{-17}\\text{ J}$.",
+            "$-6,4 \\times 10^{-17}\\text{ J}$.",
+            "$+3,2 \\times 10^{-17}\\text{ J}$.",
+            "$-3,2 \\times 10^{-17}\\text{ J}$."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q17",
+          "text": "Đường đặc trưng vôn-ampe của bóng đèn dây tóc có dạng cong (không tuyến tính) trong khi của điện trở thuần có dạng thẳng. Lí do đường đặc trưng của bóng đèn cong là",
+          "options": [
+            "Bóng đèn không tuân theo định luật Ohm vì là linh kiện bán dẫn.",
+            "Điện trở dây tóc vonfram tăng theo nhiệt độ; khi dòng lớn hơn, dây tóc nóng hơn, điện trở tăng, khiến đồ thị $I-U$ có độ dốc giảm dần.",
+            "Hiệu ứng bề mặt làm điện trở tăng khi tần số dòng điện tăng.",
+            "Bóng đèn có tụ điện bên trong làm lệch pha dòng và áp."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q18",
+          "text": "Trong tivi đèn hình CRT (ống tia âm cực) cũ, chùm electron được bắn ra và bị lệch hướng bởi từ trường để quét lên màn hình. Một electron ($m = 9,1 \\times 10^{-31}\\text{ kg}$, $q = -1,6 \\times 10^{-19}\\text{ C}$) chuyển động với tốc độ $v = 4 \\times 10^7\\text{ m/s}$ theo chiều dương trục $x$ trong từ trường đều $B = 0,02\\text{ T}$ hướng theo trục $z$ dương. Độ lớn lực Lorentz tác dụng lên electron bằng bao nhiêu?",
+          "options": [
+            "$1,28 \\times 10^{-13}\\text{ N}$.",
+            "$6,4 \\times 10^{-14}\\text{ N}$.",
+            "$1,28 \\times 10^{-12}\\text{ N}$.",
+            "$3,2 \\times 10^{-13}\\text{ N}$."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q19",
+          "text": "Điện năng được truyền từ nhà máy điện đến thành phố qua đường dây tải điện dài. Để giảm hao phí trên đường dây ($P_{\\text{hp}} = I^2 R_{\\text{dây}}$), người ta dùng máy biến áp tăng điện áp lên 10 lần trước khi truyền tải. Khi đó, với cùng công suất truyền tải, hao phí điện năng trên đường dây sẽ",
+          "options": [
+            "Giảm 10 lần.",
+            "Tăng 10 lần.",
+            "Giảm 100 lần.",
+            "Không đổi vì công suất truyền tải không đổi."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d2_q20",
+          "text": "Một ống sáo hở hai đầu dài $L = 34\\text{ cm}$. Tốc độ âm trong không khí là 340 m/s. Khi người thổi tạo ra âm cơ bản, tần số âm phát ra là bao nhiêu Hz?",
+          "options": [
+            "250 Hz.",
+            "500 Hz.",
+            "1000 Hz.",
+            "125 Hz."
+          ],
+          "correct": 0
+        }
+      ],
+      "part1B": [
+        {
+          "id": "mh25_d2_q21",
+          "text": "Một nhà khoa học thực hiện thí nghiệm đo nhiệt dung riêng của một hợp kim mới. Bà đun nóng một mẫu hợp kim khối lượng 200 g đến $150^\\circ\\text{C}$ rồi thả vào bình nhiệt lượng kế bằng đồng khối lượng 100 g chứa 300 g nước ở $25^\\circ\\text{C}$. Nhiệt độ cân bằng đo được là $35^\\circ\\text{C}$. Biết nhiệt dung riêng của nước là $4200\\text{ J/(kg}\\cdot\\text{K)}$, của đồng là $380\\text{ J/(kg}\\cdot\\text{K)}$. Những phát biểu nào sau đây đúng?",
+          "options": [
+            "1. Nhiệt lượng mà nước hấp thụ là 12600 J.",
+            "2. Nhiệt lượng mà bình đồng hấp thụ là 380 J.",
+            "3. Nhiệt dung riêng của hợp kim xấp xỉ $565\\text{ J/(kg}\\cdot\\text{K)}$.",
+            "4. Nếu khối lượng hợp kim tăng gấp đôi (giữ nguyên nhiệt độ ban đầu), nhiệt độ cân bằng sẽ cao hơn $35^\\circ\\text{C}$."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_d2_q22",
+          "text": "Trong kĩ thuật siêu âm chẩn đoán thai nhi, đầu dò phát sóng siêu âm tần số $5\\text{ MHz}$ vào cơ thể. Những phát biểu nào sau đây ĐÚNG khi nói về sóng siêu âm được sử dụng ở đây?",
+          "options": [
+            "1. Sóng siêu âm có tần số lớn hơn $20\\text{ kHz}$, vượt ngưỡng nghe của con người.",
+            "2. Sóng siêu âm tần số cao cho hình ảnh độ phân giải tốt hơn vì bước sóng nhỏ hơn, \"nhìn thấy\" được cấu trúc nhỏ hơn.",
+            "3. Siêu âm sử dụng nguyên lí phản xạ sóng tại ranh giới giữa các mô có trở kháng âm khác nhau.",
+            "4. Sóng siêu âm y tế là sóng điện từ, giống như tia X."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_d2_q23",
+          "text": "Một máy phát điện xoay chiều một pha có rôto là nam châm vĩnh cửu quay đều với tần số $50\\text{ Hz}$, stato có 200 vòng dây, diện tích mỗi vòng $S = 100\\text{ cm}^2$, cảm ứng từ cực đại $B_0 = 0,5\\text{ T}$. Những phát biểu nào sau đây đúng?",
+          "options": [
+            "1. Suất điện động cực đại $E_0 = N\\cdot B_0\\cdot S\\cdot \\omega$ với $\\omega = 100\\pi\\text{ rad/s}$.",
+            "2. Giá trị $E_0 \\approx 9870\\text{ V}$.",
+            "3. Giá trị hiệu dụng của suất điện động là $E_{\\text{rms}} = \\frac{E_0}{\\sqrt{2}} \\approx 6980\\text{ V}$.",
+            "4. Tần số của suất điện động tạo ra bằng tần số quay của rôto ($50\\text{ Hz}$) nếu máy có một cặp cực."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_d2_q24",
+          "text": "Tia laser được ứng dụng rộng rãi trong y tế, công nghiệp và viễn thông. Những phát biểu nào sau đây ĐÚNG khi nói về đặc tính của tia laser?",
+          "options": [
+            "1. Laser là ánh sáng kết hợp (coherent): tất cả các photon có cùng tần số, cùng pha và cùng hướng truyền.",
+            "2. Laser có thể truyền đi rất xa mà hầu như không bị phân kì (độ định hướng cao).",
+            "3. Laser màu đỏ có năng lượng mỗi photon lớn hơn laser màu xanh lam cùng công suất.",
+            "4. Laser được dùng trong phẫu thuật mắt LASIK để tái tạo hình dạng giác mạc."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_d2_q25",
+          "text": "Kính hiển vi điện tử (SEM/TEM) sử dụng chùm electron thay vì ánh sáng nhìn thấy để quan sát vật thể nhỏ. Những phát biểu nào sau đây ĐÚNG khi giải thích tại sao kính hiển vi điện tử có độ phân giải cao hơn kính hiển vi quang học?",
+          "options": [
+            "1. Electron có bước sóng de Broglie ($\\lambda = \\frac{h}{mv}$) nhỏ hơn nhiều so với ánh sáng nhìn thấy khi được gia tốc đến tốc độ đủ lớn.",
+            "2. Giới hạn độ phân giải của kính hiển vi tỉ lệ thuận với bước sóng của bức xạ sử dụng; bước sóng nhỏ hơn cho độ phân giải tốt hơn.",
+            "3. Electron mang điện tích nên có thể hội tụ bằng thấu kính điện từ, giống như ánh sáng hội tụ qua thấu kính thủy tinh.",
+            "4. Kính hiển vi điện tử hoạt động được trong không khí bình thường vì electron truyền qua không khí dễ dàng."
+          ],
+          "correct": []
+        }
+      ],
+      "part2": {
+        "passage": "NGỮ LIỆU 1: Bẫy tia sét trên cao ốc và hiện tượng sét hòn\nCột thu lôi Franklin hoạt động dựa trên nguyên lí phóng điện qua không khí. Khi có tích điện mạnh trên đám mây dông, điện trường giữa đám mây và mặt đất có thể đạt $3 \\times 10^6\\text{ V/m}$ – ngưỡng đánh thủng không khí. Cột thu lôi được làm bằng đồng hoặc nhôm dẫn điện tốt, đặt ở vị trí cao nhất của công trình, nối với đất qua dây dẫn. Điện tích trên đám mây: $Q \\approx 5\\text{ C}$, điện thế giữa đám mây và đất: $V \\approx 10^8\\text{ V}$, thời gian phóng điện sét trung bình: $\\Delta t \\approx 0,2\\text{ s}$. Ngoài ra, một hiện tượng hiếm gặp là \"sét hòn\" – quả cầu sáng bí ẩn lơ lửng trong không khí vài giây đến vài phút sau trận dông. Bản chất vật lí của sét hòn đến nay vẫn chưa được giải thích hoàn toàn.\n\nNGỮ LIỆU 2: Vệ tinh GPS và đồng hồ nguyên tử\nHệ thống GPS (Global Positioning System) gồm 24 vệ tinh bay trên quỹ đạo tròn ở độ cao khoảng $h = 20.200\\text{ km}$ so với bề mặt Trái Đất. Mỗi vệ tinh phát tín hiệu vô tuyến với thông tin về thời gian và vị trí. Máy thu GPS trên mặt đất tính khoảng cách đến ít nhất 4 vệ tinh từ độ trễ thời gian của tín hiệu thu được. Để hệ thống hoạt động chính xác, sai số thời gian phải dưới $20–30\\text{ ns}$ (nanosecond). Tốc độ ánh sáng $c = 3 \\times 10^8\\text{ m/s}$. Bán kính Trái Đất $R = 6400\\text{ km}$. Chu kì quay của vệ tinh GPS: $T = 11\\text{ giờ } 58\\text{ phút} \\approx 43.080\\text{ s}$.",
+        "questions": [
+          {
+            "id": "mh25_d2_q26",
+            "text": "Dựa vào Ngữ liệu 1: Năng lượng giải phóng trong một lần phóng sét ở điều kiện đã cho bằng bao nhiêu?",
+            "options": [
+              "$2 \\times 10^8\\text{ J}$.",
+              "$5 \\times 10^8\\text{ J}$.",
+              "$1 \\times 10^9\\text{ J}$.",
+              "$2,5 \\times 10^8\\text{ J}$."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_d2_q27",
+            "text": "Dựa vào Ngữ liệu 1: Cường độ dòng điện trung bình trong một lần phóng sét bằng bao nhiêu?",
+            "options": [
+              "1 A.",
+              "25 A.",
+              "10 A.",
+              "50 A."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_d2_q28",
+            "text": "Dựa vào Ngữ liệu 1: Cột thu lôi được làm nhọn ở đầu để tăng khả năng thu hút sét. Giải thích vật lí nào sau đây là ĐÚNG nhất?",
+            "options": [
+              "Đầu nhọn có điện dung lớn nên tích được nhiều điện tích hơn.",
+              "Điện tích tập trung ở chỗ cong nhọn (mật độ điện tích mặt lớn), làm cường độ điện trường cục bộ rất lớn, dễ ion hoá không khí xung quanh và tạo điều kiện cho phóng điện về phía đám mây.",
+              "Đầu nhọn có diện tích bề mặt lớn hơn, tăng xác suất tiếp xúc với sét.",
+              "Kim loại nhọn phát ra bức xạ điện từ thu hút sét."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_d2_q29",
+            "text": "Dựa vào Ngữ liệu 2: Nếu đồng hồ trên vệ tinh sai lệch 30 ns so với thực tế, sai số tối đa về khoảng cách trong tính toán GPS là bao nhiêu?",
+            "options": [
+              "9 m.",
+              "30 m.",
+              "0,9 m.",
+              "90 m."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_d2_q30",
+            "text": "Dựa vào Ngữ liệu 2: Tốc độ vệ tinh GPS trên quỹ đạo tròn ở độ cao $h = 20.200\\text{ km}$ ($g$ tại đó $\\approx 0,57\\text{ m/s}^2$) xấp xỉ bằng bao nhiêu km/s? Biết gia tốc hướng tâm $a = \\frac{v^2}{r}$ với $r = R + h$.",
+            "options": [
+              "14,0 km/s.",
+              "3,9 km/s.",
+              "7,9 km/s.",
+              "11,2 km/s."
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      "part3": [
+        {
+          "id": "mh25_d2_q31",
+          "text": "Một xilanh nằm ngang chứa khí ở áp suất $1,5 \\times 10^5\\text{ Pa}$. Khi truyền nhiệt lượng $Q = 600\\text{ J}$ cho khối khí, piston dịch chuyển đều làm thể tích khí tăng thêm $2 \\times 10^{-3}\\text{ m}^3$ (áp suất không đổi). Độ tăng nội năng của khối khí bằng bao nhiêu joule (J)?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d2_q32",
+          "text": "Trong thí nghiệm sinh học, một ống tiêm y tế chứa 12 ml không khí ở áp suất khí quyển 760 mmHg, nhiệt độ phòng không đổi. Bịt đầu kim và đẩy pittong để thể tích giảm còn $V_2$. Áp kế kỹ thuật số hiển thị áp suất dư (so với khí quyển) là 380 mmHg. Thể tích $V_2$ bằng bao nhiêu ml? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d2_q33",
+          "text": "Một cuộn dây tròn 100 vòng, bán kính 5 cm, điện trở $4\\ \\Omega$, đặt trong từ trường đều vuông góc với mặt phẳng cuộn dây. Từ trường giảm đều từ 0,8 T xuống 0,2 T trong 0,6 s. Cường độ dòng điện cảm ứng trong cuộn dây bằng bao nhiêu miliampere (mA)? Lấy $\\pi \\approx 3,14$. Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d2_q34",
+          "text": "Khi khai quật một ngôi mộ cổ, các nhà khảo cổ phân tích mẫu than củi và tìm thấy hoạt độ phóng xạ ${}^{14}\\text{C}$ hiện tại bằng 25% hoạt độ của mẫu than mới cùng khối lượng. Biết chu kì bán rã của ${}^{14}\\text{C}$ là 5730 năm. Ngôi mộ này được xây dựng cách đây khoảng bao nhiêu năm?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d2_q35",
+          "text": "Một giọt mực trong máy in phun có khối lượng $m = 4 \\times 10^{-10}\\text{ kg}$, mang điện tích dương $q = 8 \\times 10^{-13}\\text{ C}$, bay vào vùng điện trường đều $E = 1,5 \\times 10^6\\text{ V/m}$ (vuông góc với phương bay ban đầu) với vận tốc $v_0 = 25\\text{ m/s}$. Chiều dài bản lái $L = 4\\text{ cm}$. Bỏ qua trọng lực. Độ lệch theo phương điện trường khi giọt mực vừa ra khỏi bản lái bằng bao nhiêu mm? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d2_q36",
+          "text": "Một nồi áp suất bằng thép không gỉ khối lượng 800 g, chứa 1,5 lít nước ở $20^\\circ\\text{C}$. Bếp gas cung cấp công suất nhiệt 2500 W với hiệu suất 70%. Biết nhiệt dung riêng của nước là $4200\\text{ J/(kg}\\cdot\\text{K)}$, của thép không gỉ là $500\\text{ J/(kg}\\cdot\\text{K)}$, khối lượng riêng nước là $1000\\text{ kg/m}^3$. Thời gian để nước trong nồi đạt $100^\\circ\\text{C}$ bằng bao nhiêu giây? Làm tròn đến số nguyên.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d2_q37",
+          "text": "Một quả bóng bay hình cầu chứa khí heli ở nhiệt độ $27^\\circ\\text{C}$, áp suất $1,05 \\times 10^5\\text{ Pa}$, đường kính 30 cm. Đưa quả bóng lên độ cao mà nhiệt độ là $7^\\circ\\text{C}$ và áp suất khí quyển là $0,7 \\times 10^5\\text{ Pa}$ (giả sử quả bóng đủ mềm để áp suất bên trong luôn bằng áp suất khí quyển bên ngoài). Đường kính mới của quả bóng bằng bao nhiêu cm? Làm tròn đến hai chữ số thập phân. (Gợi ý: thể tích cầu $V = \\frac{4}{3}\\pi r^3$)",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d2_q38",
+          "text": "Có 4 tụ điện giống nhau, mỗi tụ có điện dung $C = 6\\ \\mu\\text{F}$. Từ 4 tụ điện này, ta có thể tạo ra tối đa bao nhiêu giá trị điện dung tương đương khác nhau (sử dụng ít nhất 1 tụ)?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d2_q39",
+          "text": "Trong lõi Mặt Trời, cứ mỗi giây có $6,2 \\times 10^{11}\\text{ kg}$ hydrogen được chuyển hóa thành helium theo chu trình proton-proton. Biết trong quá trình này, 0,7% khối lượng được chuyển thành năng lượng ($E = mc^2$), tốc độ ánh sáng $c = 3 \\times 10^8\\text{ m/s}$. Công suất bức xạ của Mặt Trời tính từ dữ liệu trên bằng bao nhiêu yottawatt ($10^{24}\\text{ W}$)? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d2_q40",
+          "text": "Trong kính hiển vi điện tử truyền qua (TEM), electron được gia tốc qua hiệu điện thế $U = 100\\text{ kV}$. Biết khối lượng electron $m_e = 9,1 \\times 10^{-31}\\text{ kg}$, điện tích $e = 1,6 \\times 10^{-19}\\text{ C}$, hằng số Planck $h = 6,626 \\times 10^{-34}\\text{ J}\\cdot\\text{s}$ (bỏ qua hiệu ứng tương đối tính). Bước sóng de Broglie của electron sau khi được gia tốc bằng bao nhiêu picometer (pm, $1\\text{ pm} = 10^{-12}\\text{ m}$)? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "hcmue_phys_2026_minhhoa_03",
+    "title": "Đề thi minh họa ĐGNL Chuyên biệt 2025 - Số 3",
+    "subject": "VẬT LÍ",
+    "duration": 5400,
+    "questions": {
+      "part1A": [
+        {
+          "id": "mh25_d3_q1",
+          "text": "Trong công nghiệp sản xuất tôn và giấy cuộn, người ta dùng thiết bị kiểm soát độ dày bằng nguồn phóng xạ. Nguồn phát tia beta ($\\beta$) được đặt ở một phía của băng vật liệu, đầu dò ở phía đối diện đo cường độ tia truyền qua. Loại bức xạ $\\beta$ được dùng vì",
+          "options": [
+            "Tia $\\beta$ đâm xuyên rất mạnh, không bị hấp thụ bởi vật liệu nên cho kết quả ổn định.",
+            "Tia $\\beta$ có khả năng đâm xuyên vừa phải – đủ để xuyên qua tấm mỏng vài mm nhưng bị hấp thụ đáng kể khi độ dày thay đổi, giúp đầu dò phân biệt được sự thay đổi nhỏ về bề dày.",
+            "Tia $\\beta$ không ion hoá vật liệu nên không làm thay đổi tính chất sản phẩm.",
+            "Tia $\\beta$ có bước sóng bằng đúng kích thước nguyên tử, tạo ra hiện tượng cộng hưởng khi truyền qua vật liệu."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q2",
+          "text": "Trong nhà máy hóa chất, mực chất lỏng trong bình kín áp suất cao (không thể mở ra kiểm tra) được đo bằng nguồn phóng xạ gamma gắn bên ngoài bình. Nguyên lí hoạt động là",
+          "options": [
+            "Tia gamma bị phản xạ ngược lại bởi bề mặt chất lỏng, đầu dò bên ngoài phát hiện tia phản xạ để xác định mực chất lỏng.",
+            "Tia gamma xuyên qua thành bình và chất lỏng bị hấp thụ nhiều hơn qua phần bình có chất lỏng, đầu dò đặt phía đối diện nhận cường độ khác nhau theo chiều cao, từ đó xác định ranh giới lỏng – khí.",
+            "Tia gamma kích thích chất lỏng phát ra bức xạ huỳnh quang có cường độ tỉ lệ với mực chất lỏng.",
+            "Tia gamma làm ion hoá không khí trên bề mặt chất lỏng, tạo tín hiệu điện được đo từ bên ngoài."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q3",
+          "text": "Hình vẽ mô tả đường sức từ xung quanh một dây dẫn thẳng dài mang dòng điện $I$. Một điểm M nằm cách dây 4 cm, điểm N cách dây 8 cm, cùng nằm trong một mặt phẳng vuông góc với dây. Tỉ số cảm ứng từ $B_M / B_N$ bằng bao nhiêu?",
+          "options": [
+            "0,5.",
+            "2.",
+            "4.",
+            "0,25."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q4",
+          "text": "Thẻ RFID (Radio Frequency Identification) dùng trong thẻ căn cước, thẻ thư viện, thẻ xe buýt hoạt động không cần pin. Khi đưa thẻ gần đầu đọc, một cuộn dây nhỏ trong thẻ sinh ra dòng điện đủ để cấp nguồn cho chip. Hiện tượng vật lí cơ bản nào tạo ra dòng điện đó?",
+          "options": [
+            "Hiệu ứng quang điện: ánh sáng từ đầu đọc chiếu vào thẻ tạo ra dòng quang điện.",
+            "Cảm ứng điện từ: từ trường xoay chiều tần số radio do đầu đọc phát ra tạo ra từ thông biến thiên qua cuộn dây trong thẻ, sinh ra suất điện động cảm ứng.",
+            "Hiệu ứng nhiệt điện: chênh lệch nhiệt độ giữa tay người và thẻ tạo ra điện áp.",
+            "Pin hóa học siêu nhỏ bên trong thẻ được nạp lại bằng sóng điện từ từ đầu đọc."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q5",
+          "text": "Nhíp xe ô tô được làm từ thép đặc biệt có khả năng biến dạng lớn mà không gãy. Trong giới hạn đàn hồi, lực $F$ và độ biến dạng $x$ của nhíp tuân theo định luật Hooke: $F = kx$. Nếu một chiếc nhíp có độ cứng $k = 40\\text{ kN/m}$ chịu tải trọng tĩnh $800\\text{ N}$, độ võng của nhíp bằng bao nhiêu cm?",
+          "options": [
+            "0,5 cm.",
+            "2 cm.",
+            "5 cm.",
+            "20 cm."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q6",
+          "text": "Vật liệu siêu dẫn mất hoàn toàn điện trở khi được làm lạnh xuống dưới nhiệt độ tới hạn $T_c$. Với hợp kim niobium-titanium (NbTi) dùng trong nam châm siêu dẫn của máy MRI, $T_c \\approx 9,2\\text{ K}$. Nhiệt độ này tương đương bao nhiêu độ Celsius?",
+          "options": [
+            "$-263,95^\\circ\\text{C}$.",
+            "$-282,2^\\circ\\text{C}$.",
+            "$9,2^\\circ\\text{C}$.",
+            "$-264,8^\\circ\\text{C}$."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q7",
+          "text": "Màng bọc co nhiệt (shrink wrap) dùng trong đóng gói hàng hóa được làm từ polyme nhiệt dẻo. Khi nung nóng, màng co lại bọc khít quanh sản phẩm. Giải thích vật lí nào sau đây là đúng nhất?",
+          "options": [
+            "Nhiệt làm đứt các liên kết hóa học trong polyme, phân tử co ngắn lại.",
+            "Trong quá trình sản xuất, màng được kéo căng (làm biến dạng dẻo các chuỗi polyme theo hướng kéo). Khi nung nóng, dao động nhiệt của các chuỗi phân tử tăng, làm chúng trở về trạng thái cuộn ngẫu nhiên có entropy cao hơn, dẫn đến màng co lại theo chiều đã bị kéo.",
+            "Nhiệt làm nở đồng đều màng theo mọi phía, bao gồm chiều dày, tạo áp lực bên trong làm màng ôm sát sản phẩm.",
+            "Nhiệt hóa lỏng bề mặt màng, lực căng mặt ngoài kéo màng ôm sát sản phẩm."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q8",
+          "text": "Khí $\\text{CO}_2$ khuếch tán từ tế bào cơ (nồng độ cao) vào máu (nồng độ thấp). Hiện tượng khuếch tán này được giải thích bởi thuyết động học phân tử như thế nào?",
+          "options": [
+            "Các phân tử $\\text{CO}_2$ bị hút về phía máu do máu có pH thấp hơn.",
+            "Các phân tử $\\text{CO}_2$ chuyển động hỗn loạn không ngừng; ở vùng nồng độ cao, số phân tử va chạm và đi qua màng theo chiều từ tế bào sang máu nhiều hơn chiều ngược lại, dẫn đến dòng thuần khuếch tán từ nơi nồng độ cao sang thấp.",
+            "Áp suất khí quyển đẩy $\\text{CO}_2$ từ tế bào vào máu.",
+            "$\\text{CO}_2$ là khí nặng nên chìm xuống và khuếch tán vào máu ở phía dưới."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q9",
+          "text": "Một bình phun sơn aerosol chứa 250 ml khí đẩy (propane) ở áp suất 4 atm và nhiệt độ $27^\\circ\\text{C}$. Sau khi để ngoài trời nắng, nhiệt độ bình tăng lên $57^\\circ\\text{C}$ (thể tích bình xem như không đổi). Áp suất trong bình lúc này bằng bao nhiêu atm?",
+          "options": [
+            "4,4 atm.",
+            "4,8 atm.",
+            "3,6 atm.",
+            "8 atm."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q10",
+          "text": "Một khối khí lí tưởng được nén đoạn nhiệt (không trao đổi nhiệt với môi trường). Trong quá trình nén, công thực hiện lên khối khí là 500 J. Sự thay đổi nội năng của khối khí là",
+          "options": [
+            "Tăng 500 J.",
+            "Giảm 500 J.",
+            "Không đổi vì quá trình đoạn nhiệt.",
+            "Tăng hoặc giảm tùy thuộc vào loại khí."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q11",
+          "text": "Sạc không dây cho điện thoại (chuẩn Qi) truyền điện năng qua khoảng cách vài mm mà không cần tiếp xúc vật lí. Cuộn dây phát trong đế sạc tạo từ trường xoay chiều tần số khoảng $100–200\\text{ kHz}$. Cuộn dây thu trong điện thoại sinh ra dòng điện xoay chiều rồi được chỉnh lưu để sạc pin. Hiệu suất truyền năng lượng bị giảm đáng kể nếu",
+          "options": [
+            "Điện thoại đặt chính giữa đế sạc, hai cuộn dây thẳng trục với nhau.",
+            "Đặt một vật kim loại dày (ví, chìa khóa) giữa điện thoại và đế sạc, vì kim loại làm giảm từ thông liên kết và sinh dòng Foucault hấp thụ năng lượng.",
+            "Đế sạc được cắm vào nguồn điện xoay chiều 50 Hz thay vì 60 Hz.",
+            "Nhiệt độ phòng thấp hơn $20^\\circ\\text{C}$ làm điện trở cuộn dây tăng."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q12",
+          "text": "Kim la bàn luôn chỉ hướng bắc-nam địa lí (gần đúng). Từ trường Trái Đất tại bề mặt có độ lớn khoảng $25–65\\ \\mu\\text{T}$. Phát biểu nào sau đây là ĐÚNG về từ trường Trái Đất?",
+          "options": [
+            "Cực từ bắc của Trái Đất (nơi kim la bàn chỉ vào) trùng với cực địa lí bắc.",
+            "Cực từ địa lí \"bắc\" thực chất là cực nam từ tính (nam châm), vì cực bắc của kim la bàn bị hút về phía đó; vị trí cực từ lệch vài độ so với cực địa lí và dịch chuyển chậm theo năm.",
+            "Từ trường Trái Đất hoàn toàn đều và song song với trục quay của Trái Đất.",
+            "Từ trường Trái Đất không ảnh hưởng đến hạt mang điện từ gió mặt trời."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q13",
+          "text": "Trong lò phản ứng nhiệt hạch thực nghiệm ITER (đang xây dựng tại Pháp), phản ứng chính là: ${}_{1}^{2}\\text{H} + {}_{1}^{3}\\text{H} \\rightarrow {}_{2}^{4}\\text{He} + X + 17,6\\text{ MeV}$. Hạt $X$ trong phản ứng này là hạt nào?",
+          "options": [
+            "Electron ($\\beta^-$).",
+            "Positron ($\\beta^+$).",
+            "Neutron (${}_{0}^{1}\\text{n}$).",
+            "Proton (${}_{1}^{1}\\text{H}$)."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q14",
+          "text": "Một hạt nhân ${}_{26}^{56}\\text{Fe}$ có khối lượng đo được là 55,9349 u. Biết khối lượng proton $m_p = 1,00728\\text{ u}$, neutron $m_n = 1,00866\\text{ u}$, $1\\text{ u} = 931,5\\text{ MeV/c}^2$. Độ hụt khối $\\Delta m$ của hạt nhân ${}_{26}^{56}\\text{Fe}$ bằng bao nhiêu u? (Làm tròn đến 4 chữ số thập phân)",
+          "options": [
+            "0,5290 u.",
+            "0,5288 u.",
+            "0,4990 u.",
+            "0,5490 u."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q15",
+          "text": "Chất thải phóng xạ từ lò phản ứng hạt nhân được lưu trữ trong các thùng đặc biệt dưới lòng đất trong hàng nghìn năm. Phát biểu nào sau đây ĐÚNG về lí do cần lưu trữ lâu dài?",
+          "options": [
+            "Phóng xạ có thể được \"tắt\" bằng cách làm lạnh, nên cần chờ đủ lạnh trước khi xử lý.",
+            "Các đồng vị phóng xạ tồn tại lâu (chu kì bán rã hàng trăm đến hàng triệu năm) liên tục phân rã và phát bức xạ ion hóa nguy hiểm; cần cách li đủ lâu để hoạt độ giảm xuống mức an toàn.",
+            "Chất thải phóng xạ phát nhiệt mãi mãi vì năng lượng hạt nhân là vô tận.",
+            "Bức xạ từ chất thải hạt nhân chỉ nguy hiểm trong vòng 24 giờ đầu, sau đó tự triệt tiêu."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q16",
+          "text": "Một tụ điện phẳng có diện tích bản $S = 100\\text{ cm}^2$, khoảng cách giữa hai bản $d = 2\\text{ mm}$, điện môi là không khí ($\\varepsilon = 1$). Cho $\\varepsilon_0 = 8,85 \\times 10^{-12}\\text{ F/m}$. Điện dung của tụ điện này bằng bao nhiêu pF (picofarad)?",
+          "options": [
+            "44,25 pF.",
+            "4,425 pF.",
+            "0,4425 pF.",
+            "442,5 pF."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q17",
+          "text": "Đồ thị đặc trưng $I-V$ của một tấm pin mặt trời được cho như hình vẽ. Công suất tối đa mà pin có thể cung cấp cho tải bằng bao nhiêu?",
+          "options": [
+            "$P = I_{sc} \\times U_{oc}$.",
+            "$P = I_{MPP} \\times U_{MPP}$, trong đó $(I_{MPP}; U_{MPP})$ là toạ độ điểm MPP trên đặc tuyến.",
+            "$P = (I_{sc} + U_{oc}) / 2$.",
+            "$P = I_{sc}^2 \\times R_{\\text{tải}}$ bất kì."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q18",
+          "text": "Súng điện từ (railgun) hoạt động bằng cách cho dòng điện cực lớn chạy qua hai thanh ray song song và qua đạn dẫn điện đặt giữa hai ray. Lực đẩy đạn là lực Ampère tác dụng lên đoạn dây mang dòng điện trong từ trường. Nếu dòng điện qua railgun là $I = 500\\text{ kA}$, chiều dài đoạn dây (đạn) nối hai ray là $L = 10\\text{ cm}$, cảm ứng từ trung bình là $B = 4\\text{ T}$, góc giữa dây và $B$ là $90^\\circ$. Lực đẩy tác dụng lên đạn bằng bao nhiêu kN?",
+          "options": [
+            "200 kN.",
+            "20 kN.",
+            "2000 kN.",
+            "2 kN."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q19",
+          "text": "Một trạm biến áp phân phối hạ áp từ 22.000 V xuống 220 V để cấp điện cho khu dân cư. Biết cuộn thứ cấp có 100 vòng dây và dòng điện hiệu dụng ở cuộn thứ cấp là 500 A. Số vòng dây cuộn sơ cấp và dòng điện hiệu dụng ở cuộn sơ cấp lần lượt là bao nhiêu?",
+          "options": [
+            "10.000 vòng và 5 A.",
+            "100 vòng và 500 A.",
+            "10.000 vòng và 50 A.",
+            "1.000 vòng và 5 A."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_d3_q20",
+          "text": "Xe cứu thương phát còi có tần số 800 Hz đang chạy lại gần một người đứng yên với tốc độ 20 m/s. Tốc độ âm trong không khí là 340 m/s. Tần số âm người đứng yên nghe được xấp xỉ bằng bao nhiêu Hz?",
+          "options": [
+            "753 Hz.",
+            "800 Hz.",
+            "851 Hz.",
+            "848 Hz."
+          ],
+          "correct": 0
+        }
+      ],
+      "part1B": [
+        {
+          "id": "mh25_d3_q21",
+          "text": "Hai bình cách nhiệt A và B chứa hai chất lỏng khác nhau: bình A chứa 400 g dầu ăn ở $80^\\circ\\text{C}$, bình B chứa 600 g nước ở $20^\\circ\\text{C}$. Đổ toàn bộ dầu trong bình A vào bình B và khuấy đều. Nhiệt độ cân bằng đo được là $40^\\circ\\text{C}$. Biết nhiệt dung riêng của nước $c_{\\text{nước}} = 4200\\text{ J/(kg}\\cdot\\text{K)}$. Những phát biểu nào sau đây đúng?",
+          "options": [
+            "1. Nhiệt lượng nước hấp thụ là 50.400 J.",
+            "2. Nhiệt lượng dầu tỏa ra là 50.400 J.",
+            "3. Nhiệt dung riêng của dầu ăn xấp xỉ $1575\\text{ J/(kg}\\cdot\\text{K)}$.",
+            "4. Nếu dùng 800 g dầu ở $80^\\circ\\text{C}$ trộn với 600 g nước ở $20^\\circ\\text{C}$, nhiệt độ cân bằng sẽ cao hơn $40^\\circ\\text{C}$."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_d3_q22",
+          "text": "Tàu đệm từ Maglev (magnetic levitation) bay lơ lửng và di chuyển nhờ lực điện từ, không tiếp xúc đường ray, đạt tốc độ trên 600 km/h. Những phát biểu nào sau đây ĐÚNG khi mô tả nguyên lí hoạt động của tàu Maglev?",
+          "options": [
+            "1. Cuộn dây siêu dẫn trên tàu tạo ra từ trường cực mạnh; khi tàu chuyển động, từ trường này biến thiên qua các cuộn dây trên đường ray, cảm ứng ra dòng điện và lực đẩy giữ tàu lơ lửng.",
+            "2. Tàu Maglev không dùng động cơ đốt trong nên không phát thải khí $\\text{CO}_2$ trực tiếp trong quá trình vận hành.",
+            "3. Lực nâng và lực đẩy tàu đều có bản chất là lực điện từ, không cần ma sát với đường ray.",
+            "4. Hệ thống siêu dẫn cần được làm lạnh bằng heli lỏng để duy trì trạng thái siêu dẫn ở nhiệt độ vài kelvin."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_d3_q23",
+          "text": "Tốc kế điện từ dùng trong xe máy gồm một nam châm gắn trên bánh xe, quay cùng bánh xe. Khi bánh quay, nam châm tạo ra từ thông biến thiên qua cuộn dây cố định gần bánh, sinh ra xung điện mà hộp điều khiển đếm để tính tốc độ. Cuộn dây cảm biến có 500 vòng, diện tích $S = 4\\text{ cm}^2$, cảm ứng từ cực đại $B_0 = 0,3\\text{ T}$. Bánh xe quay với tốc độ 900 vòng/phút. Những phát biểu nào sau đây đúng?",
+          "options": [
+            "1. Tốc độ góc của bánh xe (và nam châm) là $\\omega = 30\\pi\\text{ rad/s}$.",
+            "2. Suất điện động cực đại cảm ứng trong cuộn dây là $E_0 = N\\cdot B_0\\cdot S\\cdot \\omega \\approx 5,65\\text{ V}$.",
+            "3. Tần số của suất điện động xoay chiều cảm ứng bằng tần số quay của bánh xe, tức là 15 Hz.",
+            "4. Giá trị hiệu dụng của suất điện động là $E_{\\text{rms}} = E_0 \\approx 5,65\\text{ V}$."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_d3_q24",
+          "text": "Chụp PET (Positron Emission Tomography) là kĩ thuật hình ảnh y học dùng đồng vị phóng xạ phát positron ($\\beta^+$). Bệnh nhân được tiêm glucose đánh dấu phóng xạ ${}^{18}\\text{F}$ (chu kì bán rã $\\approx 110\\text{ phút}$). Tế bào ung thư hấp thụ glucose nhiều hơn tế bào bình thường nên tập trung ${}^{18}\\text{F}$, phát positron, tạo tín hiệu đặc trưng. Những phát biểu nào sau đây ĐÚNG?",
+          "options": [
+            "1. ${}^{18}\\text{F}$ phân rã $\\beta^+$: phát ra positron và neutrino; positron gặp electron trong mô, hủy cặp tạo ra hai photon gamma ngược chiều nhau (annihilation photons) với năng lượng mỗi photon là 0,511 MeV.",
+            "2. Máy PET phát hiện đồng thời hai photon gamma ngược chiều, từ đó xác định vị trí phát xạ (vùng ung thư) trong cơ thể.",
+            "3. Sau 5,5 giờ (3 chu kì bán rã), hoạt độ phóng xạ ${}^{18}\\text{F}$ trong cơ thể bệnh nhân còn khoảng 12,5% so với ban đầu.",
+            "4. Chụp PET sử dụng tia X có năng lượng cao để tạo hình ảnh, giống như chụp CT."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_d3_q25",
+          "text": "Trong thí nghiệm Davisson-Germer (1927), chùm electron được chiếu vào tinh thể nickel và quan sát hiện tượng nhiễu xạ, xác nhận tính chất sóng của electron. Electron được gia tốc qua hiệu điện thế $U = 54\\text{ V}$. Biết $m_e = 9,1 \\times 10^{-31}\\text{ kg}$, $e = 1,6 \\times 10^{-19}\\text{ C}$, $h = 6,626 \\times 10^{-34}\\text{ J}\\cdot\\text{s}$. Những phát biểu nào sau đây đúng?",
+          "options": [
+            "1. Vận tốc electron sau khi được gia tốc tính từ $eU = \\frac{1}{2}m_ev^2$ cho giá trị $v \\approx 4,36 \\times 10^6\\text{ m/s}$.",
+            "2. Bước sóng de Broglie $\\lambda = \\frac{h}{m_ev} \\approx 0,167\\text{ nm} = 1,67\\text{ \\AA}$, xấp xỉ khoảng cách giữa các nguyên tử trong tinh thể.",
+            "3. Vì bước sóng de Broglie xấp xỉ khoảng cách mạng tinh thể, electron bị nhiễu xạ bởi tinh thể giống như tia X bị nhiễu xạ theo điều kiện Bragg.",
+            "4. Electron có khối lượng nên không thể có tính chất sóng theo cơ học lượng tử."
+          ],
+          "correct": []
+        }
+      ],
+      "part2": {
+        "passage": "NGỮ LIỆU 1: Máy đo nồng độ cồn trong hơi thở bằng hồng ngoại (IR Breathalyzer)\nMáy đo nồng độ cồn hồng ngoại hiện đại sử dụng nguyên lí hấp thụ bức xạ hồng ngoại của phân tử ethanol ($\\text{C}_2\\text{H}_5\\text{OH}$). Phân tử ethanol hấp thụ mạnh bức xạ hồng ngoại ở bước sóng đặc trưng $\\lambda = 3,4\\ \\mu\\text{m}$ (tương ứng với dao động liên kết C–H). Nguồn sáng hồng ngoại chiếu qua buồng chứa mẫu hơi thở; đầu dò đo cường độ tia truyền qua và tính nồng độ cồn theo định luật Beer-Lambert: $I = I_0 \\cdot e^{-\\alpha CL}$, trong đó $I_0$ là cường độ ban đầu, $\\alpha$ là hệ số hấp thụ ($\\text{L}\\cdot\\text{mg}^{-1}\\cdot\\text{cm}^{-1}$), $C$ là nồng độ ethanol (mg/L), $L = 10\\text{ cm}$ là chiều dài buồng đo. Ngưỡng pháp lí tại Việt Nam hiện nay là nồng độ cồn trong máu $\\ge 50\\text{ mg/100 mL}$ hoặc nồng độ trong khí thở $\\ge 0,25\\text{ mg/L}$.\n\nNGỮ LIỆU 2: Máy đo lưu lượng nước bằng hiệu ứng điện từ (Electromagnetic Flow Meter)\nĐồng hồ đo lưu lượng điện từ (EMF) dùng phổ biến trong ngành cấp thoát nước và y tế (đo lưu lượng máu). Nguyên lí: khi chất lỏng dẫn điện (nước có khoáng chất, máu) chảy qua ống đặt trong từ trường đều $B$ vuông góc với trục ống, các ion dương và âm trong chất lỏng bị lực Lorentz lệch về hai phía, tạo ra hiệu điện thế $U$ giữa hai điện cực đặt đối xứng trên thành ống. Hiệu điện thế đo được: $U = B \\cdot v \\cdot D$, trong đó $v$ là vận tốc trung bình của chất lỏng (m/s), $D$ là đường kính ống (m), $B$ là cảm ứng từ (T). Lưu lượng thể tích: $Q = v \\cdot \\frac{\\pi D^2}{4}\\text{ (m}^3\\text{/s)}$. Thiết bị đo lưu lượng máu trong mạch chủ (aorta) của bệnh nhân: $D = 2,5\\text{ cm}$, $B = 0,04\\text{ T}$, điện cực đo được $U = 0,6\\text{ mV}$.",
+        "questions": [
+          {
+            "id": "mh25_d3_q26",
+            "text": "Dựa vào Ngữ liệu 1: Bức xạ hồng ngoại ở bước sóng $\\lambda = 3,4\\ \\mu\\text{m}$ thuộc vùng nào trong thang sóng điện từ và có tần số xấp xỉ bằng bao nhiêu (tốc độ ánh sáng $c = 3 \\times 10^8\\text{ m/s}$)?",
+            "options": [
+              "Tia tử ngoại; $f \\approx 8,8 \\times 10^{13}\\text{ Hz}$.",
+              "Hồng ngoại gần (near-IR); $f \\approx 8,8 \\times 10^{13}\\text{ Hz}$.",
+              "Hồng ngoại trung (mid-IR); $f \\approx 8,8 \\times 10^{13}\\text{ Hz}$.",
+              "Vi sóng; $f \\approx 8,8 \\times 10^9\\text{ Hz}$."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_d3_q27",
+            "text": "Dựa vào Ngữ liệu 1: Nếu kết quả đo cho thấy cường độ tia hồng ngoại truyền qua buồng đo giảm còn 60% so với $I_0$ ($I/I_0 = 0,60$), dùng $\\ln(0,6) \\approx -0,511$. Với $\\alpha = 0,2\\text{ L}\\cdot\\text{mg}^{-1}\\cdot\\text{cm}^{-1}$ và $L = 10\\text{ cm}$, nồng độ ethanol $C$ trong hơi thở tính được xấp xỉ bằng bao nhiêu mg/L?",
+            "options": [
+              "0,256 mg/L.",
+              "0,511 mg/L.",
+              "0,128 mg/L.",
+              "1,02 mg/L."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_d3_q28",
+            "text": "Dựa vào Ngữ liệu 1: Tại sao máy đo cồn hồng ngoại phải chọn đúng bước sóng $\\lambda = 3,4\\ \\mu\\text{m}$ của ethanol mà không dùng bước sóng hồng ngoại khác?",
+            "options": [
+              "Vì bước sóng $3,4\\ \\mu\\text{m}$ là bước sóng duy nhất mà nguồn sáng hồng ngoại có thể phát ra.",
+              "Vì tại bước sóng đặc trưng của dao động phân tử ethanol, độ hấp thụ là cực đại, giúp phép đo nhạy và chính xác; các phân tử khác trong hơi thở ($\\text{H}_2\\text{O}$, $\\text{CO}_2$) hấp thụ yếu hơn nhiều ở bước sóng này.",
+              "Vì bước sóng $3,4\\ \\mu\\text{m}$ không bị hấp thụ bởi ethanol, dễ đo cường độ truyền qua.",
+              "Vì bước sóng $3,4\\ \\mu\\text{m}$ nằm trong vùng nhìn thấy, mắt người có thể kiểm tra trực tiếp."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_d3_q29",
+            "text": "Dựa vào Ngữ liệu 2: Vận tốc dòng chảy trung bình của máu trong mạch chủ tính từ số liệu đo được bằng bao nhiêu m/s?",
+            "options": [
+              "0,24 m/s.",
+              "0,60 m/s.",
+              "0,06 m/s.",
+              "2,4 m/s."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_d3_q30",
+            "text": "Dựa vào Ngữ liệu 2: Lưu lượng thể tích máu qua mạch chủ tính được xấp xỉ bằng bao nhiêu lít/phút? Lấy $\\pi \\approx 3,14$. Làm tròn đến một chữ số thập phân.",
+            "options": [
+              "7,1 lít/phút.",
+              "0,7 lít/phút.",
+              "14,1 lít/phút.",
+              "4,7 lít/phút."
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      "part3": [
+        {
+          "id": "mh25_d3_q31",
+          "text": "Một mol khí lí tưởng đơn nguyên tử (nội năng $U = \\frac{3}{2}nRT$) được nung đẳng tích từ $27^\\circ\\text{C}$ đến $127^\\circ\\text{C}$. Biết $R = 8,314\\text{ J/(mol}\\cdot\\text{K)}$. Nhiệt lượng mà khối khí nhận được bằng bao nhiêu joule? Làm tròn đến số nguyên.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d3_q32",
+          "text": "Một khinh khí cầu hình cầu chứa khí hydrogen ở nhiệt độ $17^\\circ\\text{C}$, áp suất không đổi bằng áp suất khí quyển (vỏ cầu đủ mềm). Đường kính ban đầu của cầu là 10 m. Mặt trời nung nóng khí bên trong lên $57^\\circ\\text{C}$. Đường kính mới của khinh khí cầu bằng bao nhiêu m? Làm tròn đến hai chữ số thập phân. (Gợi ý: thể tích cầu tỉ lệ với $d^3$)",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d3_q33",
+          "text": "Một cuộn dây hình chữ nhật 5 cm $\\times$ 8 cm, gồm 200 vòng, điện trở tổng $2\\ \\Omega$, ban đầu đặt song song với từ trường đều $B = 0,5\\text{ T}$ (từ thông qua cuộn = 0). Người ta quay cuộn dây $90^\\circ$ quanh trục dài trong thời gian 0,04 s để mặt phẳng cuộn dây vuông góc với $B$. Suất điện động cảm ứng trung bình và cường độ dòng điện cảm ứng trung bình trong cuộn dây lần lượt bằng bao nhiêu V và A?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d3_q34",
+          "text": "Trong hệ thống kiểm soát độ dày màng nhựa bằng phóng xạ, người ta dùng nguồn ${}^{147}\\text{Pm}$ (promethium-147). Sau 5,368 năm, hoạt độ của nguồn phóng xạ giảm còn 50% so với ban đầu. Chu kì bán rã của ${}^{147}\\text{Pm}$ bằng bao nhiêu năm?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d3_q35",
+          "text": "Cảm biến vân tay điện dung trong điện thoại hoạt động theo nguyên lí: mỗi ô cảm biến là một tụ điện phẳng nhỏ. Khi ngón tay đặt lên, da người ($\\varepsilon_r \\approx 30$) thay thế không khí giữa điện cực và ngón tay, làm điện dung thay đổi. Nếu điện dung ban đầu (không có ngón tay, điện môi là không khí) là $C_0 = 0,5\\text{ pF}$, khi có ngón tay (coi như chèn hoàn toàn điện môi da người vào giữa), điện dung mới $C$ bằng bao nhiêu pF?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d3_q36",
+          "text": "Bộ vi xử lí (CPU) của một máy tính tiêu thụ công suất 65 W. Hệ thống tản nhiệt dùng nước: nước liên tục chảy qua khối tản nhiệt với lưu lượng 0,1 lít/phút, hút nhiệt từ CPU rồi giải nhiệt ra ngoài. Biết nhiệt dung riêng của nước là $4200\\text{ J/(kg}\\cdot\\text{K)}$, khối lượng riêng nước là $1000\\text{ kg/m}^3$. Giả sử 100% nhiệt lượng CPU toả ra được nước hấp thụ. Độ chênh nhiệt độ của nước giữa đầu vào và đầu ra khối tản nhiệt bằng bao nhiêu $^\\circ\\text{C}$? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d3_q37",
+          "text": "Túi khí an toàn (airbag) trong ô tô bơm phồng trong vòng 30 ms khi va chạm. Phản ứng hóa học trong bộ kích nổ tạo ra khí $\\text{N}_2$. Giả sử 67,2 lít khí $\\text{N}_2$ (đo ở $0^\\circ\\text{C}$, 1 atm) được tạo ra và bơm vào túi khí có thể tích 60 lít ở nhiệt độ $87^\\circ\\text{C}$ (do phản ứng tỏa nhiệt). Áp suất khí trong túi bằng bao nhiêu atm? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d3_q38",
+          "text": "Đèn flash máy ảnh dùng tụ điện để tích năng lượng. Một tụ điện phẳng $C = 2000\\ \\mu\\text{F}$ được nạp đến hiệu điện thế $U = 300\\text{ V}$. Năng lượng tích trữ trong tụ điện bằng bao nhiêu joule? Làm tròn đến số nguyên.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d3_q39",
+          "text": "Một nguồn phóng xạ ${}^{60}\\text{Co}$ (dùng trong xạ trị ung thư) có hoạt độ ban đầu $A_0 = 3,7 \\times 10^{10}\\text{ Bq}$ (1 Ci). Chu kì bán rã của ${}^{60}\\text{Co}$ là 5,27 năm. Sau 15,81 năm, hoạt độ còn lại bằng bao nhiêu Bq? Làm tròn đến hai chữ số có nghĩa.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_d3_q40",
+          "text": "Neutron nhiệt trong lò phản ứng hạt nhân có động năng trung bình bằng $\\frac{3}{2}k_BT$ với $k_B = 1,38 \\times 10^{-23}\\text{ J/K}$ và $T = 300\\text{ K}$. Biết khối lượng neutron $m_n = 1,675 \\times 10^{-27}\\text{ kg}$, hằng số Planck $h = 6,626 \\times 10^{-34}\\text{ J}\\cdot\\text{s}$. Bước sóng de Broglie của neutron nhiệt tính theo công thức $\\lambda = \\frac{h}{\\sqrt{2m_n \\cdot E_k}}$ bằng bao nhiêu angstrom (\\AA, $1\\text{ \\AA} = 10^{-10}\\text{ m}$)? Làm tròn đến hai chữ số thập phân.",
           "correct": ""
         }
       ]
