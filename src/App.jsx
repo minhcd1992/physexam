@@ -502,8 +502,8 @@ export default function App() {
         </main>
 
         {/* CỘT PHẢI: BẢNG TIẾN ĐỘ LÀM BÀI (STICKY SIDEBAR) */}
-        <aside className="w-full lg:w-[320px] shrink-0">
-          <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 lg:sticky lg:top-24">
+        <aside className="w-full lg:w-[320px] shrink-0 lg:sticky lg:top-20 z-10">
+          <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 max-h-[calc(100vh-7rem)] overflow-y-auto custom-scrollbar">
             <h3 className="font-black text-slate-800 mb-2 uppercase">Danh sách câu hỏi</h3>
             <div className="flex items-center gap-2 text-sm font-medium text-slate-500 mb-6">
               <div className="flex-1 bg-slate-100 h-2 rounded-full overflow-hidden">
