@@ -412,5 +412,405 @@
         }
       ]
     }
+  },
+  {
+    "id": "hcmue_phys_2025_minhhoa_01",
+    "title": "Đề thi ĐGNL Chuyên biệt 2026 - Đề số 1",
+    "subject": "VẬT LÍ",
+    "duration": 5400,
+    "questions": {
+      "part1A": [
+        {
+          "id": "mh25_ct_q1",
+          "text": "Hiện tượng nào sau đây là ví dụ về dao động tắt dần?",
+          "options": [
+            "Con lắc đồng hồ đang chạy được giữ ổn định nhờ cơ cấu bù năng lượng.",
+            "Cánh quạt điện quay đều khi có dòng điện chạy qua.",
+            "Con lắc đơn dao động trong không khí, biên độ giảm dần theo thời gian.",
+            "Màng loa rung khi có tín hiệu âm thanh được cấp liên tục."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q2",
+          "text": "Trong thang sóng điện từ, bức xạ nào sau đây có tần số lớn nhất?",
+          "options": [
+            "Sóng vô tuyến FM.",
+            "Tia hồng ngoại.",
+            "Tia tử ngoại.",
+            "Tia gamma ($\\gamma$)."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q3",
+          "text": "Hình vẽ bên mô tả đường sức điện trong vùng không gian giữa hai tấm kim loại phẳng song song. Phát biểu nào sau đây là ĐÚNG?",
+          "options": [
+            "Điện trường giữa hai bản là điện trường đều, các đường sức điện song song và cách đều nhau.",
+            "Cường độ điện trường tại mép của hai bản lớn hơn ở giữa.",
+            "Đường sức điện đi từ bản âm sang bản dương.",
+            "Điện trường giữa hai bản không đều."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q4",
+          "text": "Một bình chứa khí oxygen được dùng trong y tế có áp kế chỉ 120 atm ở $27^\\circ\\text{C}$. Điện trở trong của bình là $0,2\\ \\Omega$. Biết hằng số khí lí tưởng $R = 8,314\\text{ J/(mol}\\cdot\\text{K)}$. Nếu giữ nguyên thể tích và nạp thêm nhiệt để nhiệt độ tăng lên $57^\\circ\\text{C}$ thì áp suất mới bên trong bình bằng bao nhiêu atm?",
+          "options": [
+            "108 atm.",
+            "120 atm.",
+            "132 atm.",
+            "140 atm."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q5",
+          "text": "Phát biểu nào sau đây là ĐÚNG về các loại chất rắn?",
+          "options": [
+            "Chất rắn đơn tinh thể có tính đẳng hướng.",
+            "Chất rắn vô định hình không có cấu trúc tinh thể và không có nhiệt độ nóng chảy xác định.",
+            "Chất rắn đa tinh thể có tính dị hướng rõ rệt.",
+            "Kim loại là loại chất rắn vô định hình điển hình."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q6",
+          "text": "Nhiệt độ nào sau đây là nhiệt độ thấp nhất về lí thuyết (không thể đạt được trong thực tế)?",
+          "options": [
+            "$-200^\\circ\\text{C}$.",
+            "$-273^\\circ\\text{C}$.",
+            "0 K.",
+            "Cả B và C đều đúng."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q7",
+          "text": "Hiện tượng nào sau đây KHÔNG liên quan đến sự bay hơi?",
+          "options": [
+            "Quần áo ướt bị khô sau khi phơi ngoài nắng.",
+            "Nước đá trong cốc dần tan ra ở nhiệt độ phòng.",
+            "Nước hồ bốc hơi vào ban ngày.",
+            "Mực trong bình mực bị giảm dần dù không dùng."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q8",
+          "text": "Thuyết động học phân tử có thể giải thích hiện tượng nào sau đây?",
+          "options": [
+            "Ánh sáng bị khúc xạ khi đi từ môi trường này sang môi trường khác.",
+            "Chất khí có thể nén được dễ dàng hơn chất lỏng.",
+            "Kim loại dẫn điện tốt.",
+            "Sóng âm truyền được qua chân không."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q9",
+          "text": "Một khối khí có áp suất 3 atm, thể tích 4 lít ở nhiệt độ 300 K. Khi nén đẳng nhiệt để thể tích còn lại 1,5 lít thì áp suất mới bằng bao nhiêu?",
+          "options": [
+            "6 atm.",
+            "8 atm.",
+            "1,125 atm.",
+            "12 atm."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q10",
+          "text": "Một lượng khí lí tưởng có $N$ phân tử, áp suất $p$, thể tích $V$ ở nhiệt độ $T$ (K). Theo thuyết động học phân tử, mối quan hệ giữa áp suất $p$ và động năng tịnh tiến trung bình của phân tử khí ($\\overline{W}$) là",
+          "options": [
+            "$p = \\frac{2N}{3V}\\overline{W}$",
+            "$p = \\frac{3N}{2V}\\overline{W}$",
+            "$p = \\frac{N}{V}\\overline{W}$",
+            "$p = \\frac{2N}{V}\\overline{W}$"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q11",
+          "text": "Đơn vị nào sau đây là đơn vị đo từ thông?",
+          "options": [
+            "tesla (T).",
+            "weber (Wb).",
+            "henry (H).",
+            "farad (F)."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q12",
+          "text": "Thiết bị nào sau đây hoạt động dựa trên nguyên tắc cảm ứng điện từ?",
+          "options": [
+            "Pin mặt trời.",
+            "Bóng đèn sợi đốt.",
+            "Máy biến áp.",
+            "Tụ điện."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q13",
+          "text": "Hạt nhân ${}_{92}^{235}\\text{U}$ có bao nhiêu neutron?",
+          "options": [
+            "92 neutron.",
+            "143 neutron.",
+            "235 neutron.",
+            "327 neutron."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q14",
+          "text": "Trong phản ứng phân hạch của uranium, phát biểu nào sau đây là ĐÚNG?",
+          "options": [
+            "Năng lượng liên kết riêng của sản phẩm nhỏ hơn của hạt nhân uranium ban đầu.",
+            "Phản ứng phân hạch giải phóng năng lượng vì tổng khối lượng sản phẩm lớn hơn khối lượng ban đầu.",
+            "Phản ứng phân hạch toả năng lượng vì độ hụt khối của sản phẩm lớn hơn độ hụt khối của uranium.",
+            "Phản ứng phân hạch chỉ xảy ra trong điều kiện nhiệt độ rất cao."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q15",
+          "text": "Phát biểu nào sau đây ĐÚNG về tia alpha ($\\alpha$)?",
+          "options": [
+            "Tia $\\alpha$ là dòng các hạt nhân ${}_{2}^{4}\\text{He}$, mang điện tích $+2e$, khả năng đâm xuyên mạnh nhất trong ba loại tia phóng xạ.",
+            "Tia $\\alpha$ bị lệch trong điện trường và từ trường, mang điện tích âm.",
+            "Tia $\\alpha$ là dòng các hạt nhân ${}_{2}^{4}\\text{He}$, di chuyển chậm hơn tia $\\beta$ nhưng ion hoá mạnh hơn.",
+            "Tia $\\alpha$ có khả năng đâm xuyên qua tấm chì dày vài cm."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q16",
+          "text": "Một điện tích điểm $q = -4\\ \\mu\\text{C}$ dịch chuyển từ điểm M (điện thế 50 V) đến điểm N (điện thế 150 V). Công của lực điện thực hiện là bao nhiêu?",
+          "options": [
+            "$400\\ \\mu\\text{J}$.",
+            "$-400\\ \\mu\\text{J}$.",
+            "$-800\\ \\mu\\text{J}$.",
+            "$800\\ \\mu\\text{J}$."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q17",
+          "text": "Hai điện trở $R_1$ và $R_2$ có đặc tuyến vôn-ampe như hình vẽ. Biết tại $U = 6\\text{V}$, dòng qua $R_1$ là 2A và dòng qua $R_2$ là 1A. Khi mắc song song hai điện trở này, điện trở tương đương của bộ bằng bao nhiêu?",
+          "options": [
+            "$9\\ \\Omega$.",
+            "$2\\ \\Omega$.",
+            "$1\\ \\Omega$.",
+            "$3\\ \\Omega$."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q18",
+          "text": "Một đoạn dây dẫn thẳng dài 0,5 m mang dòng điện 4 A đặt trong từ trường đều $B = 0,3\\text{ T}$. Góc giữa dây dẫn và vectơ cảm ứng từ là $60^\\circ$. Lực từ tác dụng lên đoạn dây bằng bao nhiêu?",
+          "options": [
+            "0,52 N.",
+            "0,60 N.",
+            "0,30 N.",
+            "1,04 N."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q19",
+          "text": "Một máy biến áp lí tưởng có cuộn sơ cấp 1000 vòng, cuộn thứ cấp 250 vòng. Đặt vào cuộn sơ cấp điện áp xoay chiều hiệu dụng 220 V. Phát biểu nào sau đây là ĐÚNG?",
+          "options": [
+            "Điện áp hiệu dụng ở cuộn thứ cấp là 880 V.",
+            "Dòng điện hiệu dụng ở cuộn sơ cấp bằng 4 lần dòng điện ở cuộn thứ cấp.",
+            "Điện áp hiệu dụng ở cuộn thứ cấp là 55 V.",
+            "Tần số điện áp ở cuộn thứ cấp gấp 4 lần tần số ở cuộn sơ cấp."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "mh25_ct_q20",
+          "text": "Một dây đàn violin dài 32 cm, hai đầu cố định, khi gảy phát ra âm cơ bản với tốc độ truyền sóng trên dây là 256 m/s. Nhạc công bấm nhẹ ngón tay tại điểm giữa dây để tạo họa âm bậc hai. Tần số âm phát ra khi đó bằng bao nhiêu?",
+          "options": [
+            "400 Hz.",
+            "800 Hz.",
+            "200 Hz.",
+            "1600 Hz."
+          ],
+          "correct": 0
+        }
+      ],
+      "part1B": [
+        {
+          "id": "mh25_ct_q21",
+          "text": "Xét một vật dao động điều hoà theo phương trình $x = 5\\cos(4\\pi t + \\frac{\\pi}{3})\\text{ cm}$. Những phát biểu nào sau đây đúng?",
+          "options": [
+            "1. Biên độ dao động của vật là 5 cm.",
+            "2. Chu kì dao động của vật là $T = 0,5\\text{ s}$.",
+            "3. Pha ban đầu của dao động là $\\frac{\\pi}{3}\\text{ rad}$.",
+            "4. Vận tốc cực đại của vật là $20\\pi\\text{ cm/s} \\approx 62,8\\text{ cm/s}$.",
+            "5. Gia tốc của vật khi đi qua vị trí cân bằng bằng 0."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_ct_q22",
+          "text": "Những phát biểu nào sau đây ĐÚNG khi nói về tính chất của sóng ánh sáng?",
+          "options": [
+            "1. Ánh sáng có thể bị phân cực, chứng tỏ ánh sáng là sóng ngang.",
+            "2. Ánh sáng trắng bị tán sắc khi qua lăng kính vì các màu sắc khác nhau có bước sóng khác nhau trong chân không.",
+            "3. Tốc độ ánh sáng trong mọi môi trường đều bằng $c = 3 \\times 10^8\\text{ m/s}$.",
+            "4. Hiện tượng giao thoa ánh sáng chứng tỏ ánh sáng có tính chất sóng."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_ct_q23",
+          "text": "Một đoạn mạch RLC nối tiếp gồm $R = 100\\ \\Omega$, $L = \\frac{1}{\\pi}\\text{ H}$, $C = \\frac{100}{\\pi}\\ \\mu\\text{F}$, mắc vào nguồn xoay chiều $u = 200\\sqrt{2} \\cos(100\\pi t)\\text{ V}$. Những phát biểu nào sau đây đúng?",
+          "options": [
+            "1. Cảm kháng $Z_L = 100\\ \\Omega$.",
+            "2. Dung kháng $Z_C = 100\\ \\Omega$.",
+            "3. Mạch xảy ra hiện tượng cộng hưởng điện.",
+            "4. Cường độ dòng điện hiệu dụng trong mạch là 2 A."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_ct_q24",
+          "text": "Trong y học hạt nhân, những phát biểu nào sau đây ĐÚNG khi nói về phương pháp xạ trị ung thư bằng tia gamma?",
+          "options": [
+            "1. Tia gamma được dùng vì có khả năng đâm xuyên mạnh, tiêu diệt tế bào khối u ở sâu bên trong cơ thể.",
+            "2. Phương pháp xạ trị không gây bất kì tác dụng phụ nào cho bệnh nhân.",
+            "3. Người ta thường dùng nhiều chùm tia chiếu từ nhiều hướng khác nhau hội tụ vào khối u để giảm tổn thương mô lành.",
+            "4. Nguồn phóng xạ ${}^{60}\\text{Co}$ thường được sử dụng trong xạ trị vì phát ra tia gamma có năng lượng cao."
+          ],
+          "correct": []
+        },
+        {
+          "id": "mh25_ct_q25",
+          "text": "Biển báo hiệu nguy hiểm phóng xạ có hình ảnh như sau. Những phát biểu nào sau đây ĐÚNG khi nói về ý nghĩa của biển báo này?",
+          "options": [
+            "1. Khu vực hoặc vật liệu này phát ra bức xạ ion hoá có thể gây hại cho sức khoẻ.",
+            "2. Cần mặc trang phục bảo hộ, hạn chế thời gian tiếp xúc và giữ khoảng cách an toàn.",
+            "3. Khu vực này chỉ nguy hiểm khi chạm tay trực tiếp vào nguồn phóng xạ.",
+            "4. Trẻ em và phụ nữ mang thai cần đặc biệt tránh xa khu vực này."
+          ],
+          "correct": []
+        }
+      ],
+      "part2": {
+        "passage": "NGỮ LIỆU 1: Trong một thí nghiệm vật lí, một sinh viên sử dụng tấm pin mặt trời công suất tối đa 50 W để nạp điện cho ắc quy 12 V. Mạch điện gồm pin mặt trời (suất điện động $E$, điện trở trong $r = 2\\ \\Omega$) mắc nối tiếp với điện trở ngoài $R = 10\\ \\Omega$ và ắc quy 12 V. Khi chiếu sáng đủ mạnh, ampe kế đo được cường độ dòng điện trong mạch là 2 A.\n\nNGỮ LIỆU 2: Thang độ Richter (Magnitude Richter) là thang logarithm dùng để đo độ mạnh của động đất. Mỗi bậc tăng một đơn vị tương ứng với biên độ dao động tăng 10 lần và năng lượng tăng khoảng 31,6 lần. Một nhà địa chấn học phát hiện rằng ngôi nhà ở gần tâm chấn có tường bê tông dày 20 cm có thể hấp thụ và giảm chấn rung. Tốc độ truyền sóng địa chấn S trong lớp đất mềm khoảng 1500 m/s, trong đá cứng khoảng 4500 m/s. Vào tháng 11 năm 2020, một trận động đất 4,9 độ Richter xảy ra tại Mộc Châu, Sơn La.",
+        "questions": [
+          {
+            "id": "mh25_ct_q26",
+            "text": "Dựa vào Ngữ liệu 1: Suất điện động của pin mặt trời trong thí nghiệm này bằng bao nhiêu?",
+            "options": [
+              "12 V.",
+              "24 V.",
+              "36 V.",
+              "48 V."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_ct_q27",
+            "text": "Dựa vào Ngữ liệu 1: Công suất tiêu thụ trên điện trở ngoài $R$ bằng bao nhiêu?",
+            "options": [
+              "10 W.",
+              "20 W.",
+              "40 W.",
+              "8 W."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_ct_q28",
+            "text": "Dựa vào Ngữ liệu 1: Hiệu suất sử dụng điện năng của pin mặt trời (tỉ số giữa công suất cấp cho ắc quy và tổng công suất phát ra của pin) bằng bao nhiêu?",
+            "options": [
+              "40%.",
+              "50%.",
+              "60%.",
+              "75%."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_ct_q29",
+            "text": "Dựa vào Ngữ liệu 2: Sóng địa chấn S từ trận động đất này truyền qua lớp đất mềm đến một trạm quan trắc cách tâm chấn 150 km. Sau bao lâu trạm ghi nhận được sóng?",
+            "options": [
+              "33,3 s.",
+              "100 s.",
+              "0,01 s.",
+              "1000 s."
+            ],
+            "correct": 0
+          },
+          {
+            "id": "mh25_ct_q30",
+            "text": "Dựa vào Ngữ liệu 2: Nếu một trận động đất khác xảy ra cùng thời điểm tại Điện Biên, có biên độ sóng địa chấn nhỏ hơn 100 lần so với trận động đất tại Mộc Châu, thì độ Richter của trận động đất tại Điện Biên là bao nhiêu?",
+            "options": [
+              "2,9 độ Richter.",
+              "4,7 độ Richter.",
+              "3,9 độ Richter.",
+              "6,9 độ Richter."
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      "part3": [
+        {
+          "id": "mh25_ct_q31",
+          "text": "Một khối khí trong xilanh thẳng đứng được nung nóng đẳng áp ở áp suất $p = 2 \\times 10^5\\text{ Pa}$. Thể tích khí tăng từ 2 lít lên 5 lít. Nội năng khí tăng thêm 500 J. Nhiệt lượng cần cung cấp cho khối khí trong quá trình này là bao nhiêu joule (J)?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_ct_q32",
+          "text": "Một bình cầu thuỷ tinh chứa khí nitrogen ở áp suất 1 atm và nhiệt độ $17^\\circ\\text{C}$. Đun nóng bình đến $117^\\circ\\text{C}$ (thể tích bình không đổi). Áp suất khí trong bình lúc này bằng bao nhiêu atm? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_ct_q33",
+          "text": "Cuộn dây có 50 vòng quấn trên khung hình chữ nhật kích thước 4 cm $\\times$ 6 cm, điện trở tổng của cuộn là $0,5\\ \\Omega$. Từ trường đều vuông góc mặt phẳng cuộn dây tăng đều từ 0 T đến 1 T trong 2 s. Cường độ dòng điện cảm ứng trong cuộn dây bằng bao nhiêu miliampere (mA)?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_ct_q34",
+          "text": "Một mẫu vật phóng xạ ban đầu có $10^6$ hạt nhân ${}_{15}^{32}\\text{P}$ (chu kì bán rã $T_{1/2} = 14,3\\text{ ngày}$). Sau 42,9 ngày, số hạt nhân ${}_{15}^{32}\\text{P}$ còn lại trong mẫu bằng bao nhiêu?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_ct_q35",
+          "text": "Một điện tích $q = 3 \\times 10^{-6}\\text{ C}$ được bắn vào vùng điện trường đều giữa hai bản tụ theo phương song song với hai bản với tốc độ ban đầu $v_0 = 3 \\times 10^6\\text{ m/s}$. Khối lượng hạt $m = 9 \\times 10^{-31}\\text{ kg}$. Hai bản dài $L = 5\\text{ cm}$. Điện trường giữa hai bản $E = 1000\\text{ V/m}$ hướng vuông góc phương ban đầu. Bỏ qua trọng lực. Độ lệch theo phương điện trường của hạt khi vừa ra khỏi hai bản là bao nhiêu mm? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_ct_q36",
+          "text": "Một bếp điện có công suất định mức 1000 W, dùng để đun sôi 2 lít nước từ $25^\\circ\\text{C}$. Nhiệt dung riêng của nước là $4200\\text{ J/(kg}\\cdot\\text{K)}$, khối lượng riêng nước $1000\\text{ kg/m}^3$. Biết hiệu suất của bếp là 80%. Thời gian cần thiết để đun sôi nước là bao nhiêu phút? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_ct_q37",
+          "text": "Ở $0^\\circ\\text{C}$ và 1 atm, khí hydrogen có khối lượng riêng là $0,09\\text{ kg/m}^3$. Một bình chứa 0,18 kg khí hydrogen ở $0^\\circ\\text{C}$ và 1 atm. Nếu nén đẳng nhiệt để áp suất tăng lên 3 atm thì thể tích khí lúc sau bằng bao nhiêu lít?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_ct_q38",
+          "text": "Ba tụ điện $C_1 = 2\\ \\mu\\text{F}$, $C_2 = 3\\ \\mu\\text{F}$, $C_3 = 6\\ \\mu\\text{F}$. Hỏi từ ba tụ điện này có thể tạo ra tối đa bao nhiêu bộ tụ ghép (sử dụng ít nhất 2 tụ) cho điện dung tương đương khác nhau?",
+          "correct": ""
+        },
+        {
+          "id": "mh25_ct_q39",
+          "text": "Phản ứng tổng hợp nhiệt hạch: ${}_{1}^{2}\\text{H} + {}_{1}^{3}\\text{H} \\rightarrow {}_{2}^{4}\\text{He} + {}_{0}^{1}\\text{n} + 17,6\\text{ MeV}$. Biết $1\\text{ MeV} = 1,6 \\times 10^{-13}\\text{ J}$, số Avogadro $N_A = 6,02 \\times 10^{23}\\text{ mol}^{-1}$. Nếu tổng hợp được 1 mol He từ phản ứng trên thì năng lượng toả ra là bao nhiêu GJ (gigajoule)? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        },
+        {
+          "id": "mh25_ct_q40",
+          "text": "Trong thí nghiệm tán sắc ánh sáng, ánh sáng đơn sắc màu lục có bước sóng 520 nm chiếu qua khe hẹp trong thí nghiệm Young, khoảng cách hai khe $d = 0,5\\text{ mm}$, khoảng cách từ hai khe đến màn $D = 1\\text{ m}$. Khoảng vân giao thoa $i$ bằng bao nhiêu mm? Làm tròn đến hai chữ số thập phân.",
+          "correct": ""
+        }
+      ]
+    }
   }
 ]
