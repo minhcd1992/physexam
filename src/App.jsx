@@ -227,7 +227,8 @@ export default function App() {
                   {q.image && (
   <img 
     src={q.image} 
-    className="mt-6 mb-2 mx-auto block w-[70%] md:w-[40%] rounded-xl border border-slate-200 shadow-sm" 
+    style={{ width: q.imageWidth || '60%' }} // Ưu tiên imageWidth từ JSON, nếu không có thì mặc định 60%
+    className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
     alt="Minh họa" 
   />
 )}
@@ -262,7 +263,8 @@ export default function App() {
                 {q.image && (
   <img 
     src={q.image} 
-    className="mt-6 mb-2 mx-auto block w-[70%] md:w-[40%] rounded-xl border border-slate-200 shadow-sm" 
+    style={{ width: q.imageWidth || '60%' }} // Ưu tiên imageWidth từ JSON, nếu không có thì mặc định 60%
+    className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
     alt="Minh họa" 
   />
 )}
@@ -311,11 +313,12 @@ export default function App() {
                     <span className="text-blue-600 font-bold">Câu {exam.part1A.length + exam.part1B.length + idx + 1}: </span> 
                     {/* SỬ DỤNG HÀM MỚI Ở ĐÂY */}
                     <span dangerouslySetInnerHTML={renderMath(q.text)} />
-                    {q.image && (
+                    {exam.part2.image && (
   <img 
-    src={q.image} 
-    className="mt-6 mb-2 mx-auto block w-[70%] md:w-[40%] rounded-xl border border-slate-200 shadow-sm" 
-    alt="Minh họa" 
+    src={exam.part2.image} 
+    style={{ width: exam.part2.imageWidth || '70%' }}
+    className="mb-8 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
+    alt="Minh họa ngữ liệu" 
   />
 )}
                   </div>
@@ -356,7 +359,8 @@ export default function App() {
                     {q.image && (
   <img 
     src={q.image} 
-    className="mt-6 mb-2 mx-auto block w-[70%] md:w-[40%] rounded-xl border border-slate-200 shadow-sm" 
+    style={{ width: q.imageWidth || '60%' }} // Ưu tiên imageWidth từ JSON, nếu không có thì mặc định 60%
+    className="mt-6 mb-2 mx-auto block rounded-xl border border-slate-200 shadow-sm" 
     alt="Minh họa" 
   />
 )}
