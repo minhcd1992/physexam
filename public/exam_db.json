@@ -293,6 +293,7 @@
       "part2": {
         "passage": "NGỮ LIỆU 1: Một sinh viên kĩ thuật thử nghiệm hệ thống cung cấp điện cho đèn dây tóc 12V - 6W bằng cách đạp xe. Máy phát điện xoay chiều được sử dụng có cấu tạo gồm một khung dây hình chữ nhật có kích thước 1 cm x 3 cm quay trong từ trường có độ lớn cảm ứng từ 0,6 T. Khung dây được dẫn động bằng một vòng tròn nhỏ trên máy phát điện có đường kính 1,6 cm và được nối với bánh xe bằng dây đai truyền động. Khi cho bánh xe quay đều để một điểm trên bánh xe có tốc độ 15 m/s thì máy phát tạo ra suất điện động xoay chiều có giá trị cực đại là 17 V.\n\nNGỮ LIỆU 2: Vào năm 2019, một trận động đất có độ lớn 5,4 độ richter xảy ra tại Trùng Khánh tỉnh Cao Bằng. Khi sóng địa chấn P được phát ra từ một vị trí khởi nguồn của động đất (nguồn sóng ở tâm chấn) với tốc độ khoảng 5000 m/s thì nhà cửa, công trình và các đồ đạc, vật dụng của nhà dân ở những vị trí cách xa tâm chấn vẫn bị ảnh hưởng do có sóng truyền qua. Độ richter được tính như sau: $M_L = \\log A - \\log A_0$, với A là biên độ tối đa đo được và $A_0$ là biên độ chuẩn. Một trận động đất được xem có cấp độ nhẹ khi $M_L < 4$, trung bình khi $4 \\le M_L < 5$, mạnh khi $5 \\le M_L \\le 6$ và rất mạnh khi $M_L > 6$.",
         "image": "/images/q26-28.png",
+        "imageWidth": "80%",
         "questions": [
           {
             "id": "mh25_q26",
