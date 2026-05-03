@@ -306,7 +306,7 @@
               "Hình C ",
               "Hình D "
             ],
-            "correct": 3
+            "correct": 2
           },
           {
             "id": "mh25_q27",
@@ -380,8 +380,8 @@
           "id": "mh25_q35",
           "text": "Nguyên lý Binary-Deflection là một trong các nguyên lý của máy in phun mực. Xét một giọt mực có khối lượng $m = 3,2 \\times 10^{-10}\\text{ kg}$ được tích điện âm có độ lớn $q = 1,6 \\times 10^{-13}\\text{ C}$ đi vào vùng không gian giữa hai bản lái tia. Ban đầu giọt mực chuyển động song song với các bản với tốc độ 20 m/s. Chiều dài L của các bản bằng 2 cm. Điện trường giữa các bản được xem là đều và vuông góc với phương ban đầu, có độ lớn $3 \\times 10^6\\text{ V/m}$. Độ dịch chuyển theo phương vuông góc của giọt mực tính từ lúc đi vào đến khi vừa ra khỏi vùng giữa hai bản bằng bao nhiêu mi-li-mét (mm)?",
           "images": [
-            { "url": "/images/q35-1.png", "width": "45%" },
-            { "url": "/images/q35-2.png", "width": "45%" }
+            { "url": "/images/q35-1.png", "width": "50%" },
+            { "url": "/images/q35-2.png", "width": "50%" }
         ],
           "correct": "0,75"
         },
@@ -393,7 +393,7 @@
         {
           "id": "mh25_q37",
           "text": "Nhiệt độ ngăn mát của tủ lạnh nhà Hùng là 2,5°C. Hùng đặt một quả bóng chườm lạnh có chứa 1365 mg không khí ở 0°C và áp suất 1 atm vào trong tủ lạnh. Biết 1 mol không khí có khối lượng 29 g và thể tích 22,4 lít ở nhiệt độ 0°C và áp suất 1 atm. Nếu áp suất khí trong quả bóng không đổi thì khi cân bằng nhiệt, thể tích của quả bóng tăng thêm bao nhiêu mi-li-lít (ml)? Lấy kết quả xấp xỉ đến hai chữ số thập phân.",
-          "correct": "9,65"
+          "correct": "9,66"
         },
         {
           "id": "mh25_q38",
@@ -403,7 +403,7 @@
         {
           "id": "mh25_q39",
           "text": "Giả sử trong lõi một ngôi sao chỉ có helium với khối lượng $4,5 \\times 10^{32}\\text{ kg}$. He tiếp tục thực hiện phản ứng tổng hợp hạt nhân thành carbon theo phương trình: ${}_{2}^{4}\\text{He} + {}_{2}^{4}\\text{He} + {}_{2}^{4}\\text{He} \\rightarrow {}_{6}^{12}\\text{C} + 7,27 \\text{ MeV}$. Giả thiết toàn bộ năng lượng nhiệt từ quá trình tổng hợp He đều được phát ra với công suất trung bình là $5,1 \\times 10^{30}\\text{ W}$. Cho 1 năm bằng 365,25 ngày, khối lượng mol của helium là 4 g/mol, số Avogadro $N_A = 6,02 \\times 10^{23}\\text{ mol}^{-1}$, và $1\\text{ eV} = 1,6 \\times 10^{-19}\\text{ J}$. Sau bao nhiêu triệu năm thì He ở ngôi sao này sẽ chuyển hoá hết thành C? Lấy kết quả xấp xỉ đến hai chữ số thập phân.",
-          "correct": "1631,58"
+          "correct": "163,16"
         },
         {
           "id": "mh25_q40",
