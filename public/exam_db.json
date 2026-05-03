@@ -378,8 +378,10 @@
         {
           "id": "mh25_q35",
           "text": "Nguyên lý Binary-Deflection là một trong các nguyên lý của máy in phun mực. Xét một giọt mực có khối lượng $m = 3,2 \\times 10^{-10}\\text{ kg}$ được tích điện âm có độ lớn $q = 1,6 \\times 10^{-13}\\text{ C}$ đi vào vùng không gian giữa hai bản lái tia. Ban đầu giọt mực chuyển động song song với các bản với tốc độ 20 m/s. Chiều dài L của các bản bằng 2 cm. Điện trường giữa các bản được xem là đều và vuông góc với phương ban đầu, có độ lớn $3 \\times 10^6\\text{ V/m}$. Độ dịch chuyển theo phương vuông góc của giọt mực tính từ lúc đi vào đến khi vừa ra khỏi vùng giữa hai bản bằng bao nhiêu mi-li-mét (mm)?",
-          "image": "/images/q35-1.png",
-          "image": "/images/q35-2.png",
+          "images": [
+            { "url": "/images/q35-1.png", "width": "45%" },
+            { "url": "/images/q35-2.png", "width": "45%" }
+        ],
           "correct": "0,75"
         },
         {
