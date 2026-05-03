@@ -445,7 +445,7 @@
         {
           "id": "mh25_ct_q3",
           "text": "Hình vẽ bên mô tả đường sức điện trong vùng không gian giữa hai tấm kim loại phẳng song song. Phát biểu nào sau đây là ĐÚNG?",
-          "image":"/img/q3_1.png",
+          "image":"/images/q3_1.png",
           "options": [
             "Điện trường giữa hai bản là điện trường đều, các đường sức điện song song và cách đều nhau.",
             "Cường độ điện trường tại mép của hai bản lớn hơn ở giữa.",
@@ -589,7 +589,7 @@
         {
           "id": "mh25_ct_q16",
           "text": "Một điện tích điểm $q = -4\\ \\mu\\text{C}$ dịch chuyển từ điểm M đến điểm N. Công của lực điện thực hiện là bao nhiêu?",
-          "image": "/img/q16_1.png",
+          "image": "/images/q16_1.png",
           "options": [
             "$400\\ \\mu\\text{J}$.",
             "$-400\\ \\mu\\text{J}$.",
@@ -601,7 +601,7 @@
         {
           "id": "mh25_ct_q17",
           "text": "Hai điện trở $R_1$ và $R_2$ có đặc tuyến vôn-ampe như hình vẽ. Biết tại $U = 6\\text{V}$, dòng qua $R_1$ là 2A và dòng qua $R_2$ là 1A. Khi mắc song song hai điện trở này, điện trở tương đương của bộ bằng bao nhiêu?",
-          "image": "/img/q17_1.png",
+          "image": "/images/q17_1.png",
           "options": [
             "$9\\ \\Omega$.",
             "$2\\ \\Omega$.",
@@ -693,7 +693,7 @@
         {
           "id": "mh25_ct_q25",
           "text": "Biển báo hiệu nguy hiểm phóng xạ có hình ảnh như sau. Những phát biểu nào sau đây ĐÚNG khi nói về ý nghĩa của biển báo này?",
-          "image": "/img/q25_1.png",
+          "image": "/images/q25_1.png",
           "options": [
             "1. Khu vực hoặc vật liệu này phát ra bức xạ ion hoá có thể gây hại cho sức khoẻ.",
             "2. Cần mặc trang phục bảo hộ, hạn chế thời gian tiếp xúc và giữ khoảng cách an toàn.",
@@ -777,7 +777,7 @@
         {
           "id": "mh25_ct_q33",
           "text": "Cuộn dây có 50 vòng quấn trên khung hình chữ nhật kích thước 4 cm $\\times$ 6 cm, điện trở tổng của cuộn là $0,5\\ \\Omega$. Từ trường đều vuông góc mặt phẳng cuộn dây tăng đều từ 0 T đến 1 T trong 2 s. Cường độ dòng điện cảm ứng trong cuộn dây bằng bao nhiêu miliampere (mA)?",
-          "image": "/img/q33_1.png",
+          "image": "/images/q33_1.png",
           "correct": "120"
         },
         {
